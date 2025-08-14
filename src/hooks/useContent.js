@@ -123,7 +123,7 @@ const defaultContent = {
     ]
   },
   settings: {
-    siteTitle: "SlimmerMetAI",
+    siteTitle: "Slimmer Met AI",
     siteDescription: "Ontdek de kracht van AI voor jouw persoonlijke en professionele groei",
     contactEmail: "julia@loth.nl",
     substackUrl: "https://slimmermetai.substack.com",

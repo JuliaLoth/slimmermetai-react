@@ -2,14 +2,98 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PageContainer = styled.div`
-  min-height: calc(100vh - 120px);
-  padding: 4rem 0;
+  min-height: calc(100vh - 80px);
+`;
+
+const PageHero = styled.section`
+  background-image: url('/images/hero-background.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 6rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 80px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%);
+    z-index: 0;
+  }
 `;
 
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+`;
+
+const HeroContent = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+  
+  @media (max-width: 768px) {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+`;
+
+const PageTitle = styled.h1`
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+  background: linear-gradient(135deg, #5852f2 0%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  font-family: 'Glacial Indifference', sans-serif;
+  
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+`;
+
+const PageSubtitle = styled.p`
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #4b5563;
+  
+  @media (max-width: 768px) {
+    font-size: 1.125rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+`;
+
+const ContentSection = styled.section`
+  padding: 5rem 0;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 `;
 
 const HeroSection = styled.div`
@@ -32,25 +116,26 @@ const ProfileImageContainer = styled.div`
   margin: 0 auto;
 `;
 
-const ProfileImage = styled.div`
+const ProfileImage = styled.img`
   width: 100%;
   aspect-ratio: 1;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 8rem;
-  color: white;
+  object-fit: cover;
   box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+  transition: transform 0.5s ease;
+  
+  ${ProfileImageContainer}:hover & {
+    transform: scale(1.08);
+  }
 `;
 
-const HeroContent = styled.div``;
+const AboutHeroContent = styled.div``;
 
 const HeroTitle = styled.h1`
   font-size: 3rem;
   color: #333;
   margin-bottom: 1rem;
+  font-family: 'Glacial Indifference', sans-serif;
   
   @media (max-width: 768px) {
     font-size: 2.5rem;
@@ -68,7 +153,13 @@ const HeroDescription = styled.p`
   font-size: 1.1rem;
   color: #666;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  
+  &.highlight {
+    font-style: italic;
+    color: #764ba2;
+    margin: 1.5rem 0;
+  }
 `;
 
 const ContactButton = styled.a`
@@ -87,15 +178,12 @@ const ContactButton = styled.a`
   }
 `;
 
-const ContentSection = styled.section`
-  margin-bottom: 4rem;
-`;
-
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 2rem;
   text-align: center;
+  font-family: 'Glacial Indifference', sans-serif;
 `;
 
 const ContentGrid = styled.div`
@@ -111,6 +199,12 @@ const ContentCard = styled.div`
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   border: 1px solid #e9ecef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  }
 `;
 
 const CardIcon = styled.div`
@@ -124,6 +218,7 @@ const CardTitle = styled.h3`
   color: #333;
   margin-bottom: 1rem;
   text-align: center;
+  font-family: 'Glacial Indifference', sans-serif;
 `;
 
 const CardText = styled.p`
@@ -145,17 +240,25 @@ const SkillCard = styled.div`
   border-radius: 10px;
   text-align: center;
   border: 1px solid #e9ecef;
+  transition: transform 0.3s ease, background 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  }
 `;
 
 const SkillTitle = styled.h4`
   color: #333;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
+  font-family: 'Glacial Indifference', sans-serif;
 `;
 
 const SkillDescription = styled.p`
   color: #666;
   font-size: 0.9rem;
+  font-style: italic;
 `;
 
 const QuoteSection = styled.div`
@@ -185,117 +288,143 @@ const QuoteAuthor = styled.p`
 const OverMij = () => {
   return (
     <PageContainer>
-      <Container>
-        <HeroSection>
-          <ProfileImageContainer>
-            <ProfileImage>
-              👩‍💼
-            </ProfileImage>
-          </ProfileImageContainer>
-          
+      <PageHero>
+        <Container>
           <HeroContent>
-            <HeroTitle>Julia Loth</HeroTitle>
-            <HeroSubtitle>AI Training & Advies Specialist</HeroSubtitle>
-            <HeroDescription>
-              Ik help professionals en bedrijven om de kracht van Artificial Intelligence 
-              te benutten voor productiviteit, innovatie en groei. Met praktische training 
-              en strategisch advies maak ik AI toegankelijk voor iedereen.
-            </HeroDescription>
-            <ContactButton href="mailto:julia@loth.nl">
-              Neem Contact Op
-            </ContactButton>
+            <PageTitle>Van innovator naar AI-expert</PageTitle>
+            <PageSubtitle>
+              Herkenbaar? Je weet dat AI enorme kansen biedt, maar tussen alle buzzwords en technische termen vraag je je af: hoe vertaal ik dit concreet naar mijn dagelijkse werk? Precies daar ligt mijn expertise.
+            </PageSubtitle>
           </HeroContent>
-        </HeroSection>
+        </Container>
+      </PageHero>
+      
+      <ContentSection>
+        <Container>
+          <HeroSection>
+            <ProfileImageContainer>
+              <ProfileImage 
+                src="/images/Profiel foto Julia.svg"
+                alt="Julia Loth - AI Training & Advies Specialist"
+              />
+            </ProfileImageContainer>
+            
+            <AboutHeroContent>
+              <HeroTitle>Over mijzelf</HeroTitle>
+              <HeroSubtitle>Als innovator vertaal ik complexe vraagstukken naar concrete oplossingen</HeroSubtitle>
+              <HeroDescription>
+                Met mijn hands-on mentaliteit breng ik communicatie, concept en techniek samen om vernieuwing te realiseren die écht werkt in de praktijk.
+              </HeroDescription>
+              <HeroDescription>
+                In mijn professionele reis heb ik me gespecialiseerd in het toegankelijk maken van geavanceerde technologie. Ik geloof in:
+              </HeroDescription>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: '1.5rem 0',
+                color: '#666',
+                textAlign: 'left'
+              }}>
+                <li style={{marginBottom: '0.5rem'}}>• Praktische AI-toepassingen die direct implementeerbaar zijn</li>
+                <li style={{marginBottom: '0.5rem'}}>• Meetbare resultaten in plaats van vage beloftes</li>
+                <li style={{marginBottom: '0.5rem'}}>• Technologie als versterker van menselijke creativiteit en productiviteit</li>
+                <li style={{marginBottom: '0.5rem'}}>• Kennisdeling die professionals op elk niveau helpt mee te komen</li>
+              </ul>
+              <ContactButton href="mailto:julia@loth.nl">
+                Laten we koffie drinken ☕
+              </ContactButton>
+            </AboutHeroContent>
+          </HeroSection>
 
-        <ContentSection>
-          <SectionTitle>Mijn Missie</SectionTitle>
+          <SectionTitle>Mijn Aanpak</SectionTitle>
           
           <ContentGrid>
             <ContentCard>
               <CardIcon>🎯</CardIcon>
-              <CardTitle>Toegankelijke AI</CardTitle>
+              <CardTitle>AI zonder de Bullshit</CardTitle>
               <CardText>
-                AI hoeft niet complex te zijn. Ik maak geavanceerde technologie 
-                begrijpelijk en toepasbaar voor professionals in elke sector.
+                Geen jargon, geen buzzwords, geen "paradigma shifts". 
+                Gewoon praktische tools die je morgen kunt gebruiken. 
+                Want AI is geen raketwetenschap - het is gewoon heel handig gereedschap.
               </CardText>
             </ContentCard>
 
             <ContentCard>
               <CardIcon>🚀</CardIcon>
-              <CardTitle>Praktische Resultaten</CardTitle>
+              <CardTitle>Van "Oh shit" naar "Oh, dat was makkelijk"</CardTitle>
               <CardText>
-                Geen theoretische verhalen, maar concrete tools en technieken 
-                die je direct kunt toepassen in je dagelijkse werk.
+                Herinner je je die keer dat je 4 uur bezig was met een rapport 
+                dat ChatGPT in 10 minuten had kunnen maken? Ja, ik ook. 
+                Laten we zorgen dat dat niet meer gebeurt.
               </CardText>
             </ContentCard>
 
             <ContentCard>
               <CardIcon>🤝</CardIcon>
-              <CardTitle>Persoonlijke Begeleiding</CardTitle>
+              <CardTitle>Ik Snap Je Struggles</CardTitle>
               <CardText>
-                Elke persoon en organisatie is uniek. Daarom bied ik 
-                maatwerk training en advies aangepast aan jouw specifieke situatie.
+                Als iemand die ooit een belangrijke deadline miste door een 
+                verdwaald bestand (true story), snap ik de chaos. Daarom help 
+                ik je systemen te bouwen die zelfs op je slechtste dag werken.
               </CardText>
             </ContentCard>
           </ContentGrid>
-        </ContentSection>
 
-        <QuoteSection>
-          <Quote>
-            "De toekomst behoort toe aan degenen die AI niet zien als vervanging, 
-            maar als een krachtige partner in hun groei en succes."
-          </Quote>
-          <QuoteAuthor>- Julia Loth</QuoteAuthor>
-        </QuoteSection>
+          <QuoteSection>
+            <Quote>
+              "De beste manier om productief te zijn? 
+              Wees strategisch lui en laat AI het zware werk doen."
+            </Quote>
+            <QuoteAuthor>- Julia Loth (professional luiwammes)</QuoteAuthor>
+          </QuoteSection>
 
-        <ContentSection>
-          <SectionTitle>Expertise & Specialisaties</SectionTitle>
+          <SectionTitle>Wat Kan Ik Voor Je Betekenen?</SectionTitle>
           
           <SkillsList>
             <SkillCard>
               <SkillTitle>Prompt Engineering</SkillTitle>
               <SkillDescription>
-                Optimale communicatie met AI tools voor betere resultaten
+                "De kunst van het precies de juiste vragen stellen (en ja, dat kun je leren)"
               </SkillDescription>
             </SkillCard>
 
             <SkillCard>
               <SkillTitle>Business Automatisering</SkillTitle>
               <SkillDescription>
-                Processen stroomlijnen met AI-gedreven oplossingen
+                "Voor als je liever koffie drinkt dan Excel-sheets invullen"
               </SkillDescription>
             </SkillCard>
 
             <SkillCard>
               <SkillTitle>Content Strategie</SkillTitle>
               <SkillDescription>
-                AI inzetten voor efficiënte en effectieve content creatie
+                "Schrijf 1x, gebruik 100x - mijn favoriete strategie"
               </SkillDescription>
             </SkillCard>
 
             <SkillCard>
               <SkillTitle>Training & Coaching</SkillTitle>
               <SkillDescription>
-                Praktijkgerichte workshops en persoonlijke begeleiding
+                "Zonder wollig gedoe, gewoon doen wat werkt"
               </SkillDescription>
             </SkillCard>
 
             <SkillCard>
               <SkillTitle>Digitale Transformatie</SkillTitle>
               <SkillDescription>
-                Strategische implementatie van AI in bedrijfsprocessen
+                "Fancy woorden voor: we gaan het makkelijker maken"
               </SkillDescription>
             </SkillCard>
 
             <SkillCard>
               <SkillTitle>Change Management</SkillTitle>
               <SkillDescription>
-                Teams begeleiden bij de adoptie van nieuwe AI tools
+                "Je team overtuigen dat AI geen boeman is"
               </SkillDescription>
             </SkillCard>
           </SkillsList>
-        </ContentSection>
-      </Container>
+        </Container>
+      </ContentSection>
     </PageContainer>
   );
 };

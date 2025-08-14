@@ -1,32 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
+import './styles/global.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import TrainingenAdvies from './pages/TrainingenAdvies';
 import Nieuws from './pages/Nieuws';
 import OverMij from './pages/OverMij';
-
-const GlobalStyle = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-`;
 
 const AppContainer = styled.div`
   min-height: 100vh;
@@ -40,9 +21,40 @@ const MainContent = styled.main`
 `;
 
 function App() {
+  useEffect(() => {
+    // Try to add background image, but don't fail if it doesn't exist
+    // The background image path should work in production
+    try {
+      const backgroundImageUrl = `${process.env.PUBLIC_URL}/images/Website background.svg`;
+      
+      // Create a test image to check if it exists
+      const img = new Image();
+      img.onload = () => {
+        // Image loaded successfully, apply it
+        document.body.style.backgroundImage = `url('${backgroundImageUrl}')`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center center';
+        document.body.style.backgroundAttachment = 'fixed';
+        document.body.style.backgroundRepeat = 'no-repeat';
+      };
+      img.onerror = () => {
+        // Image failed to load, use gradient fallback from CSS
+        console.log('Background image not found, using gradient fallback');
+      };
+      img.src = backgroundImageUrl;
+    } catch (error) {
+      // If there's any error, just use the CSS fallback
+      console.log('Using default gradient background');
+    }
+    
+    // Cleanup function
+    return () => {
+      document.body.style.backgroundImage = '';
+    };
+  }, []);
+
   return (
     <Router>
-      <GlobalStyle />
       <AppContainer>
         <Header />
         <MainContent>

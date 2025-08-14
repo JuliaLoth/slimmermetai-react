@@ -1,0 +1,1173 @@
+/* ================================================
+   Slimmer Met AI - Original Website Styling 
+   Migrated from PHP site to React
+   ================================================ */
+
+/* Import Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Glacial Indifference font - temporarily disabled for development */
+/*
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('/fonts/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('/fonts/GlacialIndifference-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+*/
+
+/* ================================================
+   CSS Variables - Original Site Colors
+   ================================================ */
+:root {
+    --text-color: #333;
+    --primary-color: #5852f2;
+    --primary-hover: #4a45d1;
+    --accent-color: #db2777;
+    --gradient-bg: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    
+    /* Supporting Colors */
+    --text-light: #4b5563;
+    --text-dark: #111827;
+    --background-white: #ffffff;
+    --background-light: #f9fafc;
+    --background-gray: #f3f4f6;
+    --border-light: #e5e7eb;
+    --border-medium: #d1d5db;
+    
+    /* Shadows */
+    --shadow-xs: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-sm: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-md: 0 5px 15px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+    --shadow-xl: 0 15px 35px rgba(0,0,0,0.2);
+    --shadow-primary: 0 10px 30px rgba(88, 82, 242, 0.2);
+    --shadow-accent: 0 10px 30px rgba(219, 39, 119, 0.2);
+    
+    /* Transitions */
+    --transition-fast: all 0.2s ease;
+    --transition-default: all 0.3s ease;
+    --transition-slow: all 0.5s ease;
+    --transition-bounce: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* ================================================
+   Reset & Base Styles
+   ================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9fafc;
+    /* background-image: url('/images/Website background.svg'); */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1150px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+main {
+    flex: 1;
+    padding-top: 0; /* No extra padding - hero has margin-top */
+}
+
+/* ================================================
+   Typography - Glacial Indifference
+   ================================================ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-default);
+}
+
+/* ================================================
+   Header & Navigation - Classic Style
+   ================================================ */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.sticky {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo styling - Classic */
+.navbar .logo a {
+    display: flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    color: var(--text-color) !important;
+    font-weight: 600 !important;
+    font-family: 'Glacial Indifference', sans-serif !important;
+    transition: all 0.3s ease !important;
+}
+
+.navbar .logo a:hover {
+    transform: scale(1.05) !important;
+}
+
+.navbar .logo img {
+    margin-right: 12px !important;
+    border-radius: 10px !important;
+    transition: all 0.3s ease !important;
+    width: 55px !important;
+}
+
+.navbar .logo-text {
+    font-size: 1.6rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    color: var(--text-color) !important;
+}
+
+.navbar .logo a:hover .logo-text {
+    color: var(--accent-color) !important;
+}
+
+/* Navigation links - Classic style */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s;
+    position: relative;
+    padding: 0.6rem 0;
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+.nav-links a:hover {
+    color: #5852f2;
+}
+
+.nav-links a[aria-current="page"],
+.nav-links a.active {
+    color: #5852f2;
+    font-weight: 600;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-bg);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a[aria-current="page"]::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Mobile menu button */
+.mobile-menu-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 150;
+}
+
+.mobile-menu-button span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-button.active span:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.mobile-menu-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-button.active span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+/* ================================================
+   Buttons - Classic Style with Gradients
+   ================================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    background-size: 200% auto;
+    font-family: 'Glacial Indifference', sans-serif;
+    letter-spacing: 0.02em;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn-primary {
+    background-image: linear-gradient(45deg, #5852f2, #8e88ff, #5852f2);
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 4px 15px rgba(88, 82, 242, 0.2);
+}
+
+.btn-primary:hover {
+    background-position: right center;
+    box-shadow: 0 7px 20px rgba(88, 82, 242, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-image: linear-gradient(45deg, transparent 50%, #5852f2 50%);
+    background-size: 250% 100%;
+    background-position: left bottom;
+    color: #5852f2;
+    border: 2px solid #5852f2;
+}
+
+.btn-outline:hover {
+    background-position: right bottom;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ================================================
+   Hero Section - Classic Style
+   ================================================ */
+.hero-container {
+    /* background-image: url('/images/hero-background.svg'); */
+    background-size: cover;
+    background-position: center;
+    padding: 8rem 0 4rem;
+    margin-bottom: 3rem;
+    position: relative;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-container h1 {
+    color: transparent;
+    background: linear-gradient(45deg, var(--primary-color), #8e88ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight: 700;
+}
+
+.hero-container p {
+    color: #4b5563;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* ================================================
+   Sections - Classic Style
+   ================================================ */
+.section {
+    padding: 3rem 0;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ================================================
+   Cards - Classic Style with Strong Hover
+   ================================================ */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    will-change: transform;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    animation: cardBounce 2s infinite ease-in-out;
+}
+
+@keyframes cardBounce {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(88, 82, 242, 0.3);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.05) 0%, rgba(219, 39, 119, 0.05) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-content {
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.02) 0%, rgba(219, 39, 119, 0.02) 100%);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+    color: var(--primary-color);
+}
+
+.card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    transition: color 0.3s ease;
+}
+
+.card:hover p {
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.card-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-actions {
+    transform: translateY(-2px);
+}
+
+.card-actions .btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-actions .btn {
+    transform: translateY(-2px);
+}
+
+/* ================================================
+   Features Grid - Classic Style
+   ================================================ */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    will-change: transform;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0;
+    transform: translateY(30px);
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    animation: cardBounce 2s infinite ease-in-out;
+}
+
+.feature-card:hover::after {
+    opacity: 1;
+}
+
+.feature-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(88, 82, 242, 0.3);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+.feature-card p {
+    color: #6b7280;
+}
+
+/* ================================================
+   Tools Grid - Classic Style
+   ================================================ */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.tool-pricing {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .tool-pricing {
+    transform: translateY(-2px);
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.card:hover .price {
+    color: var(--accent-color);
+}
+
+.price-period {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .price-period {
+    opacity: 0.9;
+}
+
+/* ================================================
+   Profile Image - Classic Style
+   ================================================ */
+.profile-image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(88, 82, 242, 0.2);
+    margin: 0 auto;
+    border: 8px solid white;
+    background-color: white;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.profile-image-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(88, 82, 242, 0.3);
+}
+
+.profile-image-container:hover .profile-image {
+    transform: scale(1.08);
+}
+
+.profile-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.2) 0%, rgba(219, 39, 119, 0.2) 100%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50%;
+}
+
+.profile-image-container:hover::before {
+    opacity: 1;
+}
+
+/* ================================================
+   Footer - Classic White Style (matches original)
+   ================================================ */
+footer {
+    background-color: #fff;
+    padding: 4rem 0 2rem;
+    margin-top: auto;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-section h4 {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+}
+
+.footer-section a {
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: 'Glacial Indifference', sans-serif;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #5852f2;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* ================================================
+   Grids
+   ================================================ */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* ================================================
+   Utility Classes
+   ================================================ */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 2rem; }
+
+/* ================================================
+   Responsive Design
+   ================================================ */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 6rem 2rem 2rem;
+        transition: left 0.3s ease;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        gap: 2rem;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .mobile-menu-button {
+        display: flex;
+    }
+    
+    .nav-links a {
+        font-size: 20px;
+        padding: 0.8rem 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-content {
+        width: 90%;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        width: 95%;
+        padding: 2rem 1.5rem;
+    }
+    
+    .hero-container h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-container p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ================================================
+   Custom Scrollbar - Classic Style
+   ================================================ */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #5852f2 0%, #db2777 100%);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #4a45d1 0%, #c02368 100%);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #5852f2 #f1f1f1;
+}
+
+/* ================================================
+   Loading States
+   ================================================ */
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-style: italic;
+    color: #6b7280;
+}
+
+.loading::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 2px solid #e5e7eb;
+    border-top-color: #5852f2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* ================================================
+   Forms - Classic Style
+   ================================================ */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-group input {
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* ================================================
+   Messages & Alerts
+   ================================================ */
+.auth-message {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 0.95rem;
+    display: none;
+}
+
+.auth-message--success {
+    display: block;
+    background-color: #e8f8f0;
+    color: #1e8449;
+    border-color: #a7f3d0;
+}
+
+.auth-message--error {
+    display: block;
+    background-color: #fdeaea;
+    color: #c0392b;
+    border-color: #f8b4b4;
+}
+
+.auth-message--info {
+    display: block;
+    background-color: #eef2ff;
+    color: #4f46e5;
+    border-color: #c7d2fe;
+}
+
+/* ================================================
+   Skip Link for Accessibility
+   ================================================ */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: white;
+    color: #5852f2;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+    left: 0;
+}
+
+/* ================================================
+   Print Styles
+   ================================================ */
+@media print {
+    header,
+    footer,
+    .btn,
+    .mobile-menu-button {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+}
+
+/* ================================================
+   Background Fix for Local Development
+   ================================================ */
+body.bg-image-loaded {
+    /* background-image: url('/images/website-background.svg'); */
+}
+
+.hero-with-bg {
+    /* background-image: url('/images/hero-background.svg'); */
+}
+
+/* ================================================
+   Classic Extras from Original Site
+   ================================================ */
+
+/* Gradient text utility */
+.gradient-text {
+    background: var(--gradient-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Page specific hero variations */
+.page-hero {
+    padding: 6rem 0 3rem;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.05) 0%, rgba(219, 39, 119, 0.05) 100%);
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* About profile specific */
+.about-profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+    margin: 4rem 0;
+}
+
+.profile-content {
+    padding: 2rem 0;
+}
+
+.profile-content .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.mission-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.mission-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.mission-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .about-profile {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profile-image-container {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* ================================================
+   END OF CLASSIC STYLING
+   ================================================ */

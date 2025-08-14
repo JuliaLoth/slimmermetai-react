@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-  background: #2c3e50;
-  color: white;
-  padding: 3rem 0 1rem;
+  background-color: #fff;
+  padding: 4rem 0 2rem;
   margin-top: auto;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
 `;
 
 const Container = styled.div`
@@ -17,23 +17,31 @@ const Container = styled.div`
 
 const FooterContent = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 `;
 
-const FooterSection = styled.div``;
+const FooterSection = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
-const FooterTitle = styled.h3`
+const FooterTitle = styled.h4`
+  font-family: 'Glacial Indifference', sans-serif;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #ecf0f1;
 `;
 
 const FooterText = styled.p`
-  color: #bdc3c7;
+  color: #6b7280;
   line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
 `;
 
 const FooterNav = styled.nav`
@@ -43,22 +51,27 @@ const FooterNav = styled.nav`
 `;
 
 const FooterLink = styled(Link)`
-  color: #bdc3c7;
+  color: #6b7280;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-family: 'Glacial Indifference', sans-serif;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
   
   &:hover {
-    color: #3498db;
+    color: #5852f2;
   }
 `;
 
 const ExternalLink = styled.a`
-  color: #bdc3c7;
+  color: #6b7280;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-family: 'Glacial Indifference', sans-serif;
+  font-size: 1.3rem;
   
   &:hover {
-    color: #3498db;
+    color: #5852f2;
   }
 `;
 
@@ -71,12 +84,13 @@ const ContactInfo = styled.div`
 const ContactItem = styled.div`
   display: flex;
   align-items: center;
-  color: #bdc3c7;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
   
   &:before {
     content: "${props => props.icon}";
     margin-right: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 `;
 
@@ -87,21 +101,39 @@ const SocialLinks = styled.div`
 `;
 
 const SocialLink = styled.a`
-  color: #bdc3c7;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
   
   &:hover {
-    color: #3498db;
+    background-color: #5852f2;
+    color: white;
+    transform: translateY(-3px);
   }
 `;
 
 const FooterBottom = styled.div`
-  border-top: 1px solid #34495e;
-  padding-top: 1rem;
-  text-align: center;
-  color: #95a5a6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
   font-size: 0.9rem;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
 `;
 
 const Footer = () => {
@@ -112,7 +144,7 @@ const Footer = () => {
       <Container>
         <FooterContent>
           <FooterSection>
-            <FooterTitle>SlimmerMetAI</FooterTitle>
+            <FooterTitle>Slimmer met AI</FooterTitle>
             <FooterText>
               Ontdek de kracht van Artificial Intelligence voor jouw persoonlijke 
               en professionele groei. Van praktische trainingen tot strategisch advies.
@@ -170,7 +202,7 @@ const Footer = () => {
         </FooterContent>
 
         <FooterBottom>
-          <p>&copy; {currentYear} SlimmerMetAI. Alle rechten voorbehouden.</p>
+          <p>&copy; {currentYear} Slimmer met AI. Alle rechten voorbehouden.</p>
         </FooterBottom>
       </Container>
     </FooterContainer>

@@ -1,4 +1,4 @@
-# SlimmerMetAI Website
+# Slimmer Met AI Website
 
 Een moderne React website met Decap CMS integratie voor eenvoudig content beheer, speciaal gebouwd voor AI training en advies services.
 

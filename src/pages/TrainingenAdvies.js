@@ -2,8 +2,31 @@ import React from 'react';
 import styled from 'styled-components';
 
 const PageContainer = styled.div`
-  min-height: calc(100vh - 120px);
-  padding: 4rem 0;
+  min-height: calc(100vh - 80px);
+`;
+
+const PageHero = styled.section`
+  background-image: url('/images/hero-background.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 6rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 80px;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%);
+    z-index: 0;
+  }
 `;
 
 const Container = styled.div`
@@ -12,27 +35,65 @@ const Container = styled.div`
   padding: 0 2rem;
 `;
 
-const PageHeader = styled.div`
-  text-align: center;
-  margin-bottom: 4rem;
+const HeroContent = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+  
+  @media (max-width: 768px) {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
 `;
 
 const PageTitle = styled.h1`
   font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
   color: #333;
-  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #5852f2 0%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  font-family: 'Glacial Indifference', sans-serif;
   
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
   }
 `;
 
 const PageSubtitle = styled.p`
-  font-size: 1.2rem;
-  color: #666;
-  max-width: 600px;
+  font-size: 1.25rem;
+  max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
+  color: #4b5563;
+  
+  @media (max-width: 768px) {
+    font-size: 1.125rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+`;
+
+const ContentSection = styled.section`
+  padding: 5rem 0;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 `;
 
 const ServicesGrid = styled.div`
@@ -154,14 +215,20 @@ const ContactButton = styled.a`
 const TrainingenAdvies = () => {
   return (
     <PageContainer>
-      <Container>
-        <PageHeader>
-          <PageTitle>Trainingen & Advies</PageTitle>
-          <PageSubtitle>
-            Persoonlijke begeleiding en praktische trainingen om AI optimaal in te zetten 
-            voor jouw specifieke doelen en uitdagingen.
-          </PageSubtitle>
-        </PageHeader>
+      <PageHero>
+        <Container>
+          <HeroContent>
+            <PageTitle>Trainingen & Advies</PageTitle>
+            <PageSubtitle>
+              Persoonlijke begeleiding en praktische trainingen om AI optimaal in te zetten 
+              voor jouw specifieke doelen en uitdagingen.
+            </PageSubtitle>
+          </HeroContent>
+        </Container>
+      </PageHero>
+      
+      <ContentSection>
+        <Container>
 
         <ServicesGrid>
           <ServiceSection>
@@ -244,7 +311,8 @@ const TrainingenAdvies = () => {
             Plan een Gesprek
           </ContactButton>
         </ContactSection>
-      </Container>
+        </Container>
+      </ContentSection>
     </PageContainer>
   );
 };
