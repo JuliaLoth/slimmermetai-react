@@ -1,0 +1,103 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pagina's"
+    files:
+      - file: "src/content/home.md"
+        label: "Homepage"
+        name: "home"
+        fields:
+          - {label: "Template", name: "template", widget: "hidden", default: "home"}
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Ondertitel", name: "subtitle", widget: "text"}
+          - {label: "Hero Beschrijving", name: "heroDescription", widget: "text"}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Icoon", name: "icon", widget: "string"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beschrijving", name: "description", widget: "text"}
+              - {label: "Link", name: "link", widget: "string"}
+
+      - file: "src/content/trainingen-advies.md"
+        label: "Trainingen & Advies"
+        name: "trainingen-advies"
+        fields:
+          - {label: "Template", name: "template", widget: "hidden", default: "trainingen-advies"}
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Ondertitel", name: "subtitle", widget: "text"}
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Icoon", name: "icon", widget: "string"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Tagline", name: "tagline", widget: "string"}
+              - {label: "Beschrijving", name: "description", widget: "text"}
+              - label: "Features"
+                name: "features"
+                widget: "list"
+                field: {label: "Feature", name: "feature", widget: "string"}
+
+      - file: "src/content/over-mij.md"
+        label: "Over Mij"
+        name: "over-mij"
+        fields:
+          - {label: "Template", name: "template", widget: "hidden", default: "over-mij"}
+          - {label: "Naam", name: "name", widget: "string"}
+          - {label: "Functie", name: "role", widget: "string"}
+          - {label: "Bio", name: "bio", widget: "text"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Quote", name: "quote", widget: "text"}
+          - label: "Missie Items"
+            name: "missionItems"
+            widget: "list"
+            fields:
+              - {label: "Icoon", name: "icon", widget: "string"}
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beschrijving", name: "description", widget: "text"}
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Beschrijving", name: "description", widget: "text"}
+
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Datum", name: "date", widget: "datetime"}
+      - {label: "Beschrijving", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "featuredImage", widget: "image", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "settings"
+    label: "Site Instellingen"
+    files:
+      - file: "src/content/settings/general.md"
+        label: "Algemene Instellingen"
+        name: "general"
+        fields:
+          - {label: "Site Titel", name: "siteTitle", widget: "string"}
+          - {label: "Site Beschrijving", name: "siteDescription", widget: "text"}
+          - {label: "Contact Email", name: "contactEmail", widget: "string"}
+          - {label: "Substack URL", name: "substackUrl", widget: "string"}
+          - {label: "LinkedIn URL", name: "linkedinUrl", widget: "string"}
+          - label: "Navigatie"
+            name: "navigation"
+            widget: "list"
+            fields:
+              - {label: "Label", name: "label", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}

@@ -1,0 +1,23 @@
+node_modules/
+build/
+dist/
+.cache/
+.pnp.*
+.eslintcache
+coverage/
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Env/Logs
+.env
+.env.*
+*.log
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules
