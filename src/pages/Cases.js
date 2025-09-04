@@ -61,7 +61,7 @@ const PageTitle = styled.h1`
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1.2;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   
   @media (max-width: 768px) {
     font-size: 2.25rem;
@@ -115,7 +115,7 @@ const CaseTitle = styled.h2`
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 1rem;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   
   @media (max-width: 768px) {
     font-size: 2rem;
@@ -190,7 +190,7 @@ const StatsSection = styled.div`
 const StatsTitle = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   
   @media (max-width: 768px) {
     font-size: 2rem;
@@ -238,7 +238,7 @@ const CTASection = styled.div`
 const CTATitle = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   
   @media (max-width: 768px) {
     font-size: 2rem;
@@ -306,7 +306,7 @@ const Cases = () => {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                fontFamily: 'Glacial Indifference, sans-serif'
+                fontFamily: 'Neue Montreal, sans-serif'
               }}>
                 Kwantificeerbare Impact
               </h2>
@@ -432,7 +432,7 @@ const Cases = () => {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                fontFamily: 'Glacial Indifference, sans-serif'
+                fontFamily: 'Neue Montreal, sans-serif'
               }}>
                 Jouw Case
               </h2>

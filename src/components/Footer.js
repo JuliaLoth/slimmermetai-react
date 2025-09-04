@@ -30,7 +30,7 @@ const FooterSection = styled.div`
 `;
 
 const FooterTitle = styled.h4`
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: #1f2937;
@@ -54,7 +54,7 @@ const FooterLink = styled(Link)`
   color: #6b7280;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   margin-bottom: 0.75rem;
   font-size: 1.3rem;
   
@@ -67,7 +67,7 @@ const ExternalLink = styled.a`
   color: #6b7280;
   text-decoration: none;
   transition: color 0.3s ease;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   font-size: 1.3rem;
   
   &:hover {

@@ -39,7 +39,7 @@ const LogoContainer = styled(Link)`
   text-decoration: none !important;
   color: #1f2937 !important;
   font-weight: 600 !important;
-  font-family: 'Glacial Indifference', 'Inter', sans-serif !important;
+  font-family: 'Neue Montreal', 'Inter', sans-serif !important;
   transition: all 0.3s ease !important;
   
   &:hover {
@@ -102,7 +102,7 @@ const NavLink = styled(Link)`
   transition: all 0.3s ease;
   position: relative;
   padding: 0.6rem 0;
-  font-family: 'Glacial Indifference', 'Inter', sans-serif;
+  font-family: 'Neue Montreal', 'Inter', sans-serif;
   
   &:hover {
     color: #5852f2;

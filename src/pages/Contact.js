@@ -62,7 +62,7 @@ const PageTitle = styled.h1`
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1.2;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   
   @media (max-width: 768px) {
     font-size: 2.25rem;
@@ -122,7 +122,7 @@ const ContactTitle = styled.h2`
   font-size: 2rem;
   color: #333;
   margin-bottom: 1rem;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 `;
 
 const ContactDescription = styled.p`
@@ -186,7 +186,7 @@ const ContactInfoTitle = styled.h3`
   color: #333;
   margin-bottom: 1rem;
   font-size: 1.3rem;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 `;
 
 const ContactInfoText = styled.p`
@@ -217,7 +217,7 @@ const FAQTitle = styled.h2`
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 3rem;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 `;
 
 const FAQItem = styled.div`
@@ -383,7 +383,7 @@ const Contact = () => {
             <h2 style={{
               fontSize: '2rem',
               marginBottom: '1rem',
-              fontFamily: 'Glacial Indifference, sans-serif'
+              fontFamily: 'Neue Montreal, sans-serif'
             }}>
               Werk slimmer, niet harder - ik help je ontdekken hoe.
             </h2>

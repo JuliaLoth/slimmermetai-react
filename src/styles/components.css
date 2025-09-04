@@ -35,7 +35,7 @@
     color: var(--text-dark);
     display: flex;
     align-items: center;
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 .dashboard-card p {
@@ -138,7 +138,7 @@
     color: var(--text-dark);
     display: flex;
     align-items: center;
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 .profile-section h2 svg {
@@ -172,7 +172,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 .profile-stat-label {
@@ -554,7 +554,7 @@
     color: var(--text-light);
     margin-bottom: 0.75rem;
     width: fit-content;
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 .quantity-controls {
@@ -602,7 +602,7 @@
     font-size: 1.25rem;
     color: var(--text-color);
     margin-bottom: 0.5rem;
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 .remove-item-btn {
@@ -638,7 +638,7 @@
     margin-bottom: 1rem;
     font-size: 1rem;
     color: var(--text-light);
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 .summary-row.total {
@@ -731,7 +731,7 @@
     font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--text-color);
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 .newsletter-content p {
@@ -811,7 +811,7 @@
     margin: 0;
     color: var(--text-color);
     font-size: 1rem;
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 .testimonial-info p {
@@ -951,7 +951,7 @@
     cursor: pointer;
     position: relative;
     transition: var(--transition-fast);
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 .tab-btn:hover {

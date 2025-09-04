@@ -61,7 +61,7 @@ const PageTitle = styled.h1`
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1.2;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   
   @media (max-width: 768px) {
     font-size: 2.25rem;
@@ -308,7 +308,7 @@ const TrainingenAdvies = () => {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              fontFamily: 'Glacial Indifference, sans-serif'
+              fontFamily: 'Neue Montreal, sans-serif'
             }}>
               Klaar om aan de slag te gaan?
             </h2>

@@ -18,7 +18,7 @@ const GoogleCalendarContainer = styled.div`
     border: none !important;
     cursor: pointer !important;
     transition: all 0.3s ease !important;
-    font-family: 'Glacial Indifference', 'Inter', sans-serif !important;
+    font-family: 'Neue Montreal', 'Inter', sans-serif !important;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
     display: inline-block !important;
     min-width: auto !important;

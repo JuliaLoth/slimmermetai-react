@@ -61,7 +61,7 @@ const PageTitle = styled.h1`
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1.2;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   
   @media (max-width: 768px) {
     font-size: 2.25rem;
@@ -135,7 +135,7 @@ const HeroTitle = styled.h1`
   font-size: 3rem;
   color: #333;
   margin-bottom: 1rem;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   
   @media (max-width: 768px) {
     font-size: 2.5rem;
@@ -183,7 +183,7 @@ const SectionTitle = styled.h2`
   color: #333;
   margin-bottom: 2rem;
   text-align: center;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 `;
 
 const ContentGrid = styled.div`
@@ -218,7 +218,7 @@ const CardTitle = styled.h3`
   color: #333;
   margin-bottom: 1rem;
   text-align: center;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 `;
 
 const CardText = styled.p`
@@ -252,7 +252,7 @@ const SkillTitle = styled.h4`
   color: #333;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 `;
 
 const SkillDescription = styled.p`

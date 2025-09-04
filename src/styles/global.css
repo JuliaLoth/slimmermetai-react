@@ -6,24 +6,7 @@
 /* Import Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* Glacial Indifference font - temporarily disabled for development */
-/*
-@font-face {
-    font-family: 'Glacial Indifference';
-    src: url('/fonts/GlacialIndifference-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Glacial Indifference';
-    src: url('/fonts/GlacialIndifference-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-*/
+/* Neue Montreal font - will be loaded from index.html */
 
 /* ================================================
    CSS Variables - Original Site Colors
@@ -100,10 +83,10 @@ main {
 }
 
 /* ================================================
-   Typography - Glacial Indifference
+   Typography - Neue Montreal
    ================================================ */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     font-weight: bold;
     line-height: 1.2;
     color: var(--text-color);
@@ -169,7 +152,7 @@ header.sticky {
     text-decoration: none !important;
     color: var(--text-color) !important;
     font-weight: 600 !important;
-    font-family: 'Glacial Indifference', sans-serif !important;
+    font-family: 'Neue Montreal', sans-serif !important;
     transition: all 0.3s ease !important;
 }
 
@@ -210,7 +193,7 @@ header.sticky {
     transition: color 0.3s;
     position: relative;
     padding: 0.6rem 0;
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 .nav-links a:hover {
@@ -292,7 +275,7 @@ header.sticky {
     border: none;
     cursor: pointer;
     background-size: 200% auto;
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     letter-spacing: 0.02em;
 }
 
@@ -390,7 +373,7 @@ header.sticky {
     background-clip: text;
     font-size: 2.8rem;
     margin-bottom: 1.2rem;
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     font-weight: 700;
 }
 
@@ -636,7 +619,7 @@ header.sticky {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--text-color);
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 .feature-card p {
@@ -759,7 +742,7 @@ footer {
 }
 
 .footer-section h4 {
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     font-weight: bold;
     margin-bottom: 1.5rem;
     color: #1f2937;
@@ -769,7 +752,7 @@ footer {
     color: #6b7280;
     text-decoration: none;
     transition: color 0.3s;
-    font-family: 'Glacial Indifference', sans-serif;
+    font-family: 'Neue Montreal', sans-serif;
     margin-bottom: 0.75rem;
     display: block;
 }

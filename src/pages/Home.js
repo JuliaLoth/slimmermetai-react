@@ -61,7 +61,7 @@ const HeroTitle = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   font-weight: 700;
   
   @media (max-width: 768px) {
@@ -110,7 +110,7 @@ const ServicesSection = styled.section`
 
 const SectionTitle = styled.h2`
   text-align: center;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   font-weight: bold;
   font-size: 2.2rem;
   line-height: 1.3;
@@ -184,7 +184,7 @@ const ServiceTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #333;
-  font-family: 'Glacial Indifference', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
   transition: color 0.3s ease;
   
   ${ServiceCard}:hover & {
@@ -463,7 +463,7 @@ const Home = () => {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                fontFamily: 'Glacial Indifference, sans-serif'
+                fontFamily: 'Neue Montreal, sans-serif'
               }}>
                 Waar anderen stoppen, gaan wij verder
               </h2>
