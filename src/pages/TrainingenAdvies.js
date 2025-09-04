@@ -186,9 +186,7 @@ const TrainingenAdvies = () => {
           <HeroContent>
             <PageTitle>Werk slimmer, niet harder - op jouw manier</PageTitle>
             <PageSubtitle>
-              Vaak krijgen bedrijven een technische oplossing zonder goede begeleiding. Dan moeten zij hun 
-              processen aanpassen naar de techniek. Ik draai dit om: ik help je AI integreren in je bestaande 
-              werkwijze, zodat technologie jou versterkt in plaats van compliceert.
+              Overal hoor je over AI, maar niemand legt uit hoe het écht gaat helpen in jouw bedrijf. Standaard training blijft bij theorie. Ik bied begeleiding op maat zodat technologie jou en je bedrijf versterkt.
             </PageSubtitle>
           </HeroContent>
         </Container>
@@ -202,7 +200,7 @@ const TrainingenAdvies = () => {
             <ServiceHeader>
               <ServiceIcon>🎯</ServiceIcon>
               <ServiceInfo>
-                <ServiceTitle>AI-Integratie Traject</ServiceTitle>
+                <ServiceTitle>AI-integratie traject</ServiceTitle>
                 <ServiceTagline>Voor ondernemers die AI willen adopteren maar niet weten waar te beginnen</ServiceTagline>
               </ServiceInfo>
             </ServiceHeader>
@@ -235,7 +233,7 @@ const TrainingenAdvies = () => {
             <ServiceHeader>
               <ServiceIcon>🎫</ServiceIcon>
               <ServiceInfo>
-                <ServiceTitle>Strippenkaart Begeleiding</ServiceTitle>
+                <ServiceTitle>Strippenkaart begeleiding</ServiceTitle>
                 <ServiceTagline>Voor klanten die doorlopende AI-ondersteuning willen</ServiceTagline>
               </ServiceInfo>
             </ServiceHeader>
@@ -268,7 +266,7 @@ const TrainingenAdvies = () => {
             <ServiceHeader>
               <ServiceIcon>🚀</ServiceIcon>
               <ServiceInfo>
-                <ServiceTitle>Specifieke AI-Projecten</ServiceTitle>
+                <ServiceTitle>Specifieke AI-projecten</ServiceTitle>
                 <ServiceTagline>Voor bedrijven met concrete AI-uitdagingen</ServiceTagline>
               </ServiceInfo>
             </ServiceHeader>
@@ -342,8 +340,29 @@ const TrainingenAdvies = () => {
               }}>
                 Plan een Gesprek
               </a>
-              <div style={{fontSize: '0.85rem', color: '#666', marginTop: '0.5rem'}}>
-                Of email: <a href="mailto:julia@loth.nl" style={{color: '#667eea', textDecoration: 'none'}}>julia@loth.nl</a>
+              <div style={{marginTop: '1rem'}}>
+                <a href="mailto:julia@loth.nl" style={{
+                  display: 'inline-block',
+                  background: 'transparent',
+                  color: '#667eea',
+                  padding: '0.6rem 1.2rem',
+                  borderRadius: '20px',
+                  textDecoration: 'none',
+                  fontWeight: '500',
+                  fontSize: '0.9rem',
+                  border: '1px solid #667eea',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = '#667eea';
+                  e.target.style.color = 'white';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = 'transparent';
+                  e.target.style.color = '#667eea';
+                }}>
+                  📧 julia@loth.nl
+                </a>
               </div>
             </div>
           </div>

@@ -263,7 +263,7 @@ const Contact = () => {
         <Container>
           <ContactGrid>
             <ContactCard>
-              <ContactTitle>Gratis Kennismaking</ContactTitle>
+              <ContactTitle>Gratis kennismaking</ContactTitle>
               <ContactDescription>
                 <strong>Duur:</strong> 30 minuten (video call)<br/>
                 <strong>Kosten:</strong> Gratis, geen verplichtingen
@@ -290,7 +290,7 @@ const Contact = () => {
             </ContactCard>
             
             <ContactCard>
-              <ContactTitle>Andere Manieren van Contact</ContactTitle>
+              <ContactTitle>Andere manieren van contact</ContactTitle>
               <ContactDescription>
                 Stel gerust vragen of deel je situatie. Ik reageer altijd binnen 1 werkdag.
               </ContactDescription>
@@ -323,7 +323,7 @@ const Contact = () => {
           </ContactGrid>
 
           <FAQSection>
-            <FAQTitle>Veelgestelde Vragen</FAQTitle>
+            <FAQTitle>Veelgestelde vragen</FAQTitle>
             
             <FAQItem>
               <FAQQuestion>Q: Wat is het verschil tussen AI-training en AI-begeleiding?</FAQQuestion>

@@ -330,7 +330,7 @@ const Cases = () => {
           </div>
 
           <CaseCard>
-            <CaseTitle>Slimmer Offertes Schrijven voor Overheidsaanbestedingen</CaseTitle>
+            <CaseTitle>Slimmer offertes schrijven voor overheidsaanbestedingen</CaseTitle>
             <CaseSubtitle>Sr. Creative Consultant & AI lead bij complexe overheidsprojecten</CaseSubtitle>
             
             <CaseDescription>
@@ -371,7 +371,7 @@ const Cases = () => {
           </CaseCard>
 
           <CaseCard>
-            <CaseTitle>Startup Branding - Van Idee naar Identiteit</CaseTitle>
+            <CaseTitle>Startup branding - van idee naar identiteit</CaseTitle>
             <CaseSubtitle>AI-gestuurde branding aanpak voor kostenefficiënte merkbouw</CaseSubtitle>
             
             <CaseDescription>
@@ -452,8 +452,29 @@ const Cases = () => {
                 }}>
                   Plan een Gratis Kennismaking
                 </CTAButton>
-                <div style={{fontSize: '0.85rem', color: '#666', marginTop: '0.5rem'}}>
-                  Of email: <a href="mailto:julia@loth.nl" style={{color: '#667eea', textDecoration: 'none'}}>julia@loth.nl</a>
+                <div style={{marginTop: '1rem'}}>
+                  <a href="mailto:julia@loth.nl" style={{
+                    display: 'inline-block',
+                    background: 'transparent',
+                    color: '#667eea',
+                    padding: '0.6rem 1.2rem',
+                    borderRadius: '20px',
+                    textDecoration: 'none',
+                    fontWeight: '500',
+                    fontSize: '0.9rem',
+                    border: '1px solid #667eea',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.background = '#667eea';
+                    e.target.style.color = 'white';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.background = 'transparent';
+                    e.target.style.color = '#667eea';
+                  }}>
+                    📧 julia@loth.nl
+                  </a>
                 </div>
               </div>
             </div>

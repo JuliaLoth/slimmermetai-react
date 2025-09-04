@@ -217,6 +217,49 @@ const ServiceContent = styled.div`
   }
 `;
 
+const ProcessContainer = styled.div`
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+`;
+
+const ProcessCard = styled(ServiceCard)`
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+`;
+
+const ProcessArrow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  margin: 0 1rem;
+  
+  @media (max-width: 768px) {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
+`;
+
+const ArrowIcon = styled.div`
+  font-size: 2rem;
+  color: #667eea;
+  font-weight: bold;
+`;
+
 
 const Home = () => {
   return (
@@ -224,18 +267,8 @@ const Home = () => {
       <HeroSection>
         <Container>
           <HeroContent>
-            <HeroTitle>Werk slimmer, niet harder</HeroTitle>
-            <HeroSubtitle>AI-adoptie die past bij hoe jij werkt, niet andersom</HeroSubtitle>
-            <div style={{
-              fontSize: '1.1rem',
-              color: '#6b7280',
-              marginBottom: '2.5rem',
-              lineHeight: '1.7'
-            }}>
-              Te vaak krijgen ondernemers een technische AI-doos voorgeschoteld zonder echte begeleiding. 
-              Ik help je ontdekken hoe AI jouw leven makkelijker én leuker maakt - door samen te experimenteren 
-              en te kijken hoe je meer tijd overhoudt voor wat echt belangrijk is.
-            </div>
+            <HeroTitle>Maak AI winstgevend voor jouw bedrijf</HeroTitle>
+            <HeroSubtitle>Met advies op maat zorg ik dat AI jouw bedrijfsvoering versterkt, zodat je meer tijd krijgt voor wat echt telt.</HeroSubtitle>
             <div>
               <CTAButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer" style={{marginRight: '1rem'}}>
                 Plan een gratis kennismaking
@@ -317,15 +350,8 @@ const Home = () => {
         <Container>
           <SectionTitle>Ontdek wat AI voor jou kan doen</SectionTitle>
           
-          <div style={{
-            display: 'flex',
-            alignItems: 'stretch',
-            gap: '2rem',
-            marginTop: '3rem',
-            flexWrap: 'wrap',
-            justifyContent: 'center'
-          }}>
-            <ServiceCard style={{flex: '1', minWidth: '280px', maxWidth: '350px'}}>
+          <ProcessContainer>
+            <ProcessCard>
               <ServiceContent>
                 <div style={{
                   background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -341,29 +367,19 @@ const Home = () => {
                   margin: '0 auto 1.5rem',
                   fontWeight: 'bold'
                 }}>1</div>
-                <ServiceTitle>Kennismaking & Analyse</ServiceTitle>
+                <ServiceTitle>Kennismaking en analyse</ServiceTitle>
                 <ServiceDescription>
                   We beginnen met jouw huidige werkwijze. Geen standaard oplossingen, 
                   maar maatwerk dat past bij hoe jij denkt en werkt.
                 </ServiceDescription>
               </ServiceContent>
-            </ServiceCard>
+            </ProcessCard>
 
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              minWidth: '40px',
-              margin: '0 1rem'
-            }}>
-              <div style={{
-                fontSize: '2rem',
-                color: '#667eea',
-                fontWeight: 'bold'
-              }}>→</div>
-            </div>
+            <ProcessArrow>
+              <ArrowIcon>→</ArrowIcon>
+            </ProcessArrow>
 
-            <ServiceCard style={{flex: '1', minWidth: '280px', maxWidth: '350px'}}>
+            <ProcessCard>
               <ServiceContent>
                 <div style={{
                   background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -379,29 +395,19 @@ const Home = () => {
                   margin: '0 auto 1.5rem',
                   fontWeight: 'bold'
                 }}>2</div>
-                <ServiceTitle>Hands-on Integratie</ServiceTitle>
+                <ServiceTitle>Hands-on integratie</ServiceTitle>
                 <ServiceDescription>
                   Een halve dag praktische training met jouw eigen documenten. 
                   Een beetje theorie, daarna direct aan de slag.
                 </ServiceDescription>
               </ServiceContent>
-            </ServiceCard>
+            </ProcessCard>
 
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              minWidth: '40px',
-              margin: '0 1rem'
-            }}>
-              <div style={{
-                fontSize: '2rem',
-                color: '#667eea',
-                fontWeight: 'bold'
-              }}>→</div>
-            </div>
+            <ProcessArrow>
+              <ArrowIcon>→</ArrowIcon>
+            </ProcessArrow>
 
-            <ServiceCard style={{flex: '1', minWidth: '280px', maxWidth: '350px'}}>
+            <ProcessCard>
               <ServiceContent>
                 <div style={{
                   background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -417,14 +423,14 @@ const Home = () => {
                   margin: '0 auto 1.5rem',
                   fontWeight: 'bold'
                 }}>3</div>
-                <ServiceTitle>Doorlopende Begeleiding</ServiceTitle>
+                <ServiceTitle>Doorlopende begeleiding</ServiceTitle>
                 <ServiceDescription>
                   Via strippenkaart blijf ik beschikbaar voor vragen, nieuwe tools en optimalisaties. 
                   Zoals jij je klanten begeleidt, help ik jou groeien.
                 </ServiceDescription>
               </ServiceContent>
-            </ServiceCard>
-          </div>
+            </ProcessCard>
+          </ProcessContainer>
           
           <div style={{
             textAlign: 'center',
@@ -465,7 +471,7 @@ const Home = () => {
                 backgroundClip: 'text',
                 fontFamily: 'Neue Montreal, sans-serif'
               }}>
-                Waar anderen stoppen, gaan wij verder
+                Meer dan alleen ChatGPT-training
               </h2>
               
               <div style={{
@@ -479,8 +485,8 @@ const Home = () => {
                   <div style={{color: '#666'}}>kostenbesparing bij startup branding</div>
                 </div>
                 <div>
-                  <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#667eea'}}>18+</div>
-                  <div style={{color: '#666'}}>bedrijven geholpen</div>
+                  <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#667eea'}}>15+</div>
+                  <div style={{color: '#666'}}>bedrijven geholpen in complexe veranderingen</div>
                 </div>
                 <div>
                   <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#667eea'}}>10 jaar</div>
@@ -534,17 +540,8 @@ const Home = () => {
           </div>
           
           <div style={{textAlign: 'center'}}>
-            <div style={{marginBottom: '1rem'}}>
-              <CTAButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer" style={{marginRight: '1rem'}}>
-                Plan gratis kennismaking (30 min)
-              </CTAButton>
-            </div>
-            <CTAButton href="#" style={{
-              background: 'transparent',
-              color: '#667eea',
-              border: '2px solid #667eea'
-            }}>
-              Download AI-checklist voor MKB
+            <CTAButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer">
+              Plan gratis kennismaking (30 min)
             </CTAButton>
           </div>
         </Container>

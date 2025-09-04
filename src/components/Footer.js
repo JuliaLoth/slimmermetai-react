@@ -146,8 +146,7 @@ const Footer = () => {
           <FooterSection>
             <FooterTitle>Slimmer met AI</FooterTitle>
             <FooterText>
-              Ontdek de kracht van Artificial Intelligence voor jouw persoonlijke 
-              en professionele groei. Van praktische trainingen tot strategisch advies.
+              AI-begeleiding die past bij hoe jij werkt. Werk slimmer, niet harder - ontdek wat mogelijk is voor jouw bedrijf.
             </FooterText>
             <SocialLinks>
               <SocialLink href="https://linkedin.com/in/julia-loth" target="_blank" rel="noopener noreferrer">
