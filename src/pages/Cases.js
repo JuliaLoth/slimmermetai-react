@@ -175,32 +175,6 @@ const InsightBox = styled.div`
 `;
 
 
-const StatLabel = styled.div`
-  font-size: 1rem;
-  opacity: 0.9;
-`;
-
-const CTASection = styled.div`
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 4rem;
-  border-radius: 20px;
-  text-align: center;
-  color: white;
-  
-  @media (max-width: 768px) {
-    padding: 3rem 2rem;
-  }
-`;
-
-const CTATitle = styled.h2`
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-family: 'Neue Montreal', sans-serif;
-  
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-`;
 
 const CTAButton = styled.a`
   display: inline-block;
