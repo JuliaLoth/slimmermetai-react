@@ -114,22 +114,8 @@ const MainContent = styled.div`
   border: 1px solid #e9ecef;
 `;
 
-const SubstackHeader = styled.div`
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 2rem;
-  text-align: center;
-`;
 
-const SubstackTitle = styled.h2`
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-`;
 
-const SubstackDescription = styled.p`
-  opacity: 0.9;
-  font-size: 1.1rem;
-`;
 
 const SubstackFeedContainer = styled.div`
   min-height: 400px;
