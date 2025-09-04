@@ -184,10 +184,11 @@ const TrainingenAdvies = () => {
       <PageHero>
         <Container>
           <HeroContent>
-            <PageTitle>Trainingen & Advies</PageTitle>
+            <PageTitle>Werk slimmer, niet harder - op jouw manier</PageTitle>
             <PageSubtitle>
-              Persoonlijke begeleiding en praktische trainingen om AI optimaal in te zetten 
-              voor jouw specifieke doelen en uitdagingen.
+              Vaak krijgen bedrijven een technische oplossing zonder goede begeleiding. Dan moeten zij hun 
+              processen aanpassen naar de techniek. Ik draai dit om: ik help je AI integreren in je bestaande 
+              werkwijze, zodat technologie jou versterkt in plaats van compliceert.
             </PageSubtitle>
           </HeroContent>
         </Container>
@@ -199,71 +200,89 @@ const TrainingenAdvies = () => {
         <ServicesGrid>
           <ServiceSection>
             <ServiceHeader>
-              <ServiceIcon>🎓</ServiceIcon>
+              <ServiceIcon>🎯</ServiceIcon>
               <ServiceInfo>
-                <ServiceTitle>AI Trainingen & Workshops</ServiceTitle>
-                <ServiceTagline>Van beginner tot expert niveau</ServiceTagline>
+                <ServiceTitle>AI-Integratie Traject</ServiceTitle>
+                <ServiceTagline>Voor ondernemers die AI willen adopteren maar niet weten waar te beginnen</ServiceTagline>
               </ServiceInfo>
             </ServiceHeader>
             
             <ServiceDescription>
-              Praktische, hands-on trainingen waarin je leert hoe je AI tools zoals ChatGPT, 
-              Claude, en andere AI-platforms effectief kunt inzetten in jouw dagelijkse werk. 
-              Alle trainingen zijn aangepast aan jouw niveau en specifieke behoeften.
+              <strong>Duur:</strong> 1 dag hands-on + 4 weken begeleiding + retrospective<br/><br/>
+              Een compleet traject van kennismaking tot werkende AI-workflows die je échte tijd opleveren.
             </ServiceDescription>
             
             <FeaturesList>
-              <FeatureItem>Prompt engineering en optimalisatie</FeatureItem>
-              <FeatureItem>AI tools voor productiviteit en creativiteit</FeatureItem>
-              <FeatureItem>Automatisering van repetitieve taken</FeatureItem>
-              <FeatureItem>AI voor content creatie en marketing</FeatureItem>
-              <FeatureItem>Praktijkgericht met echte use cases</FeatureItem>
+              <FeatureItem>Kick-off gesprek - Jouw workflows en uitdagingen in kaart</FeatureItem>
+              <FeatureItem>Praktische training (halve dag) - Hands-on met jouw documenten</FeatureItem>
+              <FeatureItem>Zelfstandig aan de slag - 4 weken experimenteren en toepassen</FeatureItem>
+              <FeatureItem>Retrospective - Wat werkt, wat kan beter, hoe door?</FeatureItem>
+              <FeatureItem>Resultaat: Werkende AI-workflows die je tijd opleveren</FeatureItem>
             </FeaturesList>
+            
+            <div style={{
+              background: '#f8f9fa',
+              padding: '1rem',
+              borderRadius: '8px',
+              marginTop: '1rem',
+              textAlign: 'center'
+            }}>
+              <strong>Investering:</strong> Op maat, afhankelijk van complexiteit
+            </div>
           </ServiceSection>
 
           <ServiceSection>
             <ServiceHeader>
-              <ServiceIcon>💼</ServiceIcon>
+              <ServiceIcon>🎫</ServiceIcon>
               <ServiceInfo>
-                <ServiceTitle>Strategisch AI Advies</ServiceTitle>
-                <ServiceTagline>Implementatie en transformatie</ServiceTagline>
+                <ServiceTitle>Strippenkaart Begeleiding</ServiceTitle>
+                <ServiceTagline>Voor klanten die doorlopende AI-ondersteuning willen</ServiceTagline>
               </ServiceInfo>
             </ServiceHeader>
             
             <ServiceDescription>
-              Persoonlijk advies over hoe AI jouw bedrijf of carrière naar het volgende niveau 
-              kan tillen. Van strategie tot implementatie, we helpen je de juiste stappen te zetten.
+              <strong>Hoe het werkt:</strong> Koop strips vooraf, gebruik wanneer je ze nodig hebt<br/><br/>
+              Geen abonnement, wel zekerheid. Lagere drempel om hulp te vragen dan per uur afrekenen.
             </ServiceDescription>
             
             <FeaturesList>
-              <FeatureItem>AI readiness assessment</FeatureItem>
-              <FeatureItem>Strategische implementatieplannen</FeatureItem>
-              <FeatureItem>ROI analyse en business case ontwikkeling</FeatureItem>
-              <FeatureItem>Change management en teamtraining</FeatureItem>
-              <FeatureItem>Ongoing support en optimalisatie</FeatureItem>
+              <FeatureItem>Nieuwe AI-tool evalueren</FeatureItem>
+              <FeatureItem>Workflow optimaliseren</FeatureItem>
+              <FeatureItem>Specifieke uitdaging oplossen</FeatureItem>
+              <FeatureItem>Team trainen in AI-gebruik</FeatureItem>
+              <FeatureItem>Strategische AI-vragen</FeatureItem>
             </FeaturesList>
+            
+            <div style={{
+              background: '#f8f9fa',
+              padding: '1rem',
+              borderRadius: '8px',
+              marginTop: '1rem',
+              textAlign: 'center'
+            }}>
+              <strong>Beschikbaar:</strong> Basis (5 strips) en Premium (10 strips)
+            </div>
           </ServiceSection>
 
           <ServiceSection>
             <ServiceHeader>
               <ServiceIcon>🚀</ServiceIcon>
               <ServiceInfo>
-                <ServiceTitle>Persoonlijke Coaching</ServiceTitle>
-                <ServiceTagline>One-on-one begeleiding</ServiceTagline>
+                <ServiceTitle>Specifieke AI-Projecten</ServiceTitle>
+                <ServiceTagline>Voor bedrijven met concrete AI-uitdagingen</ServiceTagline>
               </ServiceInfo>
             </ServiceHeader>
             
             <ServiceDescription>
-              Individuele coaching sessies waarin we samen jouw specifieke AI doelen en 
-              uitdagingen aanpakken. Perfect voor professionals die snel vooruitgang willen boeken.
+              <strong>Aanpak:</strong> Per-project pricing voor maatwerk oplossingen<br/><br/>
+              <strong>Proces:</strong> Analyse → Strategie → Hands-on integratie → Overdracht
             </ServiceDescription>
             
             <FeaturesList>
-              <FeatureItem>Gepersonaliseerde leertrajecten</FeatureItem>
-              <FeatureItem>Directe feedback en optimalisatie</FeatureItem>
-              <FeatureItem>Flexibele planning en locatie</FeatureItem>
-              <FeatureItem>Focus op jouw specifieke doelen</FeatureItem>
-              <FeatureItem>Praktische implementatie support</FeatureItem>
+              <FeatureItem>Van gesprek tot offerte - Verkoopcalls automatisch omzetten naar overtuigende offertes</FeatureItem>
+              <FeatureItem>Content strategie met AI - LinkedIn posts en blogs genereren vanuit expertise</FeatureItem>
+              <FeatureItem>Kennisbeheer systeem - Google NotebookLM als "second brain" inrichten</FeatureItem>
+              <FeatureItem>Training ontwerp - AI-gestuurde workshop en presentatie creatie</FeatureItem>
             </FeaturesList>
           </ServiceSection>
         </ServicesGrid>
@@ -301,26 +320,32 @@ const TrainingenAdvies = () => {
             }}>
               Neem contact op voor een vrijblijvend gesprek over hoe AI jouw doelen kan ondersteunen.
             </p>
-            <a href="mailto:julia@loth.nl" style={{
-              display: 'inline-block',
-              background: '#667eea',
-              color: 'white',
-              padding: '0.8rem 1.5rem',
-              borderRadius: '25px',
-              textDecoration: 'none',
-              fontWeight: '600',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.background = '#764ba2';
-              e.target.style.transform = 'translateY(-2px)';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.background = '#667eea';
-              e.target.style.transform = 'translateY(0)';
-            }}>
-              Plan een Gesprek
-            </a>
+            <div style={{textAlign: 'center'}}>
+              <a href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer" style={{
+                display: 'inline-block',
+                background: '#667eea',
+                color: 'white',
+                padding: '0.8rem 1.5rem',
+                borderRadius: '25px',
+                textDecoration: 'none',
+                fontWeight: '600',
+                transition: 'all 0.3s ease',
+                marginBottom: '0.5rem'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = '#764ba2';
+                e.target.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = '#667eea';
+                e.target.style.transform = 'translateY(0)';
+              }}>
+                Plan een Gesprek
+              </a>
+              <div style={{fontSize: '0.85rem', color: '#666', marginTop: '0.5rem'}}>
+                Of email: <a href="mailto:julia@loth.nl" style={{color: '#667eea', textDecoration: 'none'}}>julia@loth.nl</a>
+              </div>
+            </div>
           </div>
         </div>
         </Container>

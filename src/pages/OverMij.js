@@ -291,9 +291,11 @@ const OverMij = () => {
       <PageHero>
         <Container>
           <HeroContent>
-            <PageTitle>Van innovator naar AI-expert</PageTitle>
+            <PageTitle>Hi, ik ben Julia - jouw AI-begeleider</PageTitle>
             <PageSubtitle>
-              Herkenbaar? Je weet dat AI enorme kansen biedt, maar tussen alle buzzwords en technische termen vraag je je af: hoe vertaal ik dit concreet naar mijn dagelijkse werk? Precies daar ligt mijn expertise.
+              Ik voel me thuis in complexe omgevingen en ben altijd bereid mijn handen uit de mouwen te steken. 
+              Naast het begeleiden van trajecten van beleid naar uitvoering fungeer ik als spil tussen communicatie, 
+              concept en techniek. Als innovator zorg ik voor vernieuwing die werkt in de praktijk.
             </PageSubtitle>
           </HeroContent>
         </Container>
@@ -310,116 +312,138 @@ const OverMij = () => {
             </ProfileImageContainer>
             
             <AboutHeroContent>
-              <HeroTitle>Over mijzelf</HeroTitle>
-              <HeroSubtitle>Als innovator vertaal ik complexe vraagstukken naar concrete oplossingen</HeroSubtitle>
+              <HeroTitle>Van Datalab naar AI-begeleiding</HeroTitle>
+              <HeroSubtitle>Mijn verhaal</HeroSubtitle>
               <HeroDescription>
-                Met mijn hands-on mentaliteit breng ik communicatie, concept en techniek samen om vernieuwing te realiseren die écht werkt in de praktijk.
+                Als teamlead van het datalab bij Provincie Noord-Brabant heb ik ervaren hoe krachtig het is 
+                wanneer mensen de lol ontdekken van nieuwe technologie. Ons team groeide in anderhalf jaar 
+                van onbekend naar strategische sparringpartner - niet door techniek op te leggen, 
+                maar door samen te experimenteren.
               </HeroDescription>
               <HeroDescription>
-                In mijn professionele reis heb ik me gespecialiseerd in het toegankelijk maken van geavanceerde technologie. Ik geloof in:
+                <strong>Waarom ik "Slimmer met AI" oprichtte</strong><br/>
+                Ik zie te vaak dat ondernemers vastzitten in repetitieve taken terwijl AI kan helpen. 
+                Mijn missie: mensen laten ontdekken hoe AI hun leven makkelijker én leuker maakt. 
+                Niet door een technische doos neer te zetten, maar door samen te ontdekken wat mogelijk is.
               </HeroDescription>
-              <ul style={{
-                listStyle: 'none',
-                padding: 0,
-                margin: '1.5rem 0',
-                color: '#666',
-                textAlign: 'left'
-              }}>
-                <li style={{marginBottom: '0.5rem'}}>• Praktische AI-toepassingen die direct implementeerbaar zijn</li>
-                <li style={{marginBottom: '0.5rem'}}>• Meetbare resultaten in plaats van vage beloftes</li>
-                <li style={{marginBottom: '0.5rem'}}>• Technologie als versterker van menselijke creativiteit en productiviteit</li>
-                <li style={{marginBottom: '0.5rem'}}>• Kennisdeling die professionals op elk niveau helpt mee te komen</li>
-              </ul>
-              <ContactButton href="mailto:julia@loth.nl">
-                Laten we koffie drinken ☕
-              </ContactButton>
+              <div style={{textAlign: 'center'}}>
+                <ContactButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer">
+                  Plan een gesprek
+                </ContactButton>
+                <div style={{fontSize: '0.85rem', color: '#666', marginTop: '0.5rem'}}>
+                  Of email: <a href="mailto:julia@loth.nl" style={{color: '#667eea', textDecoration: 'none'}}>julia@loth.nl</a>
+                </div>
+              </div>
             </AboutHeroContent>
           </HeroSection>
 
-          <SectionTitle>Mijn Aanpak</SectionTitle>
+          <SectionTitle>Mijn Expertise - 10 jaar innovatie-ervaring</SectionTitle>
           
           <ContentGrid>
             <ContentCard>
-              <CardIcon>🎯</CardIcon>
-              <CardTitle>AI zonder de Bullshit</CardTitle>
+              <CardIcon>🎨</CardIcon>
+              <CardTitle>Sr. Creative Consultant & AI lead</CardTitle>
               <CardText>
-                Geen jargon, geen buzzwords, geen "paradigma shifts". 
-                Gewoon praktische tools die je morgen kunt gebruiken. 
-                Want AI is geen raketwetenschap - het is gewoon heel handig gereedschap.
+                AI-integratie voor creatieve projecten en complexe overheidsaanbestedingen.
               </CardText>
             </ContentCard>
 
             <ContentCard>
-              <CardIcon>🚀</CardIcon>
-              <CardTitle>Van "Oh shit" naar "Oh, dat was makkelijk"</CardTitle>
+              <CardIcon>💼</CardIcon>
+              <CardTitle>Strategisch informatieadviseur</CardTitle>
               <CardText>
-                Herinner je je die keer dat je 4 uur bezig was met een rapport 
-                dat ChatGPT in 10 minuten had kunnen maken? Ja, ik ook. 
-                Laten we zorgen dat dat niet meer gebeurt.
+                IT-transformaties begeleid bij ministeries en complexe organisaties.
               </CardText>
             </ContentCard>
 
             <ContentCard>
-              <CardIcon>🤝</CardIcon>
-              <CardTitle>Ik Snap Je Struggles</CardTitle>
+              <CardIcon>🔄</CardIcon>
+              <CardTitle>Scrummaster & procesadviseur</CardTitle>
               <CardText>
-                Als iemand die ooit een belangrijke deadline miste door een 
-                verdwaald bestand (true story), snap ik de chaos. Daarom help 
-                ik je systemen te bouwen die zelfs op je slechtste dag werken.
+                Teams geholpen optimale resultaten te behalen door proces-optimalisatie.
+              </CardText>
+            </ContentCard>
+
+            <ContentCard>
+              <CardIcon>🧪</CardIcon>
+              <CardTitle>Opdrachnemer datalab</CardTitle>
+              <CardText>
+                Innovaties vertaald naar tastbare resultaten, van onbekend naar strategische partner.
               </CardText>
             </ContentCard>
           </ContentGrid>
 
-          <QuoteSection>
-            <Quote>
-              "De beste manier om productief te zijn? 
-              Wees strategisch lui en laat AI het zware werk doen."
-            </Quote>
-            <QuoteAuthor>- Julia Loth (professional luiwammes)</QuoteAuthor>
-          </QuoteSection>
+          <div style={{
+            padding: '3rem 0',
+            textAlign: 'center'
+          }}>
+            <div style={{
+              maxWidth: '700px',
+              margin: '0 auto',
+              padding: '3rem',
+              background: 'rgba(255, 255, 255, 0.95)',
+              borderRadius: '20px',
+              boxShadow: '0 15px 40px rgba(0, 0, 0, 0.15)'
+            }}>
+              <div style={{
+                background: 'rgba(102, 126, 234, 0.1)',
+                padding: '2rem',
+                borderRadius: '15px',
+                fontStyle: 'italic',
+                fontSize: '1.2rem',
+                lineHeight: '1.6',
+                color: '#333',
+                borderLeft: '4px solid #667eea'
+              }}>
+                "Creativiteit, humor, out-of-the-box denken en weigeren genoegen te nemen met 'nee' 
+                staan centraal in ons team. Deze waarden neem ik mee naar elke samenwerking."
+              </div>
+              <div style={{
+                marginTop: '1rem',
+                fontWeight: '600',
+                fontStyle: 'normal',
+                color: '#667eea'
+              }}>
+                - Julia Loth
+              </div>
+            </div>
+          </div>
 
-          <SectionTitle>Wat Kan Ik Voor Je Betekenen?</SectionTitle>
+          <SectionTitle>Certificering & Studie</SectionTitle>
           
           <SkillsList>
             <SkillCard>
-              <SkillTitle>Prompt Engineering</SkillTitle>
+              <SkillTitle>PRINCE2 Foundation</SkillTitle>
               <SkillDescription>
-                "De kunst van het precies de juiste vragen stellen (en ja, dat kun je leren)"
+                Project Management certificering
               </SkillDescription>
             </SkillCard>
 
             <SkillCard>
-              <SkillTitle>Business Automatisering</SkillTitle>
+              <SkillTitle>DevOps Foundation</SkillTitle>
               <SkillDescription>
-                "Voor als je liever koffie drinkt dan Excel-sheets invullen"
+                Technische samenwerking en procesoptimalisatie
               </SkillDescription>
             </SkillCard>
 
             <SkillCard>
-              <SkillTitle>Content Strategie</SkillTitle>
+              <SkillTitle>Agile leiderschapstraining</SkillTitle>
               <SkillDescription>
-                "Schrijf 1x, gebruik 100x - mijn favoriete strategie"
+                Teams begeleiden in verandering
               </SkillDescription>
             </SkillCard>
 
             <SkillCard>
-              <SkillTitle>Training & Coaching</SkillTitle>
+              <SkillTitle>Beeldend kunstenaar</SkillTitle>
               <SkillDescription>
-                "Zonder wollig gedoe, gewoon doen wat werkt"
+                Nieuwe Akademie Utrecht - creativiteit en conceptdenken
               </SkillDescription>
             </SkillCard>
 
             <SkillCard>
-              <SkillTitle>Digitale Transformatie</SkillTitle>
+              <SkillTitle>Process & Information Management</SkillTitle>
               <SkillDescription>
-                "Fancy woorden voor: we gaan het makkelijker maken"
-              </SkillDescription>
-            </SkillCard>
-
-            <SkillCard>
-              <SkillTitle>Change Management</SkillTitle>
-              <SkillDescription>
-                "Je team overtuigen dat AI geen boeman is"
+                Bestuursacademie - strategische procesoptimalisatie
               </SkillDescription>
             </SkillCard>
           </SkillsList>

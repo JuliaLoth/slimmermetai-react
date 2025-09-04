@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import GoogleCalendarButton from '../components/GoogleCalendarButton';
 
 const PageContainer = styled.div`
   min-height: calc(100vh - 80px);
@@ -216,18 +217,6 @@ const ServiceContent = styled.div`
   }
 `;
 
-const ServiceLink = styled(Link)`
-  color: #5852f2;
-  font-weight: 600;
-  text-decoration: none;
-  font-family: 'Glacial Indifference', sans-serif;
-  transition: color 0.3s ease;
-  margin-top: auto;
-  
-  &:hover {
-    color: #db2777;
-  }
-`;
 
 const Home = () => {
   return (
@@ -235,59 +224,329 @@ const Home = () => {
       <HeroSection>
         <Container>
           <HeroContent>
-            <HeroTitle>Slimmer met AI</HeroTitle>
-            <HeroSubtitle>
-              Ontdek hoe Artificial Intelligence jouw business en persoonlijke groei kan versnellen. 
-              Van praktische trainingen tot strategisch advies.
-            </HeroSubtitle>
-            <CTAButton to="/trainingen-advies">
-              Bekijk Onze Diensten
-            </CTAButton>
+            <HeroTitle>Werk slimmer, niet harder</HeroTitle>
+            <HeroSubtitle>AI-adoptie die past bij hoe jij werkt, niet andersom</HeroSubtitle>
+            <div style={{
+              fontSize: '1.1rem',
+              color: '#6b7280',
+              marginBottom: '2.5rem',
+              lineHeight: '1.7'
+            }}>
+              Te vaak krijgen ondernemers een technische AI-doos voorgeschoteld zonder echte begeleiding. 
+              Ik help je ontdekken hoe AI jouw leven makkelijker én leuker maakt - door samen te experimenteren 
+              en te kijken hoe je meer tijd overhoudt voor wat echt belangrijk is.
+            </div>
+            <div>
+              <CTAButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer" style={{marginRight: '1rem'}}>
+                Plan een gratis kennismaking
+              </CTAButton>
+              <CTAButton to="/hoe-ik-werk" style={{
+                background: 'transparent',
+                color: '#667eea',
+                border: '2px solid #667eea'
+              }}>
+                Bekijk hoe ik werk
+              </CTAButton>
+            </div>
           </HeroContent>
         </Container>
       </HeroSection>
 
       <ServicesSection>
         <Container>
-          <SectionTitle>Wat Kunnen We Voor Je Doen?</SectionTitle>
+          <SectionTitle>Van AI-chaos naar AI-controle</SectionTitle>
+          <div style={{
+            textAlign: 'center',
+            fontSize: '1.2rem',
+            color: '#6b7280',
+            marginBottom: '3rem',
+            maxWidth: '800px',
+            margin: '0 auto 3rem',
+            lineHeight: '1.6'
+          }}>
+            Jij kent het vast wel: overal hoor je over AI, maar niemand legt uit hoe het écht gaat helpen in jouw bedrijf. 
+            Ik ben geen gewone AI-trainer die theorie verkondigt. Als strategische innovator met 10 jaar ervaring in complexe 
+            organisaties help ik je AI integreren op een manier die aansluit bij hoe je al werkt.
+          </div>
           
           <ServicesGrid>
             <ServiceCard>
               <ServiceContent>
-                <ServiceIcon>🎯</ServiceIcon>
-                <ServiceTitle>AI Trainingen</ServiceTitle>
+                <ServiceIcon>✨</ServiceIcon>
+                <ServiceTitle>Enthousiaste begeleiding</ServiceTitle>
                 <ServiceDescription>
-                  Praktische workshops en trainingen om AI tools effectief in te zetten 
-                  in jouw dagelijkse werk en bedrijfsprocessen.
+                  Ik laat je de lol van AI ontdekken in plaats van je te overweldigen
                 </ServiceDescription>
-                <ServiceLink to="/trainingen-advies">Meer Info →</ServiceLink>
               </ServiceContent>
             </ServiceCard>
 
             <ServiceCard>
               <ServiceContent>
-                <ServiceIcon>💡</ServiceIcon>
-                <ServiceTitle>Strategisch Advies</ServiceTitle>
+                <ServiceIcon>🛠️</ServiceIcon>
+                <ServiceTitle>Praktische integratie</ServiceTitle>
                 <ServiceDescription>
-                  Persoonlijk advies over AI implementatie, automatisering en 
-                  digitale transformatie voor jouw specifieke situatie.
+                  Geen theorie, maar hands-on werken met jouw eigen documenten
                 </ServiceDescription>
-                <ServiceLink to="/trainingen-advies">Meer Info →</ServiceLink>
               </ServiceContent>
             </ServiceCard>
 
             <ServiceCard>
               <ServiceContent>
-                <ServiceIcon>📈</ServiceIcon>
-                <ServiceTitle>Business Optimalisatie</ServiceTitle>
+                <ServiceIcon>🎨</ServiceIcon>
+                <ServiceTitle>Creatieve oplossingen</ServiceTitle>
                 <ServiceDescription>
-                  Ontdek hoe AI jouw bedrijfsprocessen kan verbeteren, kosten kan besparen 
-                  en nieuwe kansen kan creëren.
+                  Ik vind altijd wel een manier die past bij jouw situatie
                 </ServiceDescription>
-                <ServiceLink to="/trainingen-advies">Meer Info →</ServiceLink>
+              </ServiceContent>
+            </ServiceCard>
+
+            <ServiceCard>
+              <ServiceContent>
+                <ServiceIcon>🤝</ServiceIcon>
+                <ServiceTitle>Mensgerichte aanpak</ServiceTitle>
+                <ServiceDescription>
+                  AI dient jou, niet andersom
+                </ServiceDescription>
               </ServiceContent>
             </ServiceCard>
           </ServicesGrid>
+        </Container>
+      </ServicesSection>
+
+      <ServicesSection style={{background: 'rgba(248, 250, 252, 0.8)'}}>
+        <Container>
+          <SectionTitle>Ontdek wat AI voor jou kan doen</SectionTitle>
+          
+          <div style={{
+            display: 'flex',
+            alignItems: 'stretch',
+            gap: '2rem',
+            marginTop: '3rem',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
+          }}>
+            <ServiceCard style={{flex: '1', minWidth: '280px', maxWidth: '350px'}}>
+              <ServiceContent>
+                <div style={{
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  color: 'white',
+                  padding: '2rem',
+                  borderRadius: '50%',
+                  width: '80px',
+                  height: '80px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '2rem',
+                  margin: '0 auto 1.5rem',
+                  fontWeight: 'bold'
+                }}>1</div>
+                <ServiceTitle>Kennismaking & Analyse</ServiceTitle>
+                <ServiceDescription>
+                  We beginnen met jouw huidige werkwijze. Geen standaard oplossingen, 
+                  maar maatwerk dat past bij hoe jij denkt en werkt.
+                </ServiceDescription>
+              </ServiceContent>
+            </ServiceCard>
+
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: '40px',
+              margin: '0 1rem'
+            }}>
+              <div style={{
+                fontSize: '2rem',
+                color: '#667eea',
+                fontWeight: 'bold'
+              }}>→</div>
+            </div>
+
+            <ServiceCard style={{flex: '1', minWidth: '280px', maxWidth: '350px'}}>
+              <ServiceContent>
+                <div style={{
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  color: 'white',
+                  padding: '2rem',
+                  borderRadius: '50%',
+                  width: '80px',
+                  height: '80px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '2rem',
+                  margin: '0 auto 1.5rem',
+                  fontWeight: 'bold'
+                }}>2</div>
+                <ServiceTitle>Hands-on Integratie</ServiceTitle>
+                <ServiceDescription>
+                  Een halve dag praktische training met jouw eigen documenten. 
+                  Een beetje theorie, daarna direct aan de slag.
+                </ServiceDescription>
+              </ServiceContent>
+            </ServiceCard>
+
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: '40px',
+              margin: '0 1rem'
+            }}>
+              <div style={{
+                fontSize: '2rem',
+                color: '#667eea',
+                fontWeight: 'bold'
+              }}>→</div>
+            </div>
+
+            <ServiceCard style={{flex: '1', minWidth: '280px', maxWidth: '350px'}}>
+              <ServiceContent>
+                <div style={{
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  color: 'white',
+                  padding: '2rem',
+                  borderRadius: '50%',
+                  width: '80px',
+                  height: '80px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '2rem',
+                  margin: '0 auto 1.5rem',
+                  fontWeight: 'bold'
+                }}>3</div>
+                <ServiceTitle>Doorlopende Begeleiding</ServiceTitle>
+                <ServiceDescription>
+                  Via strippenkaart blijf ik beschikbaar voor vragen, nieuwe tools en optimalisaties. 
+                  Zoals jij je klanten begeleidt, help ik jou groeien.
+                </ServiceDescription>
+              </ServiceContent>
+            </ServiceCard>
+          </div>
+          
+          <div style={{
+            textAlign: 'center',
+            marginTop: '3rem',
+            padding: '2rem',
+            background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)',
+            borderRadius: '15px'
+          }}>
+            <strong style={{fontSize: '1.2rem', color: '#333'}}>
+              Resultaat: AI-workflows die blijven werken en je échte tijd opleveren.
+            </strong>
+          </div>
+        </Container>
+      </ServicesSection>
+
+      <ServicesSection>
+        <Container>
+          <div style={{
+            padding: '4rem 0',
+            textAlign: 'center'
+          }}>
+            <div style={{
+              maxWidth: '800px',
+              margin: '0 auto',
+              padding: '3rem',
+              background: 'rgba(255, 255, 255, 0.95)',
+              borderRadius: '20px',
+              boxShadow: '0 15px 40px rgba(0, 0, 0, 0.15)'
+            }}>
+              <h2 style={{
+                fontSize: '2.5rem',
+                fontWeight: '700',
+                marginBottom: '2rem',
+                color: '#333',
+                background: 'linear-gradient(135deg, #5852f2 0%, #db2777 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                fontFamily: 'Glacial Indifference, sans-serif'
+              }}>
+                Waar anderen stoppen, gaan wij verder
+              </h2>
+              
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                gap: '2rem',
+                margin: '3rem 0'
+              }}>
+                <div>
+                  <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#667eea'}}>80%</div>
+                  <div style={{color: '#666'}}>kostenbesparing bij startup branding</div>
+                </div>
+                <div>
+                  <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#667eea'}}>18+</div>
+                  <div style={{color: '#666'}}>bedrijven geholpen</div>
+                </div>
+                <div>
+                  <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#667eea'}}>10 jaar</div>
+                  <div style={{color: '#666'}}>innovatie-ervaring</div>
+                </div>
+              </div>
+              
+              <div style={{
+                background: 'rgba(102, 126, 234, 0.1)',
+                padding: '2rem',
+                borderRadius: '15px',
+                marginTop: '2rem',
+                fontStyle: 'italic',
+                fontSize: '1.1rem',
+                lineHeight: '1.6',
+                color: '#333',
+                borderLeft: '4px solid #667eea'
+              }}>
+                "Creativiteit, humor, out-of-the-box denken en weigeren genoegen te nemen met 'nee' staan centraal 
+                in ons team. Deze waarden neem ik mee naar elke samenwerking."
+              </div>
+              
+              <div style={{marginTop: '3rem'}}>
+                <CTAButton to="/cases" style={{
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  color: 'white',
+                  marginRight: '1rem'
+                }}>
+                  Bekijk Cases
+                </CTAButton>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </ServicesSection>
+
+      <ServicesSection style={{background: 'rgba(248, 250, 252, 0.8)'}}>
+        <Container>
+          <SectionTitle>Klaar om slimmer te werken?</SectionTitle>
+          <div style={{
+            textAlign: 'center',
+            fontSize: '1.2rem',
+            color: '#6b7280',
+            marginBottom: '2rem',
+            maxWidth: '600px',
+            margin: '0 auto 2rem',
+            lineHeight: '1.6'
+          }}>
+            Laten we kijken hoe AI jouw bedrijf kan versterken. In een kort gesprek ontdekken we samen 
+            welke mogelijkheden het beste passen bij jouw manier van werken.
+          </div>
+          
+          <div style={{textAlign: 'center'}}>
+            <div style={{marginBottom: '1rem'}}>
+              <CTAButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer" style={{marginRight: '1rem'}}>
+                Plan gratis kennismaking (30 min)
+              </CTAButton>
+            </div>
+            <CTAButton href="#" style={{
+              background: 'transparent',
+              color: '#667eea',
+              border: '2px solid #667eea'
+            }}>
+              Download AI-checklist voor MKB
+            </CTAButton>
+          </div>
         </Container>
       </ServicesSection>
     </PageContainer>

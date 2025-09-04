@@ -8,6 +8,8 @@ import Home from './pages/Home';
 import TrainingenAdvies from './pages/TrainingenAdvies';
 import Nieuws from './pages/Nieuws';
 import OverMij from './pages/OverMij';
+import Cases from './pages/Cases';
+import Contact from './pages/Contact';
 
 const AppContainer = styled.div`
   min-height: 100vh;
@@ -61,8 +63,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/trainingen-advies" element={<TrainingenAdvies />} />
+            <Route path="/hoe-ik-werk" element={<TrainingenAdvies />} />
             <Route path="/nieuws" element={<Nieuws />} />
             <Route path="/over-mij" element={<OverMij />} />
+            <Route path="/cases" element={<Cases />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </MainContent>
         <Footer />

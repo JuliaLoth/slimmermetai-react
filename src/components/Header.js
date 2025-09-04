@@ -199,11 +199,18 @@ const Header = () => {
               Home
             </NavLink>
             <NavLink 
-              to="/trainingen-advies" 
-              active={location.pathname === '/trainingen-advies'}
+              to="/hoe-ik-werk" 
+              active={location.pathname === '/hoe-ik-werk' || location.pathname === '/trainingen-advies'}
               onClick={() => setIsMenuOpen(false)}
             >
-              Trainingen & Advies
+              Hoe ik werk
+            </NavLink>
+            <NavLink 
+              to="/cases" 
+              active={location.pathname === '/cases'}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Cases
             </NavLink>
             <NavLink 
               to="/nieuws" 
@@ -218,6 +225,13 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Over Mij
+            </NavLink>
+            <NavLink 
+              to="/contact" 
+              active={location.pathname === '/contact'}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
             </NavLink>
           </Nav>
           
