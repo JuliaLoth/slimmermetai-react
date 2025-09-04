@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
   background-color: #fff;
-  padding: 4rem 0 2rem;
+  padding: 3rem 0 2rem;
   margin-top: auto;
   box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
 `;
@@ -17,11 +17,17 @@ const Container = styled.div`
 
 const FooterContent = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem;
+  align-items: start;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 `;
 
 const FooterSection = styled.div`
@@ -32,7 +38,7 @@ const FooterSection = styled.div`
 const FooterTitle = styled.h4`
   font-family: 'Neue Montreal', sans-serif;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #1f2937;
   font-size: 1.2rem;
 `;
@@ -40,14 +46,18 @@ const FooterTitle = styled.h4`
 const FooterText = styled.p`
   color: #6b7280;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
 `;
 
 const FooterNav = styled.nav`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const FooterLink = styled(Link)`
@@ -55,8 +65,7 @@ const FooterLink = styled(Link)`
   text-decoration: none;
   transition: color 0.3s ease;
   font-family: 'Neue Montreal', sans-serif;
-  margin-bottom: 0.75rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   
   &:hover {
     color: #5852f2;
@@ -68,7 +77,7 @@ const ExternalLink = styled.a`
   text-decoration: none;
   transition: color 0.3s ease;
   font-family: 'Neue Montreal', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1rem;
   
   &:hover {
     color: #5852f2;
@@ -85,12 +94,12 @@ const ContactItem = styled.div`
   display: flex;
   align-items: center;
   color: #6b7280;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   
   &:before {
     content: "${props => props.icon}";
     margin-right: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -162,21 +171,11 @@ const Footer = () => {
             <FooterTitle>Navigatie</FooterTitle>
             <FooterNav>
               <FooterLink to="/">Home</FooterLink>
-              <FooterLink to="/trainingen-advies">Trainingen & Advies</FooterLink>
+              <FooterLink to="/trainingen-advies">Trainingen & advies</FooterLink>
+              <FooterLink to="/cases">Cases</FooterLink>
               <FooterLink to="/nieuws">Nieuws</FooterLink>
-              <FooterLink to="/over-mij">Over Mij</FooterLink>
-            </FooterNav>
-          </FooterSection>
-
-          <FooterSection>
-            <FooterTitle>Services</FooterTitle>
-            <FooterNav>
-              <FooterLink to="/trainingen-advies">AI Trainingen</FooterLink>
-              <FooterLink to="/trainingen-advies">Strategisch Advies</FooterLink>
-              <FooterLink to="/trainingen-advies">Persoonlijke Coaching</FooterLink>
-              <ExternalLink href="https://slimmermetai.substack.com" target="_blank" rel="noopener noreferrer">
-                Nieuwsbrief
-              </ExternalLink>
+              <FooterLink to="/over-mij">Over mij</FooterLink>
+              <FooterLink to="/contact">Contact</FooterLink>
             </FooterNav>
           </FooterSection>
 
@@ -188,8 +187,8 @@ const Footer = () => {
                   julia@loth.nl
                 </ExternalLink>
               </ContactItem>
-              <ContactItem icon="🌐">
-                Nederland
+              <ContactItem icon="🌍">
+                Remote service, heel Nederland
               </ContactItem>
               <ContactItem icon="💼">
                 <ExternalLink href="https://www.linkedin.com/in/julialoth" target="_blank" rel="noopener noreferrer">

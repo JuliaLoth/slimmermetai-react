@@ -120,6 +120,20 @@ const defaultContent = {
         title: "Change Management",
         description: "Teams begeleiden bij de adoptie van nieuwe AI tools"
       }
+    ],
+    education: [
+      {
+        title: "MA Internationale betrekkingen in historisch perspectief",
+        institution: "Universiteit",
+        description: "Master's degree in internationale betrekkingen met focus op historisch perspectief"
+      }
+    ],
+    certifications: [
+      {
+        title: "AI & Machine Learning Specialist",
+        issuer: "Diverse tech platforms",
+        description: "Gecertificeerd in moderne AI-tools en implementatiestrategieën"
+      }
     ]
   },
   settings: {

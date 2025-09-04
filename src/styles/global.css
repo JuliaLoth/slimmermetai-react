@@ -390,7 +390,7 @@ header.sticky {
    ================================================ */
 .section {
     padding: 3rem 0;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
     margin-bottom: 3rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);

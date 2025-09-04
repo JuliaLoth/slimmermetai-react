@@ -40,7 +40,7 @@ const HeroContent = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 3rem;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   position: relative;
@@ -102,7 +102,7 @@ const CTAButton = styled(Link)`
 
 const ServicesSection = styled.section`
   padding: 5rem 0;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   margin-bottom: 3rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -464,7 +464,7 @@ const Home = () => {
               maxWidth: '800px',
               margin: '0 auto',
               padding: '3rem',
-              background: 'rgba(255, 255, 255, 0.95)',
+              background: 'rgba(255, 255, 255, 0.85)',
               borderRadius: '20px',
               boxShadow: '0 15px 40px rgba(0, 0, 0, 0.15)'
             }}>

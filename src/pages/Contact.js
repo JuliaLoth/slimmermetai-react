@@ -40,7 +40,7 @@ const HeroContent = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 3rem;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   position: relative;
@@ -91,7 +91,7 @@ const PageSubtitle = styled.p`
 
 const ContentSection = styled.section`
   padding: 5rem 0;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   margin-bottom: 3rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -100,47 +100,52 @@ const ContentSection = styled.section`
 const ContactGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-bottom: 4rem;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
 `;
 
 const ContactCard = styled.div`
   background: white;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   border: 1px solid #e9ecef;
   text-align: center;
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
 `;
 
 const ContactTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: #333;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   font-family: 'Neue Montreal', sans-serif;
 `;
 
 const ContactDescription = styled.p`
   color: #666;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
 `;
 
 const ContactList = styled.ul`
   list-style: none;
   padding: 0;
   text-align: left;
+  margin-bottom: 1.5rem;
   
   li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: #666;
-    font-size: 1rem;
+    font-size: 0.95rem;
     
     &:before {
       content: "✓";
@@ -171,13 +176,13 @@ const ContactButton = styled.a`
 const ContactInfo = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 `;
 
 const ContactInfoCard = styled.div`
   background: #f8f9fa;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 15px;
   text-align: center;
 `;
@@ -245,6 +250,73 @@ const FAQAnswer = styled.p`
   margin: 0;
 `;
 
+const CTASection = styled.div`
+  padding: 4rem 0;
+  text-align: center;
+  margin-top: 4rem;
+`;
+
+const CTATitle = styled.h2`
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333;
+  background: linear-gradient(135deg, #5852f2 0%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Neue Montreal', sans-serif;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+`;
+
+const CTADescription = styled.p`
+  font-size: 1.2rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+`;
+
+const CTAContainer = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  
+  @media (max-width: 768px) {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+`;
+
+const CTAButtonStyled = styled.a`
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+  }
+`;
+
 const Contact = () => {
   return (
     <PageContainer>
@@ -292,7 +364,7 @@ const Contact = () => {
             <ContactCard>
               <ContactTitle>Andere manieren van contact</ContactTitle>
               <ContactDescription>
-                Stel gerust vragen of deel je situatie. Ik reageer altijd binnen 1 werkdag.
+                Stel gerust vragen of deel je situatie.
               </ContactDescription>
               
               <ContactInfo>
@@ -304,9 +376,23 @@ const Contact = () => {
                 </ContactInfoCard>
                 
                 <ContactInfoCard>
+                  <ContactInfoTitle>📱 Telefoon</ContactInfoTitle>
+                  <ContactInfoLink href="tel:+31624161016">
+                    +31 6 2416 1016
+                  </ContactInfoLink>
+                </ContactInfoCard>
+                
+                <ContactInfoCard>
                   <ContactInfoTitle>💼 LinkedIn</ContactInfoTitle>
                   <ContactInfoLink href="https://www.linkedin.com/in/julialoth" target="_blank" rel="noopener noreferrer">
                     LinkedIn Profiel
+                  </ContactInfoLink>
+                </ContactInfoCard>
+                
+                <ContactInfoCard>
+                  <ContactInfoTitle>📰 Nieuwsbrief</ContactInfoTitle>
+                  <ContactInfoLink href="https://slimmermetai.substack.com" target="_blank" rel="noopener noreferrer">
+                    Substack Nieuws
                   </ContactInfoLink>
                 </ContactInfoCard>
               </ContactInfo>
@@ -372,35 +458,20 @@ const Contact = () => {
             </FAQItem>
           </FAQSection>
           
-          <div style={{
-            textAlign: 'center',
-            marginTop: '4rem',
-            padding: '3rem',
-            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            borderRadius: '20px',
-            color: 'white'
-          }}>
-            <h2 style={{
-              fontSize: '2rem',
-              marginBottom: '1rem',
-              fontFamily: 'Neue Montreal, sans-serif'
-            }}>
-              Werk slimmer, niet harder - ik help je ontdekken hoe.
-            </h2>
-            <p style={{
-              fontSize: '1.2rem',
-              marginBottom: '2rem',
-              opacity: 0.9
-            }}>
-              Klaar voor je eerste stap naar slimmere werkprocessen?
-            </p>
-            <ContactButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer" style={{
-              background: 'white',
-              color: '#667eea'
-            }}>
-              Start het Gesprek
-            </ContactButton>
-          </div>
+          <CTASection>
+            <CTAContainer>
+              <CTATitle>
+                Maak AI winstgevend voor jouw bedrijf
+              </CTATitle>
+              <CTADescription>
+                Benieuwd hoe AI-adoptie eruitziet in jouw sector? In ons kennismakingsgesprek 
+                bespreken we concrete mogelijkheden die passen bij jouw werkwijze.
+              </CTADescription>
+              <CTAButtonStyled href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer">
+                Plan een Gratis Kennismaking
+              </CTAButtonStyled>
+            </CTAContainer>
+          </CTASection>
         </Container>
       </ContentSection>
     </PageContainer>

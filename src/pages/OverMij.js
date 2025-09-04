@@ -39,7 +39,7 @@ const HeroContent = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 3rem;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 20px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   position: relative;
@@ -90,7 +90,7 @@ const PageSubtitle = styled.p`
 
 const ContentSection = styled.section`
   padding: 5rem 0;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   margin-bottom: 3rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -98,8 +98,8 @@ const ContentSection = styled.section`
 
 const HeroSection = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 3rem;
   align-items: center;
   margin-bottom: 5rem;
   
@@ -112,8 +112,12 @@ const HeroSection = styled.div`
 
 const ProfileImageContainer = styled.div`
   position: relative;
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    max-width: 350px;
+  }
 `;
 
 const ProfileImage = styled.img`
@@ -121,11 +125,12 @@ const ProfileImage = styled.img`
   aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-  transition: transform 0.5s ease;
+  box-shadow: 0 25px 50px rgba(102, 126, 234, 0.4);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
   
   ${ProfileImageContainer}:hover & {
-    transform: scale(1.08);
+    transform: scale(1.05);
+    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.5);
   }
 `;
 
@@ -229,36 +234,47 @@ const CardText = styled.p`
 
 const SkillsList = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
+  
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const SkillCard = styled.div`
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 10px;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
   text-align: center;
   border: 1px solid #e9ecef;
-  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   }
 `;
 
 const SkillTitle = styled.h4`
   color: #333;
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   font-family: 'Neue Montreal', sans-serif;
 `;
 
 const SkillDescription = styled.p`
   color: #666;
-  font-size: 0.9rem;
-  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
 `;
 
 const QuoteSection = styled.div`
@@ -293,9 +309,8 @@ const OverMij = () => {
           <HeroContent>
             <PageTitle>Hi, ik ben Julia - jouw AI-begeleider</PageTitle>
             <PageSubtitle>
-              Ik voel me thuis in complexe omgevingen en ben altijd bereid mijn handen uit de mouwen te steken. 
-              Naast het begeleiden van trajecten van beleid naar uitvoering fungeer ik als spil tussen communicatie, 
-              concept en techniek. Als innovator zorg ik voor vernieuwing die werkt in de praktijk.
+              10 jaar ervaring als innovator. Ik help teams en organisaties complexe vraagstukken oplossen op een manier 
+              die aansluit bij hoe mensen werken. Focus: innovaties die écht verschil maken voor mensen.
             </PageSubtitle>
           </HeroContent>
         </Container>
@@ -312,19 +327,24 @@ const OverMij = () => {
             </ProfileImageContainer>
             
             <AboutHeroContent>
-              <HeroTitle>Van Datalab naar AI-begeleiding</HeroTitle>
-              <HeroSubtitle>Mijn verhaal</HeroSubtitle>
+              <HeroTitle>10 jaar innovatie, nu eigen AI-bedrijf</HeroTitle>
+              <HeroSubtitle>Mijn Verhaal</HeroSubtitle>
               <HeroDescription>
-                Als teamlead van het datalab bij Provincie Noord-Brabant heb ik ervaren hoe krachtig het is 
-                wanneer mensen de lol ontdekken van nieuwe technologie. Ons team groeide in anderhalf jaar 
-                van onbekend naar strategische sparringpartner - niet door techniek op te leggen, 
-                maar door samen te experimenteren.
+                In 10 jaar als strategische innovator heb ik geleerd hoe krachtig het is wanneer mensen échte waarde 
+                ontdekken in nieuwe technologie. Van ministeries tot provincies, van creatieve projecten tot data-innovatie - 
+                ik heb teams en organisaties geholpen technologie succesvol te adopteren. Niet door oplossingen op te leggen, 
+                maar door samen te ontdekken wat werkt.
+              </HeroDescription>
+              <HeroDescription>
+                Als teamlead van het datalab groeide ons team in anderhalf jaar van onbekend naar strategische sparringpartner. 
+                Als strategisch informatieadviseur begeleidde ik IT-transformaties. Als scrummaster zorgde ik dat teams optimaal 
+                presteerden. Steeds dezelfde rode draad: mensen centraal, technologie als middel.
               </HeroDescription>
               <HeroDescription>
                 <strong>Waarom ik "Slimmer met AI" oprichtte</strong><br/>
-                Ik zie te vaak dat ondernemers vastzitten in repetitieve taken terwijl AI kan helpen. 
-                Mijn missie: mensen laten ontdekken hoe AI hun leven makkelijker én leuker maakt. 
-                Niet door een technische doos neer te zetten, maar door samen te ontdekken wat mogelijk is.
+                Ik zie te vaak dat ondernemers vastzitten in repetitieve taken terwijl AI kan helpen. Na jaren ervaring 
+                met het succesvol implementeren van innovaties weet ik: het draait niet om de techniek, maar om de mensen. 
+                Mijn missie: ondernemers laten ontdekken hoe AI hun leven makkelijker én leuker maakt.
               </HeroDescription>
               <div style={{textAlign: 'center'}}>
                 <ContactButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer">
@@ -402,7 +422,7 @@ const OverMij = () => {
               maxWidth: '700px',
               margin: '0 auto',
               padding: '3rem',
-              background: 'rgba(255, 255, 255, 0.95)',
+              background: 'rgba(255, 255, 255, 0.85)',
               borderRadius: '20px',
               boxShadow: '0 15px 40px rgba(0, 0, 0, 0.15)'
             }}>
@@ -465,6 +485,13 @@ const OverMij = () => {
               <SkillTitle>Process & Information Management</SkillTitle>
               <SkillDescription>
                 Bestuursacademie - strategische procesoptimalisatie
+              </SkillDescription>
+            </SkillCard>
+
+            <SkillCard>
+              <SkillTitle>MA Internationale betrekkingen in historisch perspectief</SkillTitle>
+              <SkillDescription>
+                Master's degree met focus op historisch perspectief
               </SkillDescription>
             </SkillCard>
           </SkillsList>
