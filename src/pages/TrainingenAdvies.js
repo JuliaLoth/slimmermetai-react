@@ -174,43 +174,9 @@ const FeatureItem = styled.li`
   }
 `;
 
-const ContactSection = styled.div`
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 3rem;
-  border-radius: 15px;
-  text-align: center;
-  color: white;
-`;
 
-const ContactTitle = styled.h2`
-  font-size: 2rem;
-  margin-bottom: 1rem;
-`;
 
-const ContactText = styled.p`
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-`;
 
-const ContactButton = styled.a`
-  display: inline-block;
-  background: rgba(255,255,255,0.2);
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255,255,255,0.3);
-  
-  &:hover {
-    background: rgba(255,255,255,0.3);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  }
-`;
 
 const TrainingenAdvies = () => {
   return (
@@ -302,15 +268,61 @@ const TrainingenAdvies = () => {
           </ServiceSection>
         </ServicesGrid>
 
-        <ContactSection>
-          <ContactTitle>Klaar om aan de slag te gaan?</ContactTitle>
-          <ContactText>
-            Neem contact op voor een vrijblijvend gesprek over hoe AI jouw doelen kan ondersteunen.
-          </ContactText>
-          <ContactButton href="mailto:julia@loth.nl">
-            Plan een Gesprek
-          </ContactButton>
-        </ContactSection>
+        <div style={{
+          padding: '3rem 0',
+          textAlign: 'center'
+        }}>
+          <div style={{
+            maxWidth: '500px',
+            margin: '0 auto',
+            padding: '2rem',
+            background: 'rgba(255, 255, 255, 0.95)',
+            borderRadius: '20px',
+            boxShadow: '0 15px 40px rgba(0, 0, 0, 0.15)'
+          }}>
+            <h2 style={{
+              fontSize: '2rem',
+              fontWeight: '700',
+              marginBottom: '1rem',
+              color: '#333',
+              background: 'linear-gradient(135deg, #5852f2 0%, #db2777 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              fontFamily: 'Glacial Indifference, sans-serif'
+            }}>
+              Klaar om aan de slag te gaan?
+            </h2>
+            <p style={{
+              fontSize: '1.1rem',
+              color: '#4b5563',
+              lineHeight: '1.6',
+              marginBottom: '1.5rem'
+            }}>
+              Neem contact op voor een vrijblijvend gesprek over hoe AI jouw doelen kan ondersteunen.
+            </p>
+            <a href="mailto:julia@loth.nl" style={{
+              display: 'inline-block',
+              background: '#667eea',
+              color: 'white',
+              padding: '0.8rem 1.5rem',
+              borderRadius: '25px',
+              textDecoration: 'none',
+              fontWeight: '600',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.background = '#764ba2';
+              e.target.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.background = '#667eea';
+              e.target.style.transform = 'translateY(0)';
+            }}>
+              Plan een Gesprek
+            </a>
+          </div>
+        </div>
         </Container>
       </ContentSection>
     </PageContainer>

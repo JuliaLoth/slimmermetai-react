@@ -150,12 +150,6 @@ const SidebarText = styled.p`
   margin-bottom: 1rem;
 `;
 
-const NewsletterSignup = styled.div`
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 10px;
-  text-align: center;
-`;
 
 const SignupButton = styled.a`
   display: inline-block;
@@ -266,11 +260,9 @@ const Nieuws = () => {
               <SidebarText>
                 Ontvang elke week praktische tips die je direct kunt toepassen in je werk. Geen theorie, gewoon tools en technieken die écht werken.
               </SidebarText>
-              <NewsletterSignup>
-                <SignupButton href="https://slimmermetai.substack.com" target="_blank" rel="noopener noreferrer">
-                  Abonneer je Nu
-                </SignupButton>
-              </NewsletterSignup>
+              <SignupButton href="https://slimmermetai.substack.com" target="_blank" rel="noopener noreferrer">
+                Abonneer je Nu
+              </SignupButton>
             </SidebarCard>
 
 

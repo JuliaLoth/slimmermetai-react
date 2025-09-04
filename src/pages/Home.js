@@ -84,47 +84,17 @@ const HeroSubtitle = styled.p`
 `;
 
 const CTAButton = styled(Link)`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1.05rem;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  position: relative;
-  overflow: hidden;
-  background-image: linear-gradient(45deg, #5852f2, #8e88ff, #5852f2);
-  background-size: 200% auto;
+  display: inline-block;
+  background: #667eea;
   color: white;
-  box-shadow: 0 4px 15px rgba(88, 82, 242, 0.2);
-  font-family: 'Glacial Indifference', sans-serif;
-  letter-spacing: 0.02em;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
-    transition: 0.5s ease;
-  }
-  
-  &:hover::before {
-    left: 100%;
-  }
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
   
   &:hover {
-    background-position: right center;
-    box-shadow: 0 7px 20px rgba(88, 82, 242, 0.4);
+    background: #764ba2;
     transform: translateY(-2px);
   }
 `;
