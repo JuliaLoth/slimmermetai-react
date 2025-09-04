@@ -305,7 +305,7 @@ const Contact = () => {
                 
                 <ContactInfoCard>
                   <ContactInfoTitle>💼 LinkedIn</ContactInfoTitle>
-                  <ContactInfoLink href="https://linkedin.com/in/julia-loth" target="_blank" rel="noopener noreferrer">
+                  <ContactInfoLink href="https://www.linkedin.com/in/julialoth" target="_blank" rel="noopener noreferrer">
                     LinkedIn Profiel
                   </ContactInfoLink>
                 </ContactInfoCard>

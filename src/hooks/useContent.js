@@ -127,7 +127,7 @@ const defaultContent = {
     siteDescription: "Ontdek de kracht van AI voor jouw persoonlijke en professionele groei",
     contactEmail: "julia@loth.nl",
     substackUrl: "https://slimmermetai.substack.com",
-    linkedinUrl: "https://linkedin.com/in/julia-loth",
+    linkedinUrl: "https://www.linkedin.com/in/julialoth",
     navigation: [
       { label: "Home", url: "/" },
       { label: "Trainingen & Advies", url: "/trainingen-advies" },

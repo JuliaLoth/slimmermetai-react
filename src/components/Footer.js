@@ -149,7 +149,7 @@ const Footer = () => {
               AI-begeleiding die past bij hoe jij werkt. Werk slimmer, niet harder - ontdek wat mogelijk is voor jouw bedrijf.
             </FooterText>
             <SocialLinks>
-              <SocialLink href="https://linkedin.com/in/julia-loth" target="_blank" rel="noopener noreferrer">
+              <SocialLink href="https://www.linkedin.com/in/julialoth" target="_blank" rel="noopener noreferrer">
                 📧
               </SocialLink>
               <SocialLink href="https://slimmermetai.substack.com" target="_blank" rel="noopener noreferrer">
@@ -192,7 +192,7 @@ const Footer = () => {
                 Nederland
               </ContactItem>
               <ContactItem icon="💼">
-                <ExternalLink href="https://linkedin.com/in/julia-loth" target="_blank" rel="noopener noreferrer">
+                <ExternalLink href="https://www.linkedin.com/in/julialoth" target="_blank" rel="noopener noreferrer">
                   LinkedIn Profiel
                 </ExternalLink>
               </ContactItem>
