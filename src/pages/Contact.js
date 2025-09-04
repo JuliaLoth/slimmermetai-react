@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import GoogleCalendarButton from '../components/GoogleCalendarButton';
 
 const PageContainer = styled.div`
   min-height: calc(100vh - 80px);

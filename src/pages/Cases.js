@@ -174,49 +174,6 @@ const InsightBox = styled.div`
   margin-top: 2rem;
 `;
 
-const StatsSection = styled.div`
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 4rem;
-  border-radius: 20px;
-  color: white;
-  text-align: center;
-  margin-bottom: 5rem;
-  
-  @media (max-width: 768px) {
-    padding: 3rem 2rem;
-  }
-`;
-
-const StatsTitle = styled.h2`
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-family: 'Neue Montreal', sans-serif;
-  
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-`;
-
-const StatsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-`;
-
-const StatItem = styled.div`
-  text-align: center;
-`;
-
-const StatNumber = styled.div`
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
-  }
-`;
 
 const StatLabel = styled.div`
   font-size: 1rem;
@@ -245,9 +202,6 @@ const CTATitle = styled.h2`
   }
 `;
 
-const CTADescription = styled.p`
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
   opacity: 0.9;
 `;
 

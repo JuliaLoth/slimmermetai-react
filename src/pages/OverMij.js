@@ -277,29 +277,6 @@ const SkillDescription = styled.p`
   margin: 0;
 `;
 
-const QuoteSection = styled.div`
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 3rem;
-  border-radius: 15px;
-  text-align: center;
-  margin: 4rem 0;
-`;
-
-const Quote = styled.blockquote`
-  font-size: 1.5rem;
-  font-style: italic;
-  margin-bottom: 1rem;
-  
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-  }
-`;
-
-const QuoteAuthor = styled.p`
-  opacity: 0.9;
-  font-weight: 600;
-`;
 
 const OverMij = () => {
   return (
