@@ -202,9 +202,6 @@ const CTATitle = styled.h2`
   }
 `;
 
-  opacity: 0.9;
-`;
-
 const CTAButton = styled.a`
   display: inline-block;
   background: white;
