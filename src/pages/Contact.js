@@ -99,13 +99,22 @@ const ContentSection = styled.section`
 
 const ContactGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   margin-bottom: 3rem;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  /* First card spans all columns */
+  & > :first-child {
+    grid-column: 1 / -1;
   }
 `;
 
@@ -141,11 +150,21 @@ const ContactList = styled.ul`
   padding: 0;
   text-align: left;
   margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2rem;
+  align-items: start;
+  justify-items: start;
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
   
   li {
     margin-bottom: 0.75rem;
     color: #666;
     font-size: 0.95rem;
+    width: 100%;
     
     &:before {
       content: "✓";
@@ -175,9 +194,13 @@ const ContactButton = styled.a`
 
 const ContactInfo = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ContactInfoCard = styled.div`
@@ -215,6 +238,7 @@ const FAQSection = styled.div`
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   border: 1px solid #e9ecef;
+  scroll-margin-top: 100px;
 `;
 
 const FAQTitle = styled.h2`
@@ -362,7 +386,7 @@ const Contact = () => {
             </ContactCard>
             
             <ContactCard>
-              <ContactTitle>Andere manieren van contact</ContactTitle>
+              <ContactTitle>Contact</ContactTitle>
               <ContactDescription>
                 Stel gerust vragen of deel je situatie.
               </ContactDescription>
@@ -381,7 +405,16 @@ const Contact = () => {
                     +31 6 2416 1016
                   </ContactInfoLink>
                 </ContactInfoCard>
-                
+              </ContactInfo>
+            </ContactCard>
+            
+            <ContactCard>
+              <ContactTitle>Socials</ContactTitle>
+              <ContactDescription>
+                Volg mij voor de laatste updates en inzichten.
+              </ContactDescription>
+              
+              <ContactInfo>
                 <ContactInfoCard>
                   <ContactInfoTitle>💼 LinkedIn</ContactInfoTitle>
                   <ContactInfoLink href="https://www.linkedin.com/in/julialoth" target="_blank" rel="noopener noreferrer">
@@ -396,19 +429,22 @@ const Contact = () => {
                   </ContactInfoLink>
                 </ContactInfoCard>
               </ContactInfo>
+            </ContactCard>
+            
+            <ContactCard>
+              <ContactTitle>Werkgebied</ContactTitle>
+              <ContactDescription>
+                Informatie over mijn werkgebied en beschikbaarheid.
+              </ContactDescription>
               
-              <div style={{marginTop: '2rem'}}>
-                <ContactInfoTitle>🌍 Werkgebied</ContactInfoTitle>
-                <ContactInfoText>
-                  <strong>Remote only:</strong> Ik woon op een zeilboot dus werk online, overal vandaan<br/>
-                  <strong>Service:</strong> Heel Nederland (en daarbuiten)<br/>
-                  <strong>Talen:</strong> Nederlands, Engels
-                </ContactInfoText>
-              </div>
+              <ContactInfoText>
+                <strong>Remote only:</strong> Ik woon op een zeilboot dus werk online, overal vandaan<br/>
+                <strong>Talen:</strong> Nederlands, Engels
+              </ContactInfoText>
             </ContactCard>
           </ContactGrid>
 
-          <FAQSection>
+          <FAQSection id="faq">
             <FAQTitle>Veelgestelde vragen</FAQTitle>
             
             <FAQItem>

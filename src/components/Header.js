@@ -180,6 +180,13 @@ const Header = () => {
   const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
+  const handleNavClick = (to) => {
+    setIsMenuOpen(false);
+    if (!to.includes('#')) {
+      window.scrollTo(0, 0);
+    }
+  };
 
   return (
     <HeaderContainer>
@@ -194,42 +201,42 @@ const Header = () => {
             <NavLink 
               to="/" 
               active={location.pathname === '/'}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleNavClick('/')}
             >
               Home
             </NavLink>
             <NavLink 
               to="/hoe-ik-werk" 
               active={location.pathname === '/hoe-ik-werk' || location.pathname === '/trainingen-advies'}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleNavClick('/hoe-ik-werk')}
             >
               Hoe ik werk
             </NavLink>
             <NavLink 
               to="/cases" 
               active={location.pathname === '/cases'}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleNavClick('/cases')}
             >
               Cases
             </NavLink>
             <NavLink 
               to="/nieuws" 
               active={location.pathname === '/nieuws'}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleNavClick('/nieuws')}
             >
               Nieuws
             </NavLink>
             <NavLink 
               to="/over-mij" 
               active={location.pathname === '/over-mij'}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleNavClick('/over-mij')}
             >
               Over Mij
             </NavLink>
             <NavLink 
               to="/contact" 
               active={location.pathname === '/contact'}
-              onClick={() => setIsMenuOpen(false)}
+              onClick={() => handleNavClick('/contact')}
             >
               Contact
             </NavLink>

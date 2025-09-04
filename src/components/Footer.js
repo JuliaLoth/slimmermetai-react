@@ -176,6 +176,7 @@ const Footer = () => {
               <FooterLink to="/nieuws">Nieuws</FooterLink>
               <FooterLink to="/over-mij">Over mij</FooterLink>
               <FooterLink to="/contact">Contact</FooterLink>
+              <FooterLink to="/contact#faq">FAQ</FooterLink>
             </FooterNav>
           </FooterSection>
 
