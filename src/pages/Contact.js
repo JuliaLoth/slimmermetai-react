@@ -148,15 +148,16 @@ const ContactList = styled.ul`
   list-style: none;
   padding: 0;
   text-align: left;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5rem 2rem;
+  gap: 0.75rem 0.5rem;
   align-items: start;
-  justify-items: start;
+  justify-items: center;
   
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
+    justify-items: start;
   }
   
   li {
