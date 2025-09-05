@@ -30,8 +30,9 @@
     <!-- Google Fonts - Optimized Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Reduce font weights to only what's needed -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- Custom Font Faces - Neue Montreal -->
     <style>
@@ -43,21 +44,6 @@
         font-display: swap;
       }
       
-      @font-face {
-        font-family: 'Neue Montreal';
-        src: url('%PUBLIC_URL%/fonts/NeueMontreal-Light.otf') format('opentype');
-        font-weight: 300;
-        font-style: normal;
-        font-display: swap;
-      }
-      
-      @font-face {
-        font-family: 'Neue Montreal';
-        src: url('%PUBLIC_URL%/fonts/NeueMontreal-Medium.otf') format('opentype');
-        font-weight: 500;
-        font-style: normal;
-        font-display: swap;
-      }
       
       @font-face {
         font-family: 'Neue Montreal';
@@ -67,26 +53,26 @@
         font-display: swap;
       }
       
-      @font-face {
-        font-family: 'Neue Montreal';
-        src: url('%PUBLIC_URL%/fonts/NeueMontreal-Italic.otf') format('opentype');
-        font-weight: 400;
-        font-style: italic;
-        font-display: swap;
-      }
     </style>
     
-    <!-- Preload critical external resources -->
-    <link rel="preload" href="https://identity.netlify.com/v1/netlify-identity-widget.js" as="script" crossorigin>
-    <link rel="preload" href="https://calendar.google.com/calendar/scheduling-button-script.js" as="script" crossorigin>
-    
-    <!-- Netlify Identity Widget - Deferred -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
-    
-    <!-- Google Calendar Appointment Scheduling - Deferred -->
-    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet"></noscript>
-    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" defer></script>
+    <!-- Load external scripts asynchronously to avoid blocking -->
+    <script>
+      // Load Netlify Identity only when needed
+      if (window.location.pathname.includes('admin')) {
+        const netlifyScript = document.createElement('script');
+        netlifyScript.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+        netlifyScript.async = true;
+        document.head.appendChild(netlifyScript);
+      } else {
+        // Delay load for other pages
+        setTimeout(() => {
+          const netlifyScript = document.createElement('script');
+          netlifyScript.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+          netlifyScript.async = true;
+          document.head.appendChild(netlifyScript);
+        }, 2000);
+      }
+    </script>
     
     <title>Slimmer Met AI - AI Training & Advies | Julia Loth</title>
   </head>
