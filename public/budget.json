@@ -3,35 +3,35 @@
     "resourceSizes": [
       {
         "resourceType": "script",
-        "budget": 150000
+        "budget": 80000
       },
       {
         "resourceType": "font",
-        "budget": 150000
+        "budget": 140000
       },
       {
         "resourceType": "image",
-        "budget": 300000
+        "budget": 280000
       },
       {
         "resourceType": "stylesheet",
-        "budget": 20000
+        "budget": 15000
       },
       {
         "resourceType": "document",
-        "budget": 5000
+        "budget": 3000
       },
       {
         "resourceType": "other",
-        "budget": 10000
+        "budget": 5000
       },
       {
         "resourceType": "third-party",
-        "budget": 120000
+        "budget": 60000
       },
       {
         "resourceType": "total",
-        "budget": 600000
+        "budget": 500000
       }
     ],
     "resourceCounts": [

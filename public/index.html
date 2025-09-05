@@ -27,8 +27,8 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/Flavicon.svg" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
-    <!-- Preload only the most critical font for LCP -->
-    <link rel="preload" href="/fonts/NeueMontreal-Bold.otf" as="font" type="font/otf" crossorigin>
+    <!-- Remove font preload to reduce critical path latency -->
+    <!-- Font will load via CSS with optimized display settings -->
     
     <!-- Google Fonts - Optimized Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,13 +39,13 @@
     
     <!-- Critical CSS for LCP optimization -->
     <style>
-      /* Font faces with block display for faster LCP */
+      /* Font faces with fallback strategy for faster LCP */
       @font-face {
         font-family: 'Neue Montreal';
         src: url('%PUBLIC_URL%/fonts/NeueMontreal-Bold.otf') format('opentype');
         font-weight: 700;
         font-style: normal;
-        font-display: block;
+        font-display: fallback;
       }
       
       @font-face {
@@ -53,12 +53,12 @@
         src: url('%PUBLIC_URL%/fonts/NeueMontreal-Regular.otf') format('opentype');
         font-weight: 400;
         font-style: normal;
-        font-display: swap;
+        font-display: fallback;
       }
       
       /* Critical styles for faster LCP */
       .lcp-heading {
-        font-family: 'Neue Montreal', sans-serif;
+        font-family: 'Neue Montreal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-weight: 700;
         color: #333;
         background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
@@ -67,12 +67,14 @@
         background-clip: text;
       }
       
-      /* Ensure footer stays out of initial viewport */
+      /* Critical above-the-fold styles inlined */
       body {
         margin: 0;
         padding: 0;
         min-height: 100vh;
         position: relative;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(239, 73, 242, 0.05) 100%);
       }
       
       #root {
@@ -80,11 +82,64 @@
         position: relative;
         padding-bottom: 320px;
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      /* Critical header styles */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        height: 100px;
+      }
+      
+      main {
+        flex: 1;
+        padding-top: 80px;
+        padding-bottom: 320px;
+      }
+      
+      /* Critical hero section styles */
+      .hero-section {
+        background-image: url('/images/hero-background.svg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 6rem 0 4rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        margin-top: 80px;
+      }
+      
+      .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(239, 73, 242, 0.1) 100%);
+        z-index: 0;
       }
     </style>
     
     <!-- Load external scripts asynchronously to avoid blocking -->
     <script>
+      // Defer non-critical CSS loading to reduce critical path
+      window.addEventListener('load', function() {
+        // Find and prioritize any deferred stylesheets
+        var deferredStyles = document.querySelectorAll('link[rel="preload"][as="style"]');
+        deferredStyles.forEach(function(link) {
+          link.rel = 'stylesheet';
+        });
+      });
+      
       // Load Netlify Identity only when needed
       if (window.location.pathname.includes('admin')) {
         const netlifyScript = document.createElement('script');

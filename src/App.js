@@ -23,8 +23,10 @@ const AppContainer = styled.div`
 const MainContent = styled.main`
   flex: 1;
   padding: 0;
-  margin-bottom: 320px;
+  padding-bottom: 320px;
   contain: layout;
+  min-height: calc(100vh - 80px);
+  box-sizing: border-box;
 `;
 
 const LoadingContainer = styled.div`

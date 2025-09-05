@@ -12,10 +12,17 @@ const FooterContainer = styled.footer`
   contain: layout size style;
   will-change: auto;
   transform: translateZ(0);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 0;
+  animation: fadeInFooter 0.3s ease-in-out 2s forwards;
+  
+  @keyframes fadeInFooter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 `;
 
 const Container = styled.div`
