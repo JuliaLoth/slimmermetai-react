@@ -99,6 +99,22 @@ const CTAButton = styled(Link)`
   }
 `;
 
+const CTAContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 60px;
+  margin-top: 1rem;
+  contain: layout;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0.75rem;
+    min-height: 120px;
+  }
+`;
+
 const ServicesSection = styled.section`
   padding: 5rem 0;
   background-color: rgba(255, 255, 255, 0.6);
@@ -286,10 +302,10 @@ const Home = () => {
       <HeroSection>
         <Container>
           <HeroContent>
-            <HeroTitle>Maak AI winstgevend voor jouw bedrijf</HeroTitle>
-            <HeroSubtitle>Met advies op maat zorg ik dat AI jouw bedrijfsvoering versterkt, zodat je meer tijd krijgt voor wat echt telt.</HeroSubtitle>
-            <div>
-              <CTAButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer" style={{marginRight: '1rem'}}>
+            <HeroTitle className="hero-title">Maak AI winstgevend voor jouw bedrijf</HeroTitle>
+            <HeroSubtitle className="hero-subtitle">Met advies op maat zorg ik dat AI jouw bedrijfsvoering versterkt, zodat je meer tijd krijgt voor wat echt telt.</HeroSubtitle>
+            <CTAContainer>
+              <CTAButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer">
                 Plan een gratis kennismaking
               </CTAButton>
               <CTAButton to="/hoe-ik-werk" style={{
@@ -299,7 +315,7 @@ const Home = () => {
               }}>
                 Bekijk hoe ik werk
               </CTAButton>
-            </div>
+            </CTAContainer>
           </HeroContent>
         </Container>
       </HeroSection>

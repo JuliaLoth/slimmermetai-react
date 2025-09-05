@@ -5,13 +5,13 @@ import './styles/global.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-// Aggressive code splitting with smaller chunks
-const Home = React.lazy(() => import(/* webpackChunkName: "page-home", webpackPrefetch: true */ './pages/Home'));
-const TrainingenAdvies = React.lazy(() => import(/* webpackChunkName: "page-trainingen" */ './pages/TrainingenAdvies'));
-const Nieuws = React.lazy(() => import(/* webpackChunkName: "page-nieuws" */ './pages/Nieuws'));
-const OverMij = React.lazy(() => import(/* webpackChunkName: "page-over-mij" */ './pages/OverMij'));
-const Cases = React.lazy(() => import(/* webpackChunkName: "page-cases" */ './pages/Cases'));
-const Contact = React.lazy(() => import(/* webpackChunkName: "page-contact" */ './pages/Contact'));
+// Ultra-aggressive code splitting for 100% performance
+const Home = React.lazy(() => import(/* webpackChunkName: "home", webpackPreload: true */ './pages/Home'));
+const TrainingenAdvies = React.lazy(() => import(/* webpackChunkName: "trainingen" */ './pages/TrainingenAdvies'));
+const Nieuws = React.lazy(() => import(/* webpackChunkName: "nieuws" */ './pages/Nieuws'));
+const OverMij = React.lazy(() => import(/* webpackChunkName: "over-mij" */ './pages/OverMij'));
+const Cases = React.lazy(() => import(/* webpackChunkName: "cases" */ './pages/Cases'));
+const Contact = React.lazy(() => import(/* webpackChunkName: "contact" */ './pages/Contact'));
 
 const AppContainer = styled.div`
   min-height: 100vh;
@@ -43,6 +43,8 @@ const LoadingContainer = styled.div`
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   z-index: 100;
+  contain: layout style;
+  will-change: opacity;
 `;
 
 const LoadingSpinner = styled.div`
@@ -67,30 +69,34 @@ const LoadingText = styled.p`
 
 function App() {
   useEffect(() => {
-    // Try to add background image, but don't fail if it doesn't exist
-    // The background image path should work in production
-    try {
-      const backgroundImageUrl = `${process.env.PUBLIC_URL}/images/Website background.svg`;
-      
-      // Create a test image to check if it exists
-      const img = new Image();
-      img.onload = () => {
-        // Image loaded successfully, apply it
-        document.body.style.backgroundImage = `url('${backgroundImageUrl}')`;
-        document.body.style.backgroundSize = 'cover';
-        document.body.style.backgroundPosition = 'center center';
-        document.body.style.backgroundAttachment = 'fixed';
-        document.body.style.backgroundRepeat = 'no-repeat';
-      };
-      img.onerror = () => {
-        // Image failed to load, use gradient fallback from CSS
-        console.log('Background image not found, using gradient fallback');
-      };
-      img.src = backgroundImageUrl;
-    } catch (error) {
-      // If there's any error, just use the CSS fallback
-      console.log('Using default gradient background');
-    }
+    // Defer background image loading to reduce main thread blocking
+    const loadBackgroundImage = () => {
+      try {
+        const backgroundImageUrl = `${process.env.PUBLIC_URL}/images/Website background.svg`;
+        
+        // Create a test image to check if it exists
+        const img = new Image();
+        img.onload = () => {
+          // Image loaded successfully, apply it
+          document.body.style.backgroundImage = `url('${backgroundImageUrl}')`;
+          document.body.style.backgroundSize = 'cover';
+          document.body.style.backgroundPosition = 'center center';
+          document.body.style.backgroundAttachment = 'fixed';
+          document.body.style.backgroundRepeat = 'no-repeat';
+        };
+        img.onerror = () => {
+          // Image failed to load, use gradient fallback from CSS
+          console.log('Background image not found, using gradient fallback');
+        };
+        img.src = backgroundImageUrl;
+      } catch (error) {
+        // If there's any error, just use the CSS fallback
+        console.log('Using default gradient background');
+      }
+    };
+    
+    // Defer to next tick to avoid blocking initial render
+    setTimeout(loadBackgroundImage, 100);
     
     // Cleanup function
     return () => {
