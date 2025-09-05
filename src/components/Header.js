@@ -233,7 +233,7 @@ const Header = () => {
             </NavLink>
           </Nav>
           
-          <MobileMenuButton onClick={toggleMenu} aria-expanded={isMenuOpen}>
+          <MobileMenuButton onClick={toggleMenu} aria-expanded={isMenuOpen} aria-label={isMenuOpen ? "Menu sluiten" : "Menu openen"}>
             <MenuLine isOpen={isMenuOpen} line={1} />
             <MenuLine isOpen={isMenuOpen} line={2} />
             <MenuLine isOpen={isMenuOpen} line={3} />

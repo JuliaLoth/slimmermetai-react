@@ -199,6 +199,18 @@ const ServiceTitle = styled.h3`
   }
 `;
 
+const InlineSectionTitle = styled.h2`
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333;
+  background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Neue Montreal', sans-serif;
+`;
+
 const ServiceDescription = styled.p`
   color: #6b7280;
   line-height: 1.6;
@@ -467,19 +479,9 @@ const Home = () => {
               borderRadius: '20px',
               boxShadow: '0 15px 40px rgba(0, 0, 0, 0.15)'
             }}>
-              <h2 style={{
-                fontSize: '2.5rem',
-                fontWeight: '700',
-                marginBottom: '2rem',
-                color: '#333',
-                background: 'linear-gradient(135deg, #5852f2 0%, #ef49f2 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                fontFamily: 'Neue Montreal, sans-serif'
-              }}>
+              <InlineSectionTitle>
                 Meer dan alleen ChatGPT-training
-              </h2>
+              </InlineSectionTitle>
               
               <div style={{
                 display: 'grid',
