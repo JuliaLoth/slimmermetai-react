@@ -4,18 +4,22 @@ import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
   background-color: #fff;
-  padding: 3rem 0 2rem;
+  padding: 0;
   margin-top: auto;
   box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
   height: 320px;
-  contain: layout strict;
+  overflow: hidden;
+  contain: layout size style;
   will-change: auto;
+  transform: translateZ(0);
 `;
 
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 3rem 2rem 2rem;
+  height: 100%;
+  box-sizing: border-box;
 `;
 
 const FooterContent = styled.div`
@@ -25,13 +29,13 @@ const FooterContent = styled.div`
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem;
-  height: 200px;
+  height: 100%;
   contain: layout strict;
   
   @media (max-width: 768px) {
     flex-direction: column;
-    height: auto;
-    gap: 2rem;
+    gap: 1rem;
+    overflow-y: auto;
   }
 `;
 
