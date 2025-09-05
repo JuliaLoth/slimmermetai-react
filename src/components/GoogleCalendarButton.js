@@ -8,7 +8,7 @@ const GoogleCalendarContainer = styled.div`
   button,
   .calendar-scheduler-button,
   div[data-action="open"] {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%) !important;
     color: white !important;
     padding: 1rem 2rem !important;
     border-radius: 50px !important;
@@ -30,7 +30,7 @@ const GoogleCalendarContainer = styled.div`
     &:focus {
       transform: translateY(-3px) !important;
       box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4) !important;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%) !important;
     }
     
     &:active {
@@ -53,7 +53,7 @@ const GoogleCalendarContainer = styled.div`
   
   /* Ensure the main container has our styling */
   & > * {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%) !important;
     color: white !important;
     padding: 1rem 2rem !important;
     border-radius: 50px !important;
@@ -74,7 +74,7 @@ const GoogleCalendarContainer = styled.div`
 const GoogleCalendarButton = ({ 
   url = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2KJICxJHxJ__0Esk8Q76cSe7TbfIqFSisVNR9abKPBiHczeWBClhTxrqYNax0hK7l7WYzVsCD8?gv=true',
   label = 'Een afspraak maken',
-  color = '#667eea'
+  color = '#5852f2'
 }) => {
   const containerRef = useRef(null);
 

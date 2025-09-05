@@ -262,7 +262,7 @@ const SkillCard = styled.div`
   }
 `;
 
-const SkillTitle = styled.h4`
+const SkillTitle = styled.h3`
   color: #333;
   margin-bottom: 1rem;
   font-size: 1.3rem;

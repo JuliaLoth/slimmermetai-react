@@ -140,7 +140,7 @@ const CaseSection = styled.div`
   margin-bottom: 2rem;
 `;
 
-const CaseSectionTitle = styled.h4`
+const CaseSectionTitle = styled.h3`
   color: #333;
   font-weight: 600;
   margin-bottom: 1rem;

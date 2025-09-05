@@ -261,7 +261,7 @@ const FAQItem = styled.div`
   }
 `;
 
-const FAQQuestion = styled.h4`
+const FAQQuestion = styled.h3`
   color: #333;
   margin-bottom: 1rem;
   font-size: 1.2rem;

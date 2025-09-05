@@ -35,7 +35,7 @@ const FooterSection = styled.div`
   flex-direction: column;
 `;
 
-const FooterTitle = styled.h4`
+const FooterTitle = styled.h3`
   font-family: 'Neue Montreal', sans-serif;
   font-weight: bold;
   margin-bottom: 1rem;

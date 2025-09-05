@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import './styles/global.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import TrainingenAdvies from './pages/TrainingenAdvies';
-import Nieuws from './pages/Nieuws';
-import OverMij from './pages/OverMij';
-import Cases from './pages/Cases';
-import Contact from './pages/Contact';
+
+// Lazy load all page components
+const Home = React.lazy(() => import('./pages/Home'));
+const TrainingenAdvies = React.lazy(() => import('./pages/TrainingenAdvies'));
+const Nieuws = React.lazy(() => import('./pages/Nieuws'));
+const OverMij = React.lazy(() => import('./pages/OverMij'));
+const Cases = React.lazy(() => import('./pages/Cases'));
+const Contact = React.lazy(() => import('./pages/Contact'));
 
 const AppContainer = styled.div`
   min-height: 100vh;
@@ -20,6 +22,34 @@ const AppContainer = styled.div`
 const MainContent = styled.main`
   flex: 1;
   padding: 0;
+`;
+
+const LoadingContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  flex-direction: column;
+`;
+
+const LoadingSpinner = styled.div`
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #5852f2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+`;
+
+const LoadingText = styled.p`
+  color: #666;
+  font-family: 'Neue Montreal', sans-serif;
 `;
 
 function App() {
@@ -60,15 +90,22 @@ function App() {
       <AppContainer>
         <Header />
         <MainContent>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/trainingen-advies" element={<TrainingenAdvies />} />
-            <Route path="/hoe-ik-werk" element={<TrainingenAdvies />} />
-            <Route path="/nieuws" element={<Nieuws />} />
-            <Route path="/over-mij" element={<OverMij />} />
-            <Route path="/cases" element={<Cases />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <Suspense fallback={
+            <LoadingContainer>
+              <LoadingSpinner />
+              <LoadingText>Pagina laden...</LoadingText>
+            </LoadingContainer>
+          }>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/trainingen-advies" element={<TrainingenAdvies />} />
+              <Route path="/hoe-ik-werk" element={<TrainingenAdvies />} />
+              <Route path="/nieuws" element={<Nieuws />} />
+              <Route path="/over-mij" element={<OverMij />} />
+              <Route path="/cases" element={<Cases />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
         </MainContent>
         <Footer />
       </AppContainer>

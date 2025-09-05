@@ -27,10 +27,11 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/Flavicon.svg" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Optimized Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <!-- Custom Font Faces - Neue Montreal -->
     <style>
@@ -75,12 +76,17 @@
       }
     </style>
     
-    <!-- Netlify Identity Widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Preload critical external resources -->
+    <link rel="preload" href="https://identity.netlify.com/v1/netlify-identity-widget.js" as="script" crossorigin>
+    <link rel="preload" href="https://calendar.google.com/calendar/scheduling-button-script.js" as="script" crossorigin>
     
-    <!-- Google Calendar Appointment Scheduling -->
-    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <!-- Netlify Identity Widget - Deferred -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+    
+    <!-- Google Calendar Appointment Scheduling - Deferred -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet"></noscript>
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" defer></script>
     
     <title>Slimmer Met AI - AI Training & Advies | Julia Loth</title>
   </head>
