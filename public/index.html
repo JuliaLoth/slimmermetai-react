@@ -66,6 +66,21 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
+      
+      /* Ensure footer stays out of initial viewport */
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        position: relative;
+      }
+      
+      #root {
+        min-height: 100vh;
+        position: relative;
+        padding-bottom: 320px;
+        box-sizing: border-box;
+      }
     </style>
     
     <!-- Load external scripts asynchronously to avoid blocking -->
