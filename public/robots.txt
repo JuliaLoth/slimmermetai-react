@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://slimmermetai.com/sitemap.xml
+
+# Allow all crawlers access to all content
+# This helps with SEO for the AI training and advice website
