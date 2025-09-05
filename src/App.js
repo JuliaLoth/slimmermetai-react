@@ -5,13 +5,13 @@ import './styles/global.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-// Lazy load all page components
-const Home = React.lazy(() => import('./pages/Home'));
-const TrainingenAdvies = React.lazy(() => import('./pages/TrainingenAdvies'));
-const Nieuws = React.lazy(() => import('./pages/Nieuws'));
-const OverMij = React.lazy(() => import('./pages/OverMij'));
-const Cases = React.lazy(() => import('./pages/Cases'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+// Lazy load all page components with prefetch hints
+const Home = React.lazy(() => import(/* webpackChunkName: "home", webpackPrefetch: true */ './pages/Home'));
+const TrainingenAdvies = React.lazy(() => import(/* webpackChunkName: "trainingen-advies" */ './pages/TrainingenAdvies'));
+const Nieuws = React.lazy(() => import(/* webpackChunkName: "nieuws" */ './pages/Nieuws'));
+const OverMij = React.lazy(() => import(/* webpackChunkName: "over-mij" */ './pages/OverMij'));
+const Cases = React.lazy(() => import(/* webpackChunkName: "cases" */ './pages/Cases'));
+const Contact = React.lazy(() => import(/* webpackChunkName: "contact" */ './pages/Contact'));
 
 const AppContainer = styled.div`
   min-height: 100vh;

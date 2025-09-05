@@ -7,8 +7,9 @@ const FooterContainer = styled.footer`
   padding: 3rem 0 2rem;
   margin-top: auto;
   box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
-  min-height: 300px;
-  contain: layout;
+  height: 320px;
+  contain: layout strict;
+  will-change: auto;
 `;
 
 const Container = styled.div`
@@ -18,26 +19,33 @@ const Container = styled.div`
 `;
 
 const FooterContent = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem;
-  align-items: start;
-  min-height: 200px;
-  contain: layout style;
+  height: 200px;
+  contain: layout strict;
   
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    height: auto;
     gap: 2rem;
-    min-height: 400px;
   }
 `;
 
 const FooterSection = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1;
+  max-width: 300px;
+  min-width: 250px;
+  
+  @media (max-width: 768px) {
+    max-width: none;
+    min-width: auto;
+  }
 `;
 
 const FooterTitle = styled.h3`
