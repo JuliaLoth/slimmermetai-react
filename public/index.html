@@ -77,13 +77,21 @@
         netlifyScript.async = true;
         document.head.appendChild(netlifyScript);
       } else {
-        // Delay load for other pages
-        setTimeout(() => {
-          const netlifyScript = document.createElement('script');
-          netlifyScript.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
-          netlifyScript.async = true;
-          document.head.appendChild(netlifyScript);
-        }, 2000);
+        // Load on user interaction instead of timeout
+        let loaded = false;
+        const loadNetlify = () => {
+          if (!loaded) {
+            loaded = true;
+            const netlifyScript = document.createElement('script');
+            netlifyScript.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+            netlifyScript.async = true;
+            document.head.appendChild(netlifyScript);
+          }
+        };
+        // Load on first user interaction or after 5 seconds
+        document.addEventListener('click', loadNetlify, { once: true });
+        document.addEventListener('scroll', loadNetlify, { once: true });
+        setTimeout(loadNetlify, 5000);
       }
     </script>
     
