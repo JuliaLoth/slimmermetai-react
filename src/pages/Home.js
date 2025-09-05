@@ -513,7 +513,7 @@ const Home = () => {
                 borderLeft: '4px solid #5852f2'
               }}>
                 "Creativiteit, humor, out-of-the-box denken en weigeren genoegen te nemen met 'nee' staan centraal 
-                in ons team. Deze waarden neem ik mee naar elke samenwerking."
+                in mijn werkwijze. Deze waarden neem ik mee naar elke samenwerking."
               </div>
               
               <div style={{marginTop: '3rem'}}>

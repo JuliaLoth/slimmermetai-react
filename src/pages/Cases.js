@@ -256,10 +256,10 @@ const Cases = () => {
 
           <CaseCard>
             <CaseTitle>Slimmer offertes schrijven voor overheidsaanbestedingen</CaseTitle>
-            <CaseSubtitle>Sr. Creative Consultant & AI lead bij complexe overheidsprojecten</CaseSubtitle>
+            <CaseSubtitle>Senior communicatieadviseur en concepter bij complexe overheidsprojecten</CaseSubtitle>
             
             <CaseDescription>
-              <strong>Situatie:</strong> Als Sr. Creative Consultant & AI lead werkte ik mee aan complexe overheidsaanbestedingen 
+              <strong>Situatie:</strong> Als Senior communicatieadviseur en concepter werkte ik mee aan complexe overheidsaanbestedingen 
               met strikte beoordelingscriteria en krappe deadlines.
             </CaseDescription>
 
