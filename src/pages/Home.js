@@ -24,7 +24,7 @@ const HeroSection = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(239, 73, 242, 0.1) 100%);
     z-index: 0;
   }
 `;
@@ -56,7 +56,7 @@ const HeroTitle = styled.h1`
   line-height: 1.2;
   margin-bottom: 1.5rem;
   color: #333;
-  background: linear-gradient(135deg, #5852f2 0%, #db2777 100%);
+  background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -85,7 +85,7 @@ const HeroSubtitle = styled.p`
 
 const CTAButton = styled(Link)`
   display: inline-block;
-  background: #667eea;
+  background: #5852f2;
   color: white;
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
@@ -94,7 +94,7 @@ const CTAButton = styled(Link)`
   transition: all 0.3s ease;
   
   &:hover {
-    background: #764ba2;
+    background: #ef49f2;
     transform: translateY(-2px);
   }
 `;
@@ -220,7 +220,7 @@ const ServiceContent = styled.div`
   transition: all 0.3s ease;
   
   ${ServiceCard}:hover & {
-    background: linear-gradient(135deg, rgba(88, 82, 242, 0.02) 0%, rgba(219, 39, 119, 0.02) 100%);
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.02) 0%, rgba(239, 73, 242, 0.02) 100%);
   }
 `;
 
@@ -263,7 +263,7 @@ const ProcessArrow = styled.div`
 
 const ArrowIcon = styled.div`
   font-size: 2rem;
-  color: #667eea;
+  color: #5852f2;
   font-weight: bold;
 `;
 
@@ -282,8 +282,8 @@ const Home = () => {
               </CTAButton>
               <CTAButton to="/hoe-ik-werk" style={{
                 background: 'transparent',
-                color: '#667eea',
-                border: '2px solid #667eea'
+                color: '#5852f2',
+                border: '2px solid #5852f2'
               }}>
                 Bekijk hoe ik werk
               </CTAButton>
@@ -361,7 +361,7 @@ const Home = () => {
             <ProcessCard>
               <ServiceContent>
                 <div style={{
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  background: 'linear-gradient(135deg, #5852f2 0%, #ef49f2 100%)',
                   color: 'white',
                   padding: '2rem',
                   borderRadius: '50%',
@@ -389,7 +389,7 @@ const Home = () => {
             <ProcessCard>
               <ServiceContent>
                 <div style={{
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  background: 'linear-gradient(135deg, #5852f2 0%, #ef49f2 100%)',
                   color: 'white',
                   padding: '2rem',
                   borderRadius: '50%',
@@ -417,7 +417,7 @@ const Home = () => {
             <ProcessCard>
               <ServiceContent>
                 <div style={{
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  background: 'linear-gradient(135deg, #5852f2 0%, #ef49f2 100%)',
                   color: 'white',
                   padding: '2rem',
                   borderRadius: '50%',
@@ -472,7 +472,7 @@ const Home = () => {
                 fontWeight: '700',
                 marginBottom: '2rem',
                 color: '#333',
-                background: 'linear-gradient(135deg, #5852f2 0%, #db2777 100%)',
+                background: 'linear-gradient(135deg, #5852f2 0%, #ef49f2 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -488,15 +488,15 @@ const Home = () => {
                 margin: '3rem 0'
               }}>
                 <div>
-                  <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#667eea'}}>80%</div>
+                  <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#5852f2'}}>80%</div>
                   <div style={{color: '#666'}}>kostenbesparing bij startup branding</div>
                 </div>
                 <div>
-                  <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#667eea'}}>15+</div>
+                  <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#5852f2'}}>15+</div>
                   <div style={{color: '#666'}}>bedrijven geholpen in complexe veranderingen</div>
                 </div>
                 <div>
-                  <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#667eea'}}>10 jaar</div>
+                  <div style={{fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#5852f2'}}>10 jaar</div>
                   <div style={{color: '#666'}}>innovatie-ervaring</div>
                 </div>
               </div>
@@ -510,7 +510,7 @@ const Home = () => {
                 fontSize: '1.1rem',
                 lineHeight: '1.6',
                 color: '#333',
-                borderLeft: '4px solid #667eea'
+                borderLeft: '4px solid #5852f2'
               }}>
                 "Creativiteit, humor, out-of-the-box denken en weigeren genoegen te nemen met 'nee' staan centraal 
                 in ons team. Deze waarden neem ik mee naar elke samenwerking."
@@ -518,7 +518,7 @@ const Home = () => {
               
               <div style={{marginTop: '3rem'}}>
                 <CTAButton to="/cases" style={{
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  background: 'linear-gradient(135deg, #5852f2 0%, #ef49f2 100%)',
                   color: 'white',
                   marginRight: '1rem'
                 }}>

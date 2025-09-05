@@ -29,8 +29,8 @@ const Navbar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 0;
-  height: 80px;
+  padding: 1rem 0;
+  height: 100px;
 `;
 
 const LogoContainer = styled(Link)`
@@ -48,21 +48,13 @@ const LogoContainer = styled(Link)`
 `;
 
 const LogoImg = styled.img`
-  margin-right: 12px !important;
-  border-radius: 10px !important;
-  transition: all 0.3s ease !important;
-  width: 55px !important;
-  height: auto !important;
-`;
-
-const LogoText = styled.span`
-  font-size: 1.6rem !important;
-  font-weight: 600 !important;
-  transition: all 0.3s ease !important;
-  color: #1f2937 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  height: 70px !important;
+  width: 280px !important;
   
   ${LogoContainer}:hover & {
-    color: #db2777 !important;
+    transform: rotate(-3deg) translateY(-2px) !important;
+    filter: brightness(1.1) saturate(1.2) !important;
   }
 `;
 
@@ -120,7 +112,7 @@ const NavLink = styled(Link)`
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(135deg, #5852f2 0%, #db2777 100%);
+    background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
     transition: width 0.3s ease;
   }
   
@@ -193,8 +185,7 @@ const Header = () => {
       <Container>
         <Navbar>
           <LogoContainer to="/">
-            <LogoImg src="/images/Logo.svg" alt="Slimmer Met AI Logo" />
-            <LogoText>Slimmer met AI</LogoText>
+            <LogoImg src="/images/Logo kleur beeld+woord.svg" alt="Slimmer Met AI Logo" />
           </LogoContainer>
           
           <Nav isOpen={isMenuOpen}>

@@ -24,7 +24,7 @@ const PageHero = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(239, 73, 242, 0.1) 100%);
     z-index: 0;
   }
 `;
@@ -56,7 +56,7 @@ const PageTitle = styled.h1`
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: #333;
-  background: linear-gradient(135deg, #5852f2 0%, #db2777 100%);
+  background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -177,7 +177,7 @@ const ContactList = styled.ul`
 
 const ContactButton = styled.a`
   display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
   color: white;
   padding: 1rem 2rem;
   border-radius: 50px;
@@ -223,12 +223,12 @@ const ContactInfoText = styled.p`
 `;
 
 const ContactInfoLink = styled.a`
-  color: #667eea;
+  color: #5852f2;
   text-decoration: none;
   font-weight: 600;
   
   &:hover {
-    color: #764ba2;
+    color: #ef49f2;
   }
 `;
 
@@ -285,7 +285,7 @@ const CTATitle = styled.h2`
   font-weight: 700;
   margin-bottom: 2rem;
   color: #333;
-  background: linear-gradient(135deg, #5852f2 0%, #db2777 100%);
+  background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -326,7 +326,7 @@ const CTAContainer = styled.div`
 
 const CTAButtonStyled = styled.a`
   display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
   color: white;
   padding: 1rem 2rem;
   border-radius: 50px;

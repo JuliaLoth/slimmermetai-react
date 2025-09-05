@@ -24,7 +24,7 @@ const PageHero = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(239, 73, 242, 0.1) 100%);
     z-index: 0;
   }
 `;
@@ -56,7 +56,7 @@ const PageTitle = styled.h1`
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: #333;
-  background: linear-gradient(135deg, #5852f2 0%, #db2777 100%);
+  background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -143,7 +143,7 @@ const ServiceTitle = styled.h2`
 
 const ServiceTagline = styled.p`
   font-size: 1.1rem;
-  color: #667eea;
+  color: #5852f2;
   font-weight: 600;
 `;
 
@@ -302,7 +302,7 @@ const TrainingenAdvies = () => {
               fontWeight: '700',
               marginBottom: '1rem',
               color: '#333',
-              background: 'linear-gradient(135deg, #5852f2 0%, #db2777 100%)',
+              background: 'linear-gradient(135deg, #5852f2 0%, #ef49f2 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -321,7 +321,7 @@ const TrainingenAdvies = () => {
             <div style={{textAlign: 'center'}}>
               <a href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer" style={{
                 display: 'inline-block',
-                background: '#667eea',
+                background: '#5852f2',
                 color: 'white',
                 padding: '0.8rem 1.5rem',
                 borderRadius: '25px',
@@ -331,11 +331,11 @@ const TrainingenAdvies = () => {
                 marginBottom: '0.5rem'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = '#764ba2';
+                e.target.style.background = '#ef49f2';
                 e.target.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = '#667eea';
+                e.target.style.background = '#5852f2';
                 e.target.style.transform = 'translateY(0)';
               }}>
                 Plan een Gesprek
@@ -344,22 +344,22 @@ const TrainingenAdvies = () => {
                 <a href="mailto:julia@loth.nl" style={{
                   display: 'inline-block',
                   background: 'transparent',
-                  color: '#667eea',
+                  color: '#5852f2',
                   padding: '0.6rem 1.2rem',
                   borderRadius: '20px',
                   textDecoration: 'none',
                   fontWeight: '500',
                   fontSize: '0.9rem',
-                  border: '1px solid #667eea',
+                  border: '1px solid #5852f2',
                   transition: 'all 0.3s ease'
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.background = '#667eea';
+                  e.target.style.background = '#5852f2';
                   e.target.style.color = 'white';
                 }}
                 onMouseLeave={(e) => {
                   e.target.style.background = 'transparent';
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#5852f2';
                 }}>
                   📧 julia@loth.nl
                 </a>

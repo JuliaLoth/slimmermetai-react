@@ -24,7 +24,7 @@ const PageHero = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(239, 73, 242, 0.1) 100%);
     z-index: 0;
   }
 `;
@@ -56,7 +56,7 @@ const PageTitle = styled.h1`
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: #333;
-  background: linear-gradient(135deg, #5852f2 0%, #db2777 100%);
+  background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -153,7 +153,7 @@ const SidebarText = styled.p`
 
 const SignupButton = styled.a`
   display: inline-block;
-  background: #667eea;
+  background: #5852f2;
   color: white;
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
@@ -162,7 +162,7 @@ const SignupButton = styled.a`
   transition: all 0.3s ease;
   
   &:hover {
-    background: #764ba2;
+    background: #ef49f2;
     transform: translateY(-2px);
   }
 `;
@@ -228,7 +228,7 @@ const Nieuws = () => {
                   fontWeight: '700',
                   marginBottom: '1rem',
                   color: '#333',
-                  background: 'linear-gradient(135deg, #5852f2 0%, #db2777 100%)',
+                  background: 'linear-gradient(135deg, #5852f2 0%, #ef49f2 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',

@@ -24,7 +24,7 @@ const PageHero = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(88, 82, 242, 0.1) 0%, rgba(239, 73, 242, 0.1) 100%);
     z-index: 0;
   }
 `;
@@ -56,7 +56,7 @@ const PageTitle = styled.h1`
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: #333;
-  background: linear-gradient(135deg, #5852f2 0%, #db2777 100%);
+  background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -149,7 +149,7 @@ const HeroTitle = styled.h1`
 
 const HeroSubtitle = styled.p`
   font-size: 1.3rem;
-  color: #667eea;
+  color: #5852f2;
   font-weight: 600;
   margin-bottom: 1.5rem;
 `;
@@ -162,14 +162,14 @@ const HeroDescription = styled.p`
   
   &.highlight {
     font-style: italic;
-    color: #764ba2;
+    color: #ef49f2;
     margin: 1.5rem 0;
   }
 `;
 
 const ContactButton = styled.a`
   display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
   color: white;
   padding: 1rem 2rem;
   border-radius: 50px;
@@ -331,22 +331,22 @@ const OverMij = () => {
                   <a href="mailto:julia@loth.nl" style={{
                     display: 'inline-block',
                     background: 'transparent',
-                    color: '#667eea',
+                    color: '#5852f2',
                     padding: '0.6rem 1.2rem',
                     borderRadius: '20px',
                     textDecoration: 'none',
                     fontWeight: '500',
                     fontSize: '0.9rem',
-                    border: '1px solid #667eea',
+                    border: '1px solid #5852f2',
                     transition: 'all 0.3s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.target.style.background = '#667eea';
+                    e.target.style.background = '#5852f2';
                     e.target.style.color = 'white';
                   }}
                   onMouseLeave={(e) => {
                     e.target.style.background = 'transparent';
-                    e.target.style.color = '#667eea';
+                    e.target.style.color = '#5852f2';
                   }}>
                     📧 julia@loth.nl
                   </a>
@@ -411,7 +411,7 @@ const OverMij = () => {
                 fontSize: '1.2rem',
                 lineHeight: '1.6',
                 color: '#333',
-                borderLeft: '4px solid #667eea'
+                borderLeft: '4px solid #5852f2'
               }}>
                 "Creativiteit, humor, out-of-the-box denken en weigeren genoegen te nemen met 'nee' 
                 staan centraal in ons team. Deze waarden neem ik mee naar elke samenwerking."
@@ -420,7 +420,7 @@ const OverMij = () => {
                 marginTop: '1rem',
                 fontWeight: '600',
                 fontStyle: 'normal',
-                color: '#667eea'
+                color: '#5852f2'
               }}>
                 - Julia Loth
               </div>
