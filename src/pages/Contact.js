@@ -462,13 +462,6 @@ const Contact = () => {
               </FAQAnswer>
             </FAQItem>
             
-            <FAQItem>
-              <FAQQuestion>Q: Wat als AI niet blijkt te passen bij mijn bedrijf?</FAQQuestion>
-              <FAQAnswer>
-                A: Dan ben je het snelst erachter gekomen dat het (nu) nog niet het juiste moment is. 
-                Beter dan maanden proberen met verkeerde tools.
-              </FAQAnswer>
-            </FAQItem>
             
             <FAQItem>
               <FAQQuestion>Q: Hoelang duurt het voordat ik resultaat zie?</FAQQuestion>

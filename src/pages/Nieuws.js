@@ -242,7 +242,7 @@ const Nieuws = () => {
                   lineHeight: '1.6',
                   marginBottom: '0'
                 }}>
-                  Ontdek de populairste artikelen uit onze AI-nieuwsbrief met praktische tips en inzichten.
+                  Ontdek de populairste artikelen uit de AI-nieuwsbrief met praktische tips en inzichten.
                 </p>
               </div>
             </div>

@@ -200,9 +200,9 @@ const Cases = () => {
       <PageHero>
         <Container>
           <HeroContent>
-            <PageTitle>Bewezen resultaten uit de praktijk</PageTitle>
+            <PageTitle>Mijn eerdere AI-ervaring</PageTitle>
             <PageSubtitle>
-              Ontdek hoe AI-integratie eruitziet in verschillende sectoren en situaties
+              Van aanbestedingen tot branding - concrete resultaten met AI
             </PageSubtitle>
           </HeroContent>
         </Container>
@@ -275,9 +275,10 @@ const Cases = () => {
               <CaseSectionTitle>Concrete AI-aanpak:</CaseSectionTitle>
               <CaseList>
                 <li>Analyse versnellen: ChatGPT en Claude AI ingezet voor SWOT-analyses en stakeholder-mapping</li>
-                <li>Strategische templates: AI-prompts ontwikkeld voor CASI-interventies en Factor C methodiek</li>
+                <li>Strategische templates: AI-templates gemaakt voor budgetten, tijdlijnen en strategische werkwijzes</li>
                 <li>Content optimalisatie: Kernboodschappen en narratieven verfijnen met AI-ondersteuning</li>
                 <li>Kwaliteitscontrole: AI-check tegen beoordelingscriteria voordat indienen</li>
+                <li>Teamtrainingen: AI-trainingen geven aan het team voor efficiënt gebruik van tools</li>
               </CaseList>
             </CaseSection>
 

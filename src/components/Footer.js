@@ -20,6 +20,12 @@ const FooterContainer = styled.footer`
   animation: fadeInFooter 0.3s ease-in-out 3s forwards;
   z-index: 10;
   
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 280px;
+    position: relative;
+  }
+  
   @keyframes fadeInFooter {
     from { 
       opacity: 0;
@@ -52,8 +58,9 @@ const FooterContent = styled.div`
   
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 1rem;
-    overflow-y: auto;
+    gap: 1.5rem;
+    height: auto;
+    overflow-y: visible;
   }
 `;
 
