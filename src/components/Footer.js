@@ -7,6 +7,8 @@ const FooterContainer = styled.footer`
   padding: 3rem 0 2rem;
   margin-top: auto;
   box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+  min-height: 300px;
+  contain: layout;
 `;
 
 const Container = styled.div`
@@ -23,10 +25,13 @@ const FooterContent = styled.div`
   margin: 0 auto;
   padding: 0 1rem;
   align-items: start;
+  min-height: 200px;
+  contain: layout style;
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 2rem;
+    min-height: 400px;
   }
 `;
 
