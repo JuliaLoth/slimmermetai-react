@@ -5,13 +5,17 @@ import styled from 'styled-components';
 const FooterContainer = styled.footer`
   background-color: #fff;
   padding: 0;
-  margin-top: auto;
   box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
   height: 320px;
+  width: 100%;
   overflow: hidden;
   contain: layout size style;
   will-change: auto;
   transform: translateZ(0);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 `;
 
 const Container = styled.div`
