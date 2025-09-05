@@ -5,13 +5,13 @@ import './styles/global.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-// Ultra-aggressive code splitting for 100% performance
+// Preload most important pages for better UX
 const Home = React.lazy(() => import(/* webpackChunkName: "home", webpackPreload: true */ './pages/Home'));
-const TrainingenAdvies = React.lazy(() => import(/* webpackChunkName: "trainingen" */ './pages/TrainingenAdvies'));
+const TrainingenAdvies = React.lazy(() => import(/* webpackChunkName: "trainingen", webpackPrefetch: true */ './pages/TrainingenAdvies'));
+const OverMij = React.lazy(() => import(/* webpackChunkName: "over-mij", webpackPrefetch: true */ './pages/OverMij'));
+const Contact = React.lazy(() => import(/* webpackChunkName: "contact", webpackPrefetch: true */ './pages/Contact'));
+const Cases = React.lazy(() => import(/* webpackChunkName: "cases", webpackPrefetch: true */ './pages/Cases'));
 const Nieuws = React.lazy(() => import(/* webpackChunkName: "nieuws" */ './pages/Nieuws'));
-const OverMij = React.lazy(() => import(/* webpackChunkName: "over-mij" */ './pages/OverMij'));
-const Cases = React.lazy(() => import(/* webpackChunkName: "cases" */ './pages/Cases'));
-const Contact = React.lazy(() => import(/* webpackChunkName: "contact" */ './pages/Contact'));
 
 const AppContainer = styled.div`
   min-height: 100vh;
@@ -32,29 +32,23 @@ const MainContent = styled.main`
 const LoadingContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: calc(100vh - 160px);
   flex-direction: column;
   width: 100%;
-  position: fixed;
-  top: 80px;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  z-index: 100;
+  padding-top: 120px;
   contain: layout style;
   will-change: opacity;
 `;
 
 const LoadingSpinner = styled.div`
-  width: 40px;
-  height: 40px;
-  border: 3px solid #f3f3f3;
-  border-top: 3px solid #5852f2;
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(88, 82, 242, 0.1);
+  border-top: 2px solid #5852f2;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: 1rem;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 0.5rem;
 
   @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -63,8 +57,12 @@ const LoadingSpinner = styled.div`
 `;
 
 const LoadingText = styled.p`
-  color: #666;
-  font-family: 'Neue Montreal', sans-serif;
+  color: #888;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0;
+  opacity: 0.7;
 `;
 
 function App() {

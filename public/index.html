@@ -27,8 +27,9 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/Flavicon.svg" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
-    <!-- Remove font preload to reduce critical path latency -->
-    <!-- Font will load via CSS with optimized display settings -->
+    <!-- Preload critical images for faster loading -->
+    <link rel="preload" href="/images/Profiel foto Julia.svg" as="image" type="image/svg+xml">
+    <link rel="preload" href="/images/Logo kleur beeld+woord.svg" as="image" type="image/svg+xml">
     
     <!-- Google Fonts - Optimized Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
