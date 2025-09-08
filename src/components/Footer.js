@@ -120,12 +120,13 @@ const ContactItem = styled.div`
   align-items: center;
   color: #6b7280;
   margin-bottom: 0.5rem;
-  
-  &:before {
-    content: "${props => props.icon}";
-    margin-right: 0.5rem;
-    font-size: 1.1rem;
-  }
+`;
+
+const ContactIcon = styled.img`
+  width: 28px;
+  height: 28px;
+  margin-right: 0.5rem;
+  opacity: 0.7;
 `;
 
 const SocialLinks = styled.div`
@@ -141,15 +142,21 @@ const SocialLink = styled.a`
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #f3f4f6;
-  color: #4b5563;
   transition: all 0.3s ease;
-  font-size: 1.2rem;
   
   &:hover {
-    background-color: #5852f2;
-    color: white;
     transform: translateY(-3px);
+  }
+`;
+
+const SocialIcon = styled.img`
+  width: 32px;
+  height: 32px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  
+  ${SocialLink}:hover & {
+    opacity: 1;
   }
 `;
 
@@ -184,10 +191,10 @@ const Footer = () => {
             </FooterText>
             <SocialLinks>
               <SocialLink href="https://www.linkedin.com/in/julialoth" target="_blank" rel="noopener noreferrer">
-                📧
+                <SocialIcon src="/images/Icon_linkedin.png" alt="LinkedIn" />
               </SocialLink>
               <SocialLink href="https://slimmermetai.substack.com" target="_blank" rel="noopener noreferrer">
-                📰
+                <SocialIcon src="/images/Icon_nieuwsbrief.png" alt="Newsletter" />
               </SocialLink>
             </SocialLinks>
           </FooterSection>
@@ -208,15 +215,18 @@ const Footer = () => {
           <FooterSection>
             <FooterTitle>Contact</FooterTitle>
             <ContactInfo>
-              <ContactItem icon="📧">
+              <ContactItem>
+                <ContactIcon src="/images/Icon_email.png" alt="Email" />
                 <ExternalLink href="mailto:julia@loth.nl">
                   julia@loth.nl
                 </ExternalLink>
               </ContactItem>
-              <ContactItem icon="🌍">
+              <ContactItem>
+                <ContactIcon src="/images/Icon_wereld.png" alt="Locatie" />
                 Remote service, heel Nederland
               </ContactItem>
-              <ContactItem icon="💼">
+              <ContactItem>
+                <ContactIcon src="/images/Icon_linkedin.png" alt="LinkedIn" />
                 <ExternalLink href="https://www.linkedin.com/in/julialoth" target="_blank" rel="noopener noreferrer">
                   LinkedIn Profiel
                 </ExternalLink>

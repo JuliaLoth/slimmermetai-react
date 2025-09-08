@@ -121,11 +121,20 @@ const ServiceHeader = styled.div`
   }
 `;
 
-const ServiceIcon = styled.div`
-  font-size: 4rem;
+const ServiceIcon = styled.img`
+  width: 64px;
+  height: 64px;
   margin-right: 2rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  
+  ${ServiceSection}:hover & {
+    opacity: 1;
+  }
   
   @media (max-width: 768px) {
+    width: 48px;
+    height: 48px;
     margin-right: 0;
     margin-bottom: 1rem;
   }
@@ -198,7 +207,7 @@ const TrainingenAdvies = () => {
         <ServicesGrid>
           <ServiceSection>
             <ServiceHeader>
-              <ServiceIcon>🎯</ServiceIcon>
+              <ServiceIcon src="/images/Icon_AI_integratie.png" alt="AI Integratie" />
               <ServiceInfo>
                 <ServiceTitle>AI-integratie traject</ServiceTitle>
                 <ServiceTagline>Voor ondernemers die AI willen adopteren maar niet weten waar te beginnen</ServiceTagline>
@@ -231,7 +240,7 @@ const TrainingenAdvies = () => {
 
           <ServiceSection>
             <ServiceHeader>
-              <ServiceIcon>🎫</ServiceIcon>
+              <ServiceIcon src="/images/Icon_strippenkaart.png" alt="Strippenkaart" />
               <ServiceInfo>
                 <ServiceTitle>Strippenkaart begeleiding</ServiceTitle>
                 <ServiceTagline>Voor klanten die doorlopende AI-ondersteuning willen</ServiceTagline>
@@ -264,7 +273,7 @@ const TrainingenAdvies = () => {
 
           <ServiceSection>
             <ServiceHeader>
-              <ServiceIcon>🚀</ServiceIcon>
+              <ServiceIcon src="/images/Icon_specifiektraject.png" alt="Specifiek traject" />
               <ServiceInfo>
                 <ServiceTitle>Specifieke AI-projecten</ServiceTitle>
                 <ServiceTagline>Voor bedrijven met concrete AI-uitdagingen</ServiceTagline>
@@ -361,7 +370,7 @@ const TrainingenAdvies = () => {
                   e.target.style.background = 'transparent';
                   e.target.style.color = '#5852f2';
                 }}>
-                  📧 julia@loth.nl
+                  <img src="/images/Icon_email.png" alt="Email" style={{width: '16px', height: '16px', marginRight: '8px', verticalAlign: 'middle'}} /> julia@loth.nl
                 </a>
               </div>
             </div>

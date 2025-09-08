@@ -267,7 +267,7 @@ const Nieuws = () => {
 
 
             <SidebarCard>
-              <SidebarTitle>💡 Wist je dat?</SidebarTitle>
+              <SidebarTitle><img src="/images/Icon_praktisch.png" alt="Tip" style={{width: '20px', height: '20px', marginRight: '8px', verticalAlign: 'middle'}} /> Wist je dat?</SidebarTitle>
               <SidebarText>
                 AI kan je productiviteit met 40-60% verhogen als je de juiste 
                 tools en technieken gebruikt. In onze nieuwsbrief delen we 

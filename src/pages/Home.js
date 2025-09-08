@@ -193,13 +193,19 @@ const ServiceCard = styled.div`
   }
 `;
 
-const ServiceIcon = styled.div`
-  font-size: 3rem;
+const ServiceIcon = styled.img`
+  width: 56px;
+  height: 56px;
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
+  opacity: 0.8;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   
   ${ServiceCard}:hover & {
     transform: scale(1.1);
+    opacity: 1;
   }
 `;
 
@@ -340,7 +346,7 @@ const Home = () => {
           <ServicesGrid>
             <ServiceCard>
               <ServiceContent>
-                <ServiceIcon>✨</ServiceIcon>
+                <ServiceIcon src="/images/Icon_enthousiast.png" alt="Enthousiast" />
                 <ServiceTitle>Enthousiaste begeleiding</ServiceTitle>
                 <ServiceDescription>
                   Ik laat je de lol van AI ontdekken in plaats van je te overweldigen
@@ -350,7 +356,7 @@ const Home = () => {
 
             <ServiceCard>
               <ServiceContent>
-                <ServiceIcon>🛠️</ServiceIcon>
+                <ServiceIcon src="/images/Icon_praktisch.png" alt="Praktisch" />
                 <ServiceTitle>Praktische integratie</ServiceTitle>
                 <ServiceDescription>
                   Geen theorie, maar hands-on werken met jouw eigen documenten
@@ -360,7 +366,7 @@ const Home = () => {
 
             <ServiceCard>
               <ServiceContent>
-                <ServiceIcon>🎨</ServiceIcon>
+                <ServiceIcon src="/images/Icon_creatief.png" alt="Creatief" />
                 <ServiceTitle>Creatieve oplossingen</ServiceTitle>
                 <ServiceDescription>
                   Ik vind altijd wel een manier die past bij jouw situatie
@@ -370,7 +376,7 @@ const Home = () => {
 
             <ServiceCard>
               <ServiceContent>
-                <ServiceIcon>🤝</ServiceIcon>
+                <ServiceIcon src="/images/Icon_mensgericht.png" alt="Mensgericht" />
                 <ServiceTitle>Mensgerichte aanpak</ServiceTitle>
                 <ServiceDescription>
                   AI dient jou, niet andersom

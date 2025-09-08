@@ -212,10 +212,19 @@ const ContentCard = styled.div`
   }
 `;
 
-const CardIcon = styled.div`
-  font-size: 3rem;
+const CardIcon = styled.img`
+  width: 64px;
+  height: 64px;
   margin-bottom: 1.5rem;
-  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  
+  ${ContentCard}:hover & {
+    opacity: 1;
+  }
 `;
 
 const CardTitle = styled.h3`
@@ -348,7 +357,7 @@ const OverMij = () => {
                     e.target.style.background = 'transparent';
                     e.target.style.color = '#5852f2';
                   }}>
-                    📧 julia@loth.nl
+                    <img src="/images/Icon_email.png" alt="Email" style={{width: '16px', height: '16px', marginRight: '8px', verticalAlign: 'middle'}} /> julia@loth.nl
                   </a>
                 </div>
               </div>
@@ -359,7 +368,7 @@ const OverMij = () => {
           
           <ContentGrid>
             <ContentCard>
-              <CardIcon>🎨</CardIcon>
+              <CardIcon src="/images/Icon_creatief.png" alt="Creatief" />
               <CardTitle>Sr. Creative Consultant & AI lead</CardTitle>
               <CardText>
                 AI-integratie voor creatieve projecten en complexe overheidsaanbestedingen.
@@ -367,7 +376,7 @@ const OverMij = () => {
             </ContentCard>
 
             <ContentCard>
-              <CardIcon>💼</CardIcon>
+              <CardIcon src="/images/Icon_strategischinformatieadviseur.png" alt="Strategisch" />
               <CardTitle>Strategisch informatieadviseur</CardTitle>
               <CardText>
                 IT-transformaties begeleid bij ministeries en complexe organisaties.
@@ -375,7 +384,7 @@ const OverMij = () => {
             </ContentCard>
 
             <ContentCard>
-              <CardIcon>🔄</CardIcon>
+              <CardIcon src="/images/Icon_scrummaster.png" alt="Scrummaster" />
               <CardTitle>Scrummaster & procesadviseur</CardTitle>
               <CardText>
                 Teams geholpen optimale resultaten te behalen door proces-optimalisatie.
@@ -383,7 +392,7 @@ const OverMij = () => {
             </ContentCard>
 
             <ContentCard>
-              <CardIcon>🧪</CardIcon>
+              <CardIcon src="/images/Icon_datalab.png" alt="Datalab" />
               <CardTitle>Opdrachnemer datalab</CardTitle>
               <CardText>
                 Innovaties vertaald naar tastbare resultaten, van onbekend naar strategische partner.

@@ -101,6 +101,7 @@ const ContactGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   margin-bottom: 3rem;
+  align-items: stretch;
   
   @media (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
@@ -124,9 +125,14 @@ const ContactCard = styled.div`
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   border: 1px solid #e9ecef;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 300px;
   
   @media (max-width: 768px) {
     padding: 1.5rem;
+    min-height: auto;
   }
 `;
 
@@ -393,14 +399,14 @@ const Contact = () => {
               
               <ContactInfo>
                 <ContactInfoCard>
-                  <ContactInfoTitle>📧 Email</ContactInfoTitle>
+                  <ContactInfoTitle><img src="/images/Icon_email.png" alt="Email" style={{width: '24px', height: '24px', marginRight: '8px', verticalAlign: 'middle'}} /> Email</ContactInfoTitle>
                   <ContactInfoLink href="mailto:julia@loth.nl">
                     julia@loth.nl
                   </ContactInfoLink>
                 </ContactInfoCard>
                 
                 <ContactInfoCard>
-                  <ContactInfoTitle>📱 Telefoon</ContactInfoTitle>
+                  <ContactInfoTitle><img src="/images/Icon_mobiel.png" alt="Telefoon" style={{width: '24px', height: '24px', marginRight: '8px', verticalAlign: 'middle'}} /> Telefoon</ContactInfoTitle>
                   <ContactInfoLink href="tel:+31624161016">
                     +31 6 2416 1016
                   </ContactInfoLink>
@@ -416,14 +422,14 @@ const Contact = () => {
               
               <ContactInfo>
                 <ContactInfoCard>
-                  <ContactInfoTitle>💼 LinkedIn</ContactInfoTitle>
+                  <ContactInfoTitle><img src="/images/Icon_linkedin.png" alt="LinkedIn" style={{width: '24px', height: '24px', marginRight: '8px', verticalAlign: 'middle'}} /> LinkedIn</ContactInfoTitle>
                   <ContactInfoLink href="https://www.linkedin.com/in/julialoth" target="_blank" rel="noopener noreferrer">
                     LinkedIn Profiel
                   </ContactInfoLink>
                 </ContactInfoCard>
                 
                 <ContactInfoCard>
-                  <ContactInfoTitle>📰 Nieuwsbrief</ContactInfoTitle>
+                  <ContactInfoTitle><img src="/images/Icon_nieuwsbrief.png" alt="Nieuwsbrief" style={{width: '24px', height: '24px', marginRight: '8px', verticalAlign: 'middle'}} /> Nieuwsbrief</ContactInfoTitle>
                   <ContactInfoLink href="https://slimmermetai.substack.com" target="_blank" rel="noopener noreferrer">
                     Substack Nieuws
                   </ContactInfoLink>
@@ -437,10 +443,21 @@ const Contact = () => {
                 Informatie over mijn werkgebied en beschikbaarheid.
               </ContactDescription>
               
-              <ContactInfoText>
-                <strong>Remote only:</strong> Ik woon op een zeilboot dus werk online, overal vandaan<br/>
-                <strong>Talen:</strong> Nederlands, Engels
-              </ContactInfoText>
+              <ContactInfo>
+                <ContactInfoCard>
+                  <ContactInfoTitle><img src="/images/Icon_wereld.png" alt="Service gebied" style={{width: '24px', height: '24px', marginRight: '8px', verticalAlign: 'middle'}} /> Service gebied</ContactInfoTitle>
+                  <ContactInfoText>
+                    Remote service, heel Nederland
+                  </ContactInfoText>
+                </ContactInfoCard>
+                
+                <ContactInfoCard>
+                  <ContactInfoTitle><img src="/images/Icon_praktisch.png" alt="Talen" style={{width: '24px', height: '24px', marginRight: '8px', verticalAlign: 'middle'}} /> Talen</ContactInfoTitle>
+                  <ContactInfoText>
+                    Nederlands, Engels
+                  </ContactInfoText>
+                </ContactInfoCard>
+              </ContactInfo>
             </ContactCard>
           </ContactGrid>
 

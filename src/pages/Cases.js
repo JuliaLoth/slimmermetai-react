@@ -399,7 +399,7 @@ const Cases = () => {
                     e.target.style.background = 'transparent';
                     e.target.style.color = '#5852f2';
                   }}>
-                    📧 julia@loth.nl
+                    <img src="/images/Icon_email.png" alt="Email" style={{width: '16px', height: '16px', marginRight: '8px', verticalAlign: 'middle'}} /> julia@loth.nl
                   </a>
                 </div>
               </div>
