@@ -6,25 +6,13 @@ const FooterContainer = styled.footer`
   background-color: #fff;
   padding: 0;
   box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
-  height: 320px;
   width: 100%;
-  overflow: hidden;
-  contain: layout size style;
-  will-change: auto;
-  transform: translateZ(0);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  overflow: visible;
   opacity: 0;
   animation: fadeInFooter 0.3s ease-in-out 3s forwards;
   z-index: 10;
-  
-  @media (max-width: 768px) {
-    height: auto;
-    min-height: 280px;
-    position: relative;
-  }
+  position: relative;
+  margin-top: auto;
   
   @keyframes fadeInFooter {
     from { 
@@ -42,7 +30,6 @@ const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 2rem 2rem;
-  height: 100%;
   box-sizing: border-box;
 `;
 
@@ -53,14 +40,10 @@ const FooterContent = styled.div`
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem;
-  height: 100%;
-  contain: layout strict;
   
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 1.5rem;
-    height: auto;
-    overflow-y: visible;
   }
 `;
 

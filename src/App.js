@@ -23,7 +23,6 @@ const AppContainer = styled.div`
 const MainContent = styled.main`
   flex: 1;
   padding: 0;
-  padding-bottom: 320px;
   contain: layout;
   min-height: calc(100vh - 80px);
   box-sizing: border-box;
