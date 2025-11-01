@@ -11,6 +11,7 @@ const TrainingenAdvies = React.lazy(() => import(/* webpackChunkName: "traininge
 const OverMij = React.lazy(() => import(/* webpackChunkName: "over-mij", webpackPrefetch: true */ './pages/OverMij'));
 const Contact = React.lazy(() => import(/* webpackChunkName: "contact", webpackPrefetch: true */ './pages/Contact'));
 const Cases = React.lazy(() => import(/* webpackChunkName: "cases", webpackPrefetch: true */ './pages/Cases'));
+const CaseDetail = React.lazy(() => import(/* webpackChunkName: "case-detail" */ './pages/CaseDetail'));
 const Nieuws = React.lazy(() => import(/* webpackChunkName: "nieuws" */ './pages/Nieuws'));
 
 const AppContainer = styled.div`
@@ -119,6 +120,7 @@ function App() {
               <Route path="/nieuws" element={<Nieuws />} />
               <Route path="/over-mij" element={<OverMij />} />
               <Route path="/cases" element={<Cases />} />
+              <Route path="/cases/:caseId" element={<CaseDetail />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </Suspense>

@@ -150,24 +150,6 @@ const SidebarText = styled.p`
   margin-bottom: 1rem;
 `;
 
-
-const SignupButton = styled.a`
-  display: inline-block;
-  background: #5852f2;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    background: #ef49f2;
-    transform: translateY(-2px);
-  }
-`;
-
-
 const Nieuws = () => {
   useEffect(() => {
     // Laad Supascribe feed script
@@ -254,9 +236,17 @@ const Nieuws = () => {
               <SidebarText>
                 Ontvang elke week praktische tips die je direct kunt toepassen in je werk. Geen theorie, gewoon tools en technieken die écht werken.
               </SidebarText>
-              <SignupButton href="https://slimmermetai.substack.com" target="_blank" rel="noopener noreferrer">
-                Abonneer je Nu
-              </SignupButton>
+              <div style={{marginTop: '1rem'}}>
+                <iframe
+                  src="https://slimmermetai.substack.com/embed"
+                  width="100%"
+                  height="150"
+                  style={{border: '1px solid #EEE', background: 'white', maxWidth: '480px'}}
+                  frameBorder="0"
+                  scrolling="no"
+                  title="Subscribe to newsletter"
+                ></iframe>
+              </div>
             </SidebarCard>
 
 

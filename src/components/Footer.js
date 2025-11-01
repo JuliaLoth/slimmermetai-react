@@ -91,42 +91,10 @@ const FooterLink = styled(Link)`
   transition: color 0.3s ease;
   font-family: 'Neue Montreal', sans-serif;
   font-size: 1rem;
-  
+
   &:hover {
     color: #5852f2;
   }
-`;
-
-const ExternalLink = styled.a`
-  color: #6b7280;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-family: 'Neue Montreal', sans-serif;
-  font-size: 1rem;
-  
-  &:hover {
-    color: #5852f2;
-  }
-`;
-
-const ContactInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-`;
-
-const ContactItem = styled.div`
-  display: flex;
-  align-items: center;
-  color: #6b7280;
-  margin-bottom: 0.5rem;
-`;
-
-const ContactIcon = styled.img`
-  width: 28px;
-  height: 28px;
-  margin-right: 0.5rem;
-  opacity: 0.7;
 `;
 
 const SocialLinks = styled.div`
@@ -213,25 +181,19 @@ const Footer = () => {
           </FooterSection>
 
           <FooterSection>
-            <FooterTitle>Contact</FooterTitle>
-            <ContactInfo>
-              <ContactItem>
-                <ContactIcon src="/images/Icon_email.png" alt="Email" />
-                <ExternalLink href="mailto:julia@loth.nl">
-                  julia@loth.nl
-                </ExternalLink>
-              </ContactItem>
-              <ContactItem>
-                <ContactIcon src="/images/Icon_wereld.png" alt="Locatie" />
-                Remote service, heel Nederland
-              </ContactItem>
-              <ContactItem>
-                <ContactIcon src="/images/Icon_linkedin.png" alt="LinkedIn" />
-                <ExternalLink href="https://www.linkedin.com/in/julialoth" target="_blank" rel="noopener noreferrer">
-                  LinkedIn Profiel
-                </ExternalLink>
-              </ContactItem>
-            </ContactInfo>
+            <FooterTitle>Nieuwsbrief</FooterTitle>
+            <FooterText style={{fontSize: '0.95rem', marginBottom: '1rem'}}>
+              Wekelijkse AI-tips direct in je inbox
+            </FooterText>
+            <iframe
+              src="https://slimmermetai.substack.com/embed"
+              width="100%"
+              height="150"
+              style={{border: '1px solid #EEE', background: 'white', borderRadius: '8px'}}
+              frameBorder="0"
+              scrolling="no"
+              title="Subscribe to newsletter"
+            ></iframe>
           </FooterSection>
         </FooterContent>
 

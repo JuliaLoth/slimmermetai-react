@@ -44,7 +44,8 @@ const HeroContent = styled.div`
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 2;
-  
+  text-align: center;
+
   @media (max-width: 768px) {
     padding: 2rem;
     margin: 0 1rem;
@@ -193,7 +194,27 @@ const TrainingenAdvies = () => {
       <PageHero>
         <Container>
           <HeroContent>
-            <PageTitle>Werk slimmer, niet harder - op jouw manier</PageTitle>
+            <div style={{
+              fontSize: '3.5rem',
+              fontWeight: '700',
+              background: 'linear-gradient(135deg, #5852f2 0%, #ef49f2 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              marginBottom: '0.75rem',
+              fontFamily: 'Neue Montreal, sans-serif',
+              lineHeight: '1.2'
+            }}>
+              Werk slimmer, niet harder
+            </div>
+            <div style={{
+              fontSize: '1.8rem',
+              fontWeight: '600',
+              color: '#5852f2',
+              marginBottom: '1rem'
+            }}>
+              op jouw manier
+            </div>
             <PageSubtitle>
               Overal hoor je over AI, maar niemand legt uit hoe het écht gaat helpen in jouw bedrijf. Standaard training blijft bij theorie. Ik bied begeleiding op maat zodat technologie jou en je bedrijf versterkt.
             </PageSubtitle>
@@ -248,8 +269,10 @@ const TrainingenAdvies = () => {
             </ServiceHeader>
             
             <ServiceDescription>
-              <strong>Hoe het werkt:</strong> Koop vooraf strippen en gebruik ze wanneer je ondersteuning of advies nodig hebt<br/><br/>
-              Geen abonnement, wel zekerheid. Lagere drempel om hulp te vragen dan per uur afrekenen.
+              <strong>Hoe het werkt:</strong> Koop een bundel uren vooraf en gebruik ze wanneer jij wilt.<br/>
+              Nieuwe tool testen? Daar gaat een strip. Workflow optimaliseren? Nog een strip.<br/><br/>
+              Geen doorlopend abonnement. Geen verrassingen. Wel de zekerheid dat je hulp
+              krijgt wanneer je die nodig hebt - zonder elke keer na te denken over de kosten.
             </ServiceDescription>
             
             <FeaturesList>

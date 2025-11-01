@@ -44,7 +44,8 @@ const HeroContent = styled.div`
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   position: relative;
   z-index: 1;
-  
+  text-align: center;
+
   @media (max-width: 768px) {
     padding: 2rem;
     margin: 0 1rem;
@@ -92,10 +93,12 @@ const CTAButton = styled(Link)`
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
-  
+  box-shadow: 0 2px 8px rgba(88, 82, 242, 0.3);
+
   &:hover {
     background: #ef49f2;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 73, 242, 0.4);
   }
 `;
 
@@ -308,17 +311,26 @@ const Home = () => {
       <HeroSection>
         <Container>
           <HeroContent>
-            <HeroTitle className="hero-title">Maak jouw bedrijf beter met AI</HeroTitle>
+            <div style={{
+              fontSize: '3.5rem',
+              fontWeight: '700',
+              background: 'linear-gradient(135deg, #5852f2 0%, #ef49f2 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              marginBottom: '0.75rem',
+              fontFamily: 'Neue Montreal, sans-serif',
+              lineHeight: '1.2'
+            }}>
+              Werk slimmer, niet harder
+            </div>
+            <HeroTitle className="hero-title" style={{fontSize: '1.8rem', fontWeight: '600', marginBottom: '1rem', color: '#5852f2', background: 'none', WebkitTextFillColor: '#5852f2'}}>Maak jouw bedrijf beter met AI</HeroTitle>
             <HeroSubtitle className="hero-subtitle">Met advies op maat zorg ik dat AI jouw bedrijfsvoering versterkt, zodat je meer tijd krijgt voor wat echt telt.</HeroSubtitle>
             <CTAContainer>
               <CTAButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer">
-                Plan een gratis kennismaking
+                Kennismaken?
               </CTAButton>
-              <CTAButton to="/hoe-ik-werk" style={{
-                background: 'transparent',
-                color: '#5852f2',
-                border: '2px solid #5852f2'
-              }}>
+              <CTAButton to="/trainingen-advies">
                 Bekijk hoe ik werk
               </CTAButton>
             </CTAContainer>
