@@ -338,7 +338,7 @@ const Home = () => {
             margin: '0 auto 3rem',
             lineHeight: '1.6'
           }}>
-            Jij kent het vast wel: overal hoor je over AI, maar niemand legt uit hoe het écht gaat helpen in jouw bedrijf.
+            Je kent het vast wel: overal hoor je over AI, maar niemand legt uit hoe het écht gaat helpen in jouw bedrijf. ChatGPT of Copilot? Gratis of betaald? De toptool van vandaag is morgen misschien alweer achterhaald.
             Ik ben geen gewone AI-trainer die theorie verkondigt. Als strategische innovator met 10 jaar ervaring in complexe
             organisaties help ik jou AI te integreren op de manier die aansluit hoe jij en je collega's al werken.
           </div>

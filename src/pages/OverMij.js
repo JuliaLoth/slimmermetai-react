@@ -295,8 +295,7 @@ const OverMij = () => {
           <HeroContent>
             <PageTitle>Hi, ik ben Julia - jouw AI-begeleider</PageTitle>
             <PageSubtitle>
-              10 jaar ervaring als innovator. Ik help teams en organisaties complexe vraagstukken oplossen op een manier 
-              die aansluit bij hoe mensen werken. Focus: innovaties die écht verschil maken voor mensen.
+              As innovator help ik teams en organisaties om complexe vraagstukken op te lossen. Op een manier die aansluit op hoe mensen graag werken. Mijn focus: innovaties die écht het verschil maken voor medewerkers en de organisatie.
             </PageSubtitle>
           </HeroContent>
         </Container>
@@ -364,7 +363,7 @@ const OverMij = () => {
             </AboutHeroContent>
           </HeroSection>
 
-          <SectionTitle>Mijn Expertise - 10 jaar innovatie-ervaring</SectionTitle>
+          <SectionTitle>Mijn meerwaarde</SectionTitle>
           
           <ContentGrid>
             <ContentCard>
@@ -377,7 +376,7 @@ const OverMij = () => {
 
             <ContentCard>
               <CardIcon src="/images/Icon_strategischinformatieadviseur.png" alt="Strategisch" />
-              <CardTitle>Strategisch informatieadviseur</CardTitle>
+              <CardTitle>Strategisch informatieadviseur bij een G4 gemeente</CardTitle>
               <CardText>
                 IT-transformaties begeleid bij ministeries en complexe organisaties.
               </CardText>
@@ -385,7 +384,7 @@ const OverMij = () => {
 
             <ContentCard>
               <CardIcon src="/images/Icon_scrummaster.png" alt="Scrummaster" />
-              <CardTitle>Scrummaster & procesadviseur</CardTitle>
+              <CardTitle>Scrummaster & Procesadviseur bij een regionale millieudienst</CardTitle>
               <CardText>
                 Teams geholpen optimale resultaten te behalen door proces-optimalisatie.
               </CardText>
@@ -393,7 +392,7 @@ const OverMij = () => {
 
             <ContentCard>
               <CardIcon src="/images/Icon_datalab.png" alt="Datalab" />
-              <CardTitle>Opdrachnemer datalab</CardTitle>
+              <CardTitle>Opdrachtnemer bij een Datalab van een Provincie</CardTitle>
               <CardText>
                 Innovaties vertaald naar tastbare resultaten, van onbekend naar strategische partner.
               </CardText>
@@ -422,8 +421,8 @@ const OverMij = () => {
                 color: '#333',
                 borderLeft: '4px solid #5852f2'
               }}>
-                "Creativiteit, humor, out-of-the-box denken en weigeren genoegen te nemen met 'nee' 
-                staan centraal in mijn werkwijze. Deze waarden neem ik mee naar elke samenwerking."
+                "Creativiteit, humor, out-of-the-box denken en weigeren genoegen te nemen met 'nee'
+                staan centraal in mijn werkwijze. Deze eigenschappen neem ik mee in elke samenwerking."
               </div>
               <div style={{
                 marginTop: '1rem',

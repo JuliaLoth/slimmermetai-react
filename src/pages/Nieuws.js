@@ -170,22 +170,15 @@ const SignupButton = styled.a`
 
 const Nieuws = () => {
   useEffect(() => {
-    // Substack Feed Widget configuratie
-    window.SubstackFeedWidget = {
-      substackUrl: "slimmermetai.substack.com",
-      posts: 3,
-      filter: "top"
-    };
-
-    // Laad Substack feed script
+    // Laad Supascribe feed script
     const script = document.createElement('script');
-    script.src = "https://substackapi.com/embeds/feed.js";
+    script.src = "https://js.supascribe.com/v1/loader/HjNBdTYKW9Wl1aIOtLNHtNKttNC3.js";
     script.async = true;
     document.body.appendChild(script);
 
     return () => {
       // Cleanup script als component unmount
-      const existingScript = document.querySelector('script[src="https://substackapi.com/embeds/feed.js"]');
+      const existingScript = document.querySelector('script[src="https://js.supascribe.com/v1/loader/HjNBdTYKW9Wl1aIOtLNHtNKttNC3.js"]');
       if (existingScript) {
         document.body.removeChild(existingScript);
       }
@@ -248,8 +241,9 @@ const Nieuws = () => {
             </div>
             
             <div style={{padding: '2rem', textAlign: 'center'}}>
-              <SubstackFeedContainer id="substack-feed-embed">
-                {/* Substack feed widget wordt hier geladen */}
+              <SubstackFeedContainer>
+                {/* Feed embed code */}
+                <div data-supascribe-embed-id="589349283017" data-supascribe-feed></div>
               </SubstackFeedContainer>
             </div>
           </MainContent>
