@@ -216,7 +216,7 @@ const TrainingenAdvies = () => {
             
             <ServiceDescription>
               <strong>Duur:</strong> 1 dag hands-on + 4 weken begeleiding + retrospective<br/><br/>
-              Een compleet traject van kennismaking tot werkende AI-workflows die je échte tijd opleveren.
+              Een compleet traject van kennismaking tot werkende AI-workflows die je écht tijd opleveren.
             </ServiceDescription>
             
             <FeaturesList>
@@ -248,7 +248,7 @@ const TrainingenAdvies = () => {
             </ServiceHeader>
             
             <ServiceDescription>
-              <strong>Hoe het werkt:</strong> Koop strips vooraf, gebruik wanneer je ze nodig hebt<br/><br/>
+              <strong>Hoe het werkt:</strong> Koop vooraf strippen en gebruik ze wanneer je ondersteuning of advies nodig hebt<br/><br/>
               Geen abonnement, wel zekerheid. Lagere drempel om hulp te vragen dan per uur afrekenen.
             </ServiceDescription>
             
@@ -325,7 +325,7 @@ const TrainingenAdvies = () => {
               lineHeight: '1.6',
               marginBottom: '1.5rem'
             }}>
-              Neem contact op voor een vrijblijvend gesprek over hoe AI jouw doelen kan ondersteunen.
+              Neem contact op voor een vrijblijvend gesprek over hoe AI jou helpt je doelstellingen te bereiken.
             </p>
             <div style={{textAlign: 'center'}}>
               <a href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer" style={{

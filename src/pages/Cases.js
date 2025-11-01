@@ -259,7 +259,7 @@ const Cases = () => {
             <CaseSubtitle>Senior communicatieadviseur en concepter bij complexe overheidsprojecten</CaseSubtitle>
             
             <CaseDescription>
-              <strong>Situatie:</strong> Als Senior communicatieadviseur en concepter werkte ik mee aan complexe overheidsaanbestedingen 
+              <strong>Situatie:</strong> Als Senior communicatieadviseur en concepter werk ik mee aan complexe overheidsaanbestedingen
               met strikte beoordelingscriteria en krappe deadlines.
             </CaseDescription>
 
@@ -277,7 +277,7 @@ const Cases = () => {
                 <li>Analyse versnellen: ChatGPT en Claude AI ingezet voor SWOT-analyses en stakeholder-mapping</li>
                 <li>Strategische templates: AI-templates gemaakt voor budgetten, tijdlijnen en strategische werkwijzes</li>
                 <li>Content optimalisatie: Kernboodschappen en narratieven verfijnen met AI-ondersteuning</li>
-                <li>Kwaliteitscontrole: AI-check tegen beoordelingscriteria voordat indienen</li>
+                <li>Kwaliteitscontrole: AI-check tegen beoordelingscriteria voorafgaand aan het indienen</li>
                 <li>Teamtrainingen: AI-trainingen geven aan het team voor efficiënt gebruik van tools</li>
               </CaseList>
             </CaseSection>
