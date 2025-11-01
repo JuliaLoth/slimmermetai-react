@@ -308,7 +308,7 @@ const Home = () => {
       <HeroSection>
         <Container>
           <HeroContent>
-            <HeroTitle className="hero-title">Maak AI winstgevend voor jouw bedrijf</HeroTitle>
+            <HeroTitle className="hero-title">Maak jouw bedrijf beter met AI</HeroTitle>
             <HeroSubtitle className="hero-subtitle">Met advies op maat zorg ik dat AI jouw bedrijfsvoering versterkt, zodat je meer tijd krijgt voor wat echt telt.</HeroSubtitle>
             <CTAContainer>
               <CTAButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer">
@@ -338,9 +338,9 @@ const Home = () => {
             margin: '0 auto 3rem',
             lineHeight: '1.6'
           }}>
-            Jij kent het vast wel: overal hoor je over AI, maar niemand legt uit hoe het écht gaat helpen in jouw bedrijf. 
-            Ik ben geen gewone AI-trainer die theorie verkondigt. Als strategische innovator met 10 jaar ervaring in complexe 
-            organisaties help ik je AI integreren op een manier die aansluit bij hoe je al werkt.
+            Jij kent het vast wel: overal hoor je over AI, maar niemand legt uit hoe het écht gaat helpen in jouw bedrijf.
+            Ik ben geen gewone AI-trainer die theorie verkondigt. Als strategische innovator met 10 jaar ervaring in complexe
+            organisaties help ik jou AI te integreren op de manier die aansluit hoe jij en je collega's al werken.
           </div>
           
           <ServicesGrid>
@@ -466,7 +466,7 @@ const Home = () => {
                 }}>3</div>
                 <ServiceTitle>Doorlopende begeleiding</ServiceTitle>
                 <ServiceDescription>
-                  Via strippenkaart blijf ik beschikbaar voor vragen, nieuwe tools en optimalisaties. 
+                  Via jouw strippenkaart blijf ik beschikbaar voor vragen, nieuwe tools en optimalisaties.
                   Zoals jij je klanten begeleidt, help ik jou groeien.
                 </ServiceDescription>
               </ServiceContent>
@@ -481,7 +481,7 @@ const Home = () => {
             borderRadius: '15px'
           }}>
             <strong style={{fontSize: '1.2rem', color: '#333'}}>
-              Resultaat: AI-workflows die blijven werken en je échte tijd opleveren.
+              Resultaat: AI-workflows die blijven werken en je écht tijd opleveren.
             </strong>
           </div>
         </Container>
@@ -536,8 +536,8 @@ const Home = () => {
                 color: '#333',
                 borderLeft: '4px solid #5852f2'
               }}>
-                "Creativiteit, humor, out-of-the-box denken en weigeren genoegen te nemen met 'nee' staan centraal 
-                in mijn werkwijze. Deze waarden neem ik mee naar elke samenwerking."
+                "Creativiteit, humor, out-of-the-box denken en weigeren genoegen te nemen met 'nee' staan centraal
+                in mijn werkwijze. Deze eigenschappen neem ik mee naar elke samenwerking."
               </div>
               
               <div style={{marginTop: '3rem'}}>
