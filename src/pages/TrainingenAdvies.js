@@ -52,27 +52,6 @@ const HeroContent = styled.div`
   }
 `;
 
-const PageTitle = styled.h1`
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #333;
-  background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.2;
-  font-family: 'Neue Montreal', sans-serif;
-  
-  @media (max-width: 768px) {
-    font-size: 2.25rem;
-  }
-  
-  @media (max-width: 480px) {
-    font-size: 2rem;
-  }
-`;
-
 const PageSubtitle = styled.p`
   font-size: 1.25rem;
   max-width: 700px;
