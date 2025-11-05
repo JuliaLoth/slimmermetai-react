@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import SubstackFeed from '../components/SubstackFeed';
 
 const PageContainer = styled.div`
   min-height: calc(100vh - 80px);
@@ -113,17 +114,6 @@ const MainContent = styled.div`
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   border: 1px solid #e9ecef;
 `;
-
-
-
-
-const SubstackFeedContainer = styled.div`
-  min-height: 400px;
-  width: 100%;
-  border-radius: 10px;
-`;
-
-
 const Sidebar = styled.div`
   display: flex;
   flex-direction: column;
@@ -151,22 +141,6 @@ const SidebarText = styled.p`
 `;
 
 const Nieuws = () => {
-  useEffect(() => {
-    // Laad Supascribe feed script
-    const script = document.createElement('script');
-    script.src = "https://js.supascribe.com/v1/loader/HjNBdTYKW9Wl1aIOtLNHtNKttNC3.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script als component unmount
-      const existingScript = document.querySelector('script[src="https://js.supascribe.com/v1/loader/HjNBdTYKW9Wl1aIOtLNHtNKttNC3.js"]');
-      if (existingScript) {
-        document.body.removeChild(existingScript);
-      }
-    };
-  }, []);
-
   return (
     <PageContainer>
       <PageHero>
@@ -222,11 +196,8 @@ const Nieuws = () => {
               </div>
             </div>
             
-            <div style={{padding: '2rem', textAlign: 'center'}}>
-              <SubstackFeedContainer>
-                {/* Feed embed code */}
-                <div data-supascribe-embed-id="485062445398" data-supascribe-feed></div>
-              </SubstackFeedContainer>
+            <div style={{padding: '2rem 0'}}>
+              <SubstackFeed maxPosts={10} />
             </div>
           </MainContent>
 
