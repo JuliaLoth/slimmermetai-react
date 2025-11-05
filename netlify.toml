@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  GENERATE_SOURCEMAP = "false"
 
 [[redirects]]
   from = "/admin/*"
