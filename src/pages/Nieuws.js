@@ -225,7 +225,7 @@ const Nieuws = () => {
             <div style={{padding: '2rem', textAlign: 'center'}}>
               <SubstackFeedContainer>
                 {/* Feed embed code */}
-                <div data-supascribe-embed-id="589349283017" data-supascribe-feed></div>
+                <div data-supascribe-embed-id="485062445398" data-supascribe-feed></div>
               </SubstackFeedContainer>
             </div>
           </MainContent>
