@@ -156,40 +156,7 @@
     </style>
     
     <!-- Load external scripts asynchronously to avoid blocking -->
-    <script>
-      // Defer non-critical CSS loading to reduce critical path
-      window.addEventListener('load', function() {
-        // Find and prioritize any deferred stylesheets
-        var deferredStyles = document.querySelectorAll('link[rel="preload"][as="style"]');
-        deferredStyles.forEach(function(link) {
-          link.rel = 'stylesheet';
-        });
-      });
-      
-      // Load Netlify Identity only when needed
-      if (window.location.pathname.includes('admin')) {
-        const netlifyScript = document.createElement('script');
-        netlifyScript.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
-        netlifyScript.async = true;
-        document.head.appendChild(netlifyScript);
-      } else {
-        // Load on user interaction instead of timeout
-        let loaded = false;
-        const loadNetlify = () => {
-          if (!loaded) {
-            loaded = true;
-            const netlifyScript = document.createElement('script');
-            netlifyScript.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
-            netlifyScript.async = true;
-            document.head.appendChild(netlifyScript);
-          }
-        };
-        // Load on first user interaction or after 5 seconds
-        document.addEventListener('click', loadNetlify, { once: true });
-        document.addEventListener('scroll', loadNetlify, { once: true });
-        setTimeout(loadNetlify, 5000);
-      }
-    </script>
+    <script src="%PUBLIC_URL%/init.js"></script>
     
     <title>Slimmer Met AI - AI Training & Advies | Julia Loth</title>
   </head>
@@ -197,16 +164,6 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
+    <script src="%PUBLIC_URL%/netlify-identity-init.js"></script>
   </body>
 </html>

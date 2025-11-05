@@ -39,11 +39,11 @@
     # Content Security Policy
     Content-Security-Policy = '''
       default-src 'self';
-      script-src 'self' 'unsafe-inline' https://calendar.app.google;
+      script-src 'self' https://identity.netlify.com https://calendar.app.google;
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
       img-src 'self' data: https:;
       font-src 'self' https://fonts.gstatic.com;
-      connect-src 'self';
+      connect-src 'self' https://identity.netlify.com https://*.netlify.com;
       frame-ancestors 'none';
       base-uri 'self';
       form-action 'self' https://calendar.app.google;
