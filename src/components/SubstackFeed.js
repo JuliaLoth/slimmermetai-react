@@ -154,50 +154,48 @@ const SubstackFeed = ({ feedUrl = 'https://slimmermetai.substack.com/feed', maxP
       try {
         setLoading(true);
 
-        // Fetch RSS feed via CORS proxy (we gebruiken allorigins.win als fallback)
+        // Fetch RSS feed via rss2json API (more reliable for RSS)
         const response = await fetch(
-          `https://api.allorigins.win/raw?url=${encodeURIComponent(feedUrl)}`
+          `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`
         );
 
         if (!response.ok) {
           throw new Error('Failed to fetch feed');
         }
 
-        const xmlText = await response.text();
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+        const data = await response.json();
 
-        // Parse XML naar posts array
-        const items = xmlDoc.querySelectorAll('item');
-        const parsedPosts = Array.from(items).slice(0, maxPosts).map(item => {
+        if (data.status !== 'ok') {
+          throw new Error(data.message || 'RSS feed error');
+        }
+
+        // Parse JSON response from rss2json
+        const parsedPosts = data.items.slice(0, maxPosts).map(item => {
           // Extract title
-          const title = item.querySelector('title')?.textContent || 'Untitled';
+          const title = item.title || 'Untitled';
 
           // Extract link
-          const link = item.querySelector('link')?.textContent || '#';
+          const link = item.link || '#';
 
           // Extract description (excerpt)
-          const description = item.querySelector('description')?.textContent || '';
+          const description = item.description || '';
           // Strip HTML tags from description
           const excerpt = description.replace(/<[^>]*>/g, '').substring(0, 200) + '...';
 
           // Extract date
-          const pubDate = item.querySelector('pubDate')?.textContent || '';
+          const pubDate = item.pubDate || '';
           const formattedDate = pubDate ? new Date(pubDate).toLocaleDateString('nl-NL', {
             year: 'numeric',
             month: 'short',
             day: 'numeric'
           }) : '';
 
-          // Extract image from enclosure or content
-          let imageUrl = '';
-          const enclosure = item.querySelector('enclosure');
-          if (enclosure) {
-            imageUrl = enclosure.getAttribute('url');
-          } else {
-            // Try to extract image from content:encoded
-            const content = item.querySelector('encoded, content\\:encoded')?.textContent || '';
-            const imgMatch = content.match(/<img[^>]+src="([^">]+)"/);
+          // Extract image from thumbnail or enclosure
+          let imageUrl = item.thumbnail || item.enclosure?.link || '';
+
+          // If no image, try to extract from content/description
+          if (!imageUrl) {
+            const imgMatch = (item.content || item.description || '').match(/<img[^>]+src="([^">]+)"/);
             if (imgMatch) {
               imageUrl = imgMatch[1];
             }
