@@ -117,7 +117,9 @@ const CaseCard = styled(Link)`
   border: 1px solid #e9ecef;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   &:hover {
     transform: translateY(-5px);
@@ -148,6 +150,7 @@ const CaseExcerpt = styled.p`
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 1rem;
+  flex: 1;
 `;
 
 const ReadMoreButton = styled.span`
@@ -159,6 +162,8 @@ const ReadMoreButton = styled.span`
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
 
   ${CaseCard}:hover & {
     transform: translateY(-2px);
@@ -168,15 +173,21 @@ const ReadMoreButton = styled.span`
 
 const cases = [
   {
+    id: 'agile-coach-ai-onderneming',
+    title: 'Van startende agile coach naar AI-gedreven onderneming',
+    subtitle: 'Slim beginnen met AI vanaf dag één',
+    excerpt: 'Hoe een startende agile coach AI volledig integreerde in zijn bedrijfsvoering - van offerte tot workshop ontwerp. Geen legacy, geen inefficiëntie, gewoon direct slim werken.'
+  },
+  {
     id: 'overheidsaanbestedingen',
-    title: 'Slimmer offertes schrijven voor overheidsaanbestedingen',
-    subtitle: 'Senior communicatieadviseur en concepter bij complexe overheidsprojecten',
+    title: 'AI voor overheids-<br />aanbestedingen',
+    subtitle: 'Slimmer offertes schrijven bij complexe overheidsprojecten',
     excerpt: 'Hoe AI-tools kernteams van 2-3 mensen helpen om kwalitatieve voorstellen te schrijven met analyses, strategieën en creatieve concepten binnen krappe deadlines.'
   },
   {
     id: 'startup-branding',
     title: 'Startup branding - van idee naar identiteit',
-    subtitle: 'AI-gestuurde branding aanpak voor kostenefficiënte merkbouw',
+    subtitle: 'Slim gebruik van AI voor betaalbare, professionele branding',
     excerpt: 'Complete merkidentiteit ontwikkelen met 80% kostenbesparing - hoe AI professionele branding toegankelijk maakt voor elk budget.'
   }
 ];
@@ -244,7 +255,7 @@ const Cases = () => {
           <CasesGrid>
             {cases.map(caseItem => (
               <CaseCard key={caseItem.id} to={`/cases/${caseItem.id}`}>
-                <CaseTitle>{caseItem.title}</CaseTitle>
+                <CaseTitle dangerouslySetInnerHTML={{ __html: caseItem.title }} />
                 <CaseSubtitle>{caseItem.subtitle}</CaseSubtitle>
                 <CaseExcerpt>{caseItem.excerpt}</CaseExcerpt>
                 <ReadMoreButton>Lees meer</ReadMoreButton>

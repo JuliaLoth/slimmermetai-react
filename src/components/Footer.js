@@ -199,6 +199,7 @@ const Footer = () => {
 
         <FooterBottom>
           <p>&copy; {currentYear} Slimmer met AI. Alle rechten voorbehouden.</p>
+          <p style={{ fontStyle: 'italic', color: '#9ca3af' }}>Deze site is 100% gemaakt door AI</p>
         </FooterBottom>
       </Container>
     </FooterContainer>

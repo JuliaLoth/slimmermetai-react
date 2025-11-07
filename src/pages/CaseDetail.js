@@ -15,7 +15,7 @@ const PageHero = styled.section`
   padding: 6rem 0 4rem;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   margin-top: 80px;
 
   &::before {
@@ -40,21 +40,35 @@ const BackLink = styled(Link)`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #5852f2;
+  color: white;
+  background: rgba(88, 82, 242, 0.9);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
-  margin-bottom: 2rem;
   transition: all 0.3s ease;
-  position: relative;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
   z-index: 3;
+  box-shadow: 0 4px 12px rgba(88, 82, 242, 0.3);
 
   &:hover {
-    color: #ef49f2;
+    background: linear-gradient(135deg, #5852f2 0%, #ef49f2 100%);
     transform: translateX(-5px);
+    box-shadow: 0 6px 16px rgba(88, 82, 242, 0.4);
   }
 
   &::before {
     content: '←';
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    top: 1rem;
+    left: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -142,9 +156,27 @@ const InsightBox = styled.div`
 `;
 
 const caseData = {
+  'agile-coach-ai-onderneming': {
+    title: 'Van startende agile coach naar AI-gedreven onderneming',
+    subtitle: 'Slim beginnen met AI vanaf dag één',
+    situatie: 'Bart begon zijn onderneming als agile coach met een duidelijke visie. Dat gaf hem een unieke kans: zijn bedrijf meteen slim inrichten. Geen legacy systemen, geen ingesleten werkwijzen - gewoon direct efficiënt beginnen. Hij wilde AI volledig integreren in zijn werkwijze - van klantgesprek tot offerte, van workshop ontwerp tot content creatie.',
+    uitdaging: 'Bart hoefde geen oude systemen om te bouwen, maar juist dat maakte de uitdaging interessant. Welke processen zet je op? De kernvraagstukken: efficiënt offreren (van call naar overtuigende offerte), kennisbeheer (templates toegankelijk houden), workshop ontwerp (creatieve werkvormen ontwikkelen), content strategie (LinkedIn zonder dat het ten koste gaat van klantwerk), en de juiste mindset (AI als collega die je moet inwerken).',
+    aanpak: [
+      'Kick-off: Via vragenlijst workflows, succesfactoren en planning in kaart gebracht',
+      'Hands-on training: Halve dag basis leggen met juiste mindset en goed prompten',
+      'Offerte workflow: Klantgesprekken opnemen, transcriberen en in offerte bot verwerken',
+      'Google NotebookLM: Alle offertes, notities en templates in één centrale kennisbasis',
+      'Workshop ontwerp: AI als sparringpartner voor creatieve werkvormen en draaiboeken',
+      'Content strategie: Unieke invalshoeken voor LinkedIn gebaseerd op agile expertise',
+      'Vier weken experimenteren: Praktijk boven theorie, AI gebruiken in echt werk',
+      'Retrospective: Samen optimaliseren van workflow en aanpak bijstellen'
+    ],
+    resultaat: 'Bart heeft nu een bedrijfsvoering waarbij AI een natuurlijke rol speelt. Directe tijdwinst bij offertes en notities. Schaalbare processen die meegroeien. Belangrijkste: de juiste mindset - Bart snapt hoe AI werkt en hoe hij het moet inwerken.',
+    insight: '"Super handig en inzichtelijk. Had ik dit maar eerder gedaan. Julia heeft het ook mooi gepersonaliseerd, dus echt gekeken naar wat ik nodig heb. Ze is heel kundig hierin - ze weet veel en kan goed helpen." — Bart, agile coach'
+  },
   'overheidsaanbestedingen': {
-    title: 'Slimmer offertes schrijven voor overheidsaanbestedingen',
-    subtitle: 'Senior communicatieadviseur en concepter bij complexe overheidsprojecten',
+    title: 'AI voor overheidsaanbestedingen',
+    subtitle: 'Slimmer offertes schrijven bij complexe overheidsprojecten',
     situatie: 'Als Senior communicatieadviseur en concepter werk ik mee aan complexe overheidsaanbestedingen met strikte beoordelingscriteria en krappe deadlines.',
     uitdaging: 'Kernteams van 2-3 mensen moesten snel kwalitatieve voorstellen schrijven met analyses, strategieën en creatieve concepten.',
     aanpak: [
@@ -159,7 +191,7 @@ const caseData = {
   },
   'startup-branding': {
     title: 'Startup branding - van idee naar identiteit',
-    subtitle: 'AI-gestuurde branding aanpak voor kostenefficiënte merkbouw',
+    subtitle: 'Slim gebruik van AI voor betaalbare, professionele branding',
     situatie: 'Tech startup had een sterk product maar geen budget voor duur branding bureau.',
     uitdaging: 'Complete merkidentiteit ontwikkelen binnen beperkt budget en strakke timeline.',
     aanpak: [
@@ -181,12 +213,12 @@ const CaseDetail = () => {
   if (!caseInfo) {
     return (
       <PageContainer>
-        <ContentSection>
+        <PageHero>
+          <BackLink to="/cases">Terug naar Cases</BackLink>
           <Container>
-            <BackLink to="/cases">Terug naar Cases</BackLink>
             <h2>Case niet gevonden</h2>
           </Container>
-        </ContentSection>
+        </PageHero>
       </PageContainer>
     );
   }
@@ -194,8 +226,8 @@ const CaseDetail = () => {
   return (
     <PageContainer>
       <PageHero>
+        <BackLink to="/cases">Terug naar Cases</BackLink>
         <Container>
-          <BackLink to="/cases">Terug naar Cases</BackLink>
           <HeroContent>
             <div style={{
               fontSize: '3rem',
@@ -289,8 +321,9 @@ const CaseDetail = () => {
                 lineHeight: '1.6',
                 marginBottom: '2rem'
               }}>
-                Benieuwd hoe AI-adoptie eruitziet in jouw sector? In ons kennismakingsgesprek
-                bespreken we concrete mogelijkheden die passen bij jouw werkwijze.
+                {caseId === 'agile-coach-ai-onderneming'
+                  ? 'Herken je de uitdaging? Te weinig tijd, te veel repetitief werk? Plan een gratis kennismakingsgesprek. We ontdekken samen hoe AI jouw processen kan versterken.'
+                  : 'Benieuwd hoe AI-adoptie eruitziet in jouw sector? In ons kennismakingsgesprek bespreken we concrete mogelijkheden die passen bij jouw werkwijze.'}
               </p>
               <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem'}}>
                 <a href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer" style={{
@@ -302,7 +335,16 @@ const CaseDetail = () => {
                   textDecoration: 'none',
                   fontWeight: '600',
                   fontSize: '1.1rem',
-                  transition: 'all 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 4px 12px rgba(88, 82, 242, 0.3)'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.transform = 'translateY(-3px)';
+                  e.target.style.boxShadow = '0 8px 20px rgba(88, 82, 242, 0.5)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.transform = 'translateY(0)';
+                  e.target.style.boxShadow = '0 4px 12px rgba(88, 82, 242, 0.3)';
                 }}>
                   Plan een Gratis Kennismaking
                 </a>

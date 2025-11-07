@@ -499,6 +499,52 @@ const Home = () => {
         </Container>
       </ServicesSection>
 
+      <ServicesSection style={{background: 'rgba(255, 255, 255, 0.8)'}}>
+        <Container>
+          <SectionTitle>Wat klanten zeggen</SectionTitle>
+          <div style={{
+            maxWidth: '800px',
+            margin: '0 auto',
+            padding: '3rem',
+            background: 'rgba(255, 255, 255, 0.95)',
+            borderRadius: '20px',
+            boxShadow: '0 15px 40px rgba(0, 0, 0, 0.15)'
+          }}>
+            <div style={{
+              background: 'rgba(102, 126, 234, 0.1)',
+              padding: '2.5rem',
+              borderRadius: '15px',
+              fontStyle: 'italic',
+              fontSize: '1.2rem',
+              lineHeight: '1.7',
+              color: '#333',
+              borderLeft: '4px solid #5852f2',
+              marginBottom: '1.5rem'
+            }}>
+              "Super handig en inzichtelijk. Had ik dit maar eerder gedaan. Julia heeft het ook mooi gepersonaliseerd,
+              dus echt gekeken naar wat ik nodig heb. Ze is heel kundig hierin - ze weet veel en kan goed helpen."
+            </div>
+            <div style={{
+              textAlign: 'right',
+              fontWeight: '600',
+              color: '#5852f2',
+              fontSize: '1.1rem',
+              marginBottom: '2rem'
+            }}>
+              — Bart, agile coach
+            </div>
+            <div style={{textAlign: 'center'}}>
+              <CTAButton to="/cases/agile-coach-ai-onderneming" style={{
+                background: 'linear-gradient(135deg, #5852f2 0%, #ef49f2 100%)',
+                color: 'white'
+              }}>
+                Lees Bart's volledige verhaal
+              </CTAButton>
+            </div>
+          </div>
+        </Container>
+      </ServicesSection>
+
       <ServicesSection>
         <Container>
           <div style={{
