@@ -288,6 +288,75 @@ const CaseDetail = () => {
             <InsightBox>
               {caseInfo.insight}
             </InsightBox>
+
+            {caseId === 'agile-coach-ai-onderneming' && (
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '1.5rem',
+                marginTop: '2rem',
+                padding: '2rem',
+                background: 'rgba(255, 255, 255, 0.9)',
+                borderRadius: '15px',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)'
+              }}>
+                <a href="https://www.linkedin.com/in/claassenbart/?originalSubdomain=nl" target="_blank" rel="noopener noreferrer" style={{
+                  display: 'block',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  borderRadius: '50%'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                  e.currentTarget.style.boxShadow = '0 8px 20px rgba(88, 82, 242, 0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}>
+                  <img src="/images/profiel foto bart claassens.jpg" alt="Bart Claassens" style={{
+                    width: '120px',
+                    height: '120px',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    border: '4px solid #5852f2',
+                    display: 'block'
+                  }} />
+                </a>
+                <div>
+                  <div style={{
+                    fontSize: '1.3rem',
+                    fontWeight: '600',
+                    color: '#333',
+                    marginBottom: '0.5rem'
+                  }}>
+                    Bart Claassens
+                  </div>
+                  <div style={{
+                    fontSize: '1rem',
+                    color: '#666',
+                    marginBottom: '0.75rem'
+                  }}>
+                    Agile Coach
+                  </div>
+                  <a href="https://www.linkedin.com/in/claassenbart/?originalSubdomain=nl" target="_blank" rel="noopener noreferrer" style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    color: '#5852f2',
+                    textDecoration: 'none',
+                    fontWeight: '500',
+                    fontSize: '0.95rem',
+                    transition: 'opacity 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
+                  onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}>
+                    <img src="/images/Icon_linkedin.png" alt="LinkedIn" style={{width: '20px', height: '20px'}} />
+                    Bekijk LinkedIn profiel
+                  </a>
+                </div>
+              </div>
+            )}
           </ContentCard>
 
           <div style={{

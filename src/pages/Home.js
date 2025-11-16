@@ -322,10 +322,10 @@ const Home = () => {
               fontFamily: 'Neue Montreal, sans-serif',
               lineHeight: '1.2'
             }}>
-              Werk slimmer, niet harder
+              AI op jouw manier
             </div>
-            <HeroTitle className="hero-title" style={{fontSize: '1.8rem', fontWeight: '600', marginBottom: '1rem', color: '#5852f2', background: 'none', WebkitTextFillColor: '#5852f2'}}>Maak jouw bedrijf beter met AI</HeroTitle>
-            <HeroSubtitle className="hero-subtitle">Met advies op maat zorg ik dat AI jouw bedrijfsvoering versterkt, zodat je meer tijd krijgt voor wat echt telt.</HeroSubtitle>
+            <HeroTitle className="hero-title" style={{fontSize: '1.8rem', fontWeight: '600', marginBottom: '1rem', color: '#5852f2', background: 'none', WebkitTextFillColor: '#5852f2'}}>AI die past bij jouw werkwijze, niet andersom</HeroTitle>
+            <HeroSubtitle className="hero-subtitle">Ik begeleid je bij implementatie die past, die blijft werken, die tijd vrijmaakt.</HeroSubtitle>
             <CTAContainer>
               <CTAButton as="a" href="https://calendar.app.google/z5eJjn4wGVcXqvZq8" target="_blank" rel="noopener noreferrer">
                 Kennismaken?
@@ -525,13 +525,34 @@ const Home = () => {
               dus echt gekeken naar wat ik nodig heb. Ze is heel kundig hierin - ze weet veel en kan goed helpen."
             </div>
             <div style={{
-              textAlign: 'right',
-              fontWeight: '600',
-              color: '#5852f2',
-              fontSize: '1.1rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'flex-end',
+              gap: '1rem',
               marginBottom: '2rem'
             }}>
-              — Bart, agile coach
+              <a href="https://www.linkedin.com/in/claassenbart/?originalSubdomain=nl" target="_blank" rel="noopener noreferrer" style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                textDecoration: 'none',
+                fontWeight: '600',
+                color: '#5852f2',
+                fontSize: '1.1rem',
+                transition: 'opacity 0.3s ease'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
+              onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}>
+                <span>— Bart, agile coach</span>
+                <img src="/images/profiel foto bart claassens.jpg" alt="Bart Claassens" style={{
+                  width: '60px',
+                  height: '60px',
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  border: '3px solid #5852f2',
+                  boxShadow: '0 4px 8px rgba(88, 82, 242, 0.3)'
+                }} />
+              </a>
             </div>
             <div style={{textAlign: 'center'}}>
               <CTAButton to="/cases/agile-coach-ai-onderneming" style={{
